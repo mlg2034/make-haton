@@ -1,6 +1,6 @@
 # make_haton
 
-A new Flutter project.
+Quizzer
 
 ## Getting Started
 
