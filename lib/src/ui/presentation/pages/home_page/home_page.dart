@@ -39,9 +39,10 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16)),
               child: Center(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    
+                    SvgPicture.asset('assets/images/ic_collections.svg') , 
+                    SizedBox(width: 24,),
+                    Text('Collections')
                   ],
                 ),
               ),

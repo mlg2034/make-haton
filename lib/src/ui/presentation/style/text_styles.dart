@@ -16,16 +16,21 @@ final dartThemeTextStyle = TextStyle(
     height: 21.11 / 18,
     color: ColorsEnum.SETTINS_TITLE_COLOR);
 final languageTextStyle = TextStyle(
-   fontFamily: 'Work Sans',
+    fontFamily: 'Work Sans',
     fontWeight: FontWeight.w700,
     fontSize: 18.sp,
     height: 21.11 / 18,
-    color: ColorsEnum.PRIMARY_COLOR 
-);
+    color: ColorsEnum.PRIMARY_COLOR);
 final settingsInfoTextStyle = TextStyle(
-  fontFamily: 'Work Sans',
+    fontFamily: 'Work Sans',
     fontWeight: FontWeight.w700,
     fontSize: 16.sp,
     height: 18 / 16,
-    color: ColorsEnum.PRIMARY_COLOR 
+    color: ColorsEnum.PRIMARY_COLOR);
+final collectionsTextStyle = TextStyle(
+   fontFamily: 'Work Sans',
+    fontWeight: FontWeight.w700,
+    fontSize: 16.sp,
+    height: 18.77/ 16,
+    color: ColorsEnum.BLACK_COLOR
 );
