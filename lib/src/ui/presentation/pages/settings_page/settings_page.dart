@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:make_haton/src/ui/presentation/style/colors.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import '../../components/widgets/custom_container.dart';
 import '../../components/widgets/custom_row_settings_widget.dart';
 import '../../style/text_styles.dart';
@@ -40,7 +40,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   width: 35.w,
                 ),
                 Text(
-                  'SETTINGS',
+                  // 'Settings',
+                  AppLocalizations.of(context)!.settings,
                   style: settingsTextStyle,
                 )
               ],
@@ -50,15 +51,15 @@ class _SettingsPageState extends State<SettingsPage> {
             height: 6.h,
           ),
           CustomSettingsRowWidget(
-            settingText: 'Dark theme',
+            settingText: AppLocalizations.of(context)!.dark_theme,
           ),
           const Divider(),
           CustomSettingsRowWidget(
-            settingText: 'Sounds',
+            settingText:  AppLocalizations.of(context)!.sounds,
           ),
           Divider(),
           CustomSettingsRowWidget(
-            settingText: 'Notifications',
+            settingText: AppLocalizations.of(context)!.notifications,
           ),
           Divider(),
           Padding(
@@ -67,10 +68,10 @@ class _SettingsPageState extends State<SettingsPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Lanquage',
+                   AppLocalizations.of(context)!.languages,
                   style: dartThemeTextStyle,
                 ),
-                Text('English' ,style: languageTextStyle,)
+                Text(AppLocalizations.of(context)!.language ,style: languageTextStyle,)
               ],
             ),
           ),
@@ -78,11 +79,11 @@ class _SettingsPageState extends State<SettingsPage> {
           Container(
             padding:const EdgeInsets.symmetric(horizontal: 48, vertical: 24) ,
             alignment: Alignment.topLeft,
-            child: Text('Pivacy Policy', style: settingsInfoTextStyle,)),
+            child: Text( AppLocalizations.of(context)!.privacy_policy, style: settingsInfoTextStyle,)),
            Container(
             padding:const EdgeInsets.symmetric(horizontal: 48, vertical: 24) ,
             alignment: Alignment.topLeft,
-            child: Text('Terms of Sevice', style: settingsInfoTextStyle,)),
+            child: Text( AppLocalizations.of(context)!.terms_of_service, style: settingsInfoTextStyle,)),
         ],
       ),
     );
