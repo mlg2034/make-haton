@@ -14,15 +14,17 @@ class QuizPage extends StatelessWidget {
             Row(
               children: [
                 Container(
-                    width: 53,
-                    height: 53,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: AppColors.border, width: 1),
-                        color: AppColors.white),
-                    child: SvgPicture.asset(UiKitAssets.images.icCancel.keyName))
+                  width: 53,
+                  height: 53,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: AppColors.border, width: 1),
+                    color: AppColors.white,
+                  ),
+                  child: SvgPicture.asset(UiKitAssets.images.icCancel.keyName),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

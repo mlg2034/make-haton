@@ -49,6 +49,4 @@ app.*.map.json
 pubspec.lock
 Podfile.lock
 *.xcconfig
-ios/Flutter/Debug.xcconfig
-ios/Flutter/Debug.xcconfig
-pubspec.lock
+ios/Flutter/

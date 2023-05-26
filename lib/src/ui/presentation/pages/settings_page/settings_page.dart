@@ -49,19 +49,21 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const Divider(),
           Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-              alignment: Alignment.topLeft,
-              child: Text(
-                localization.privacy_policy,
-                style: settingsInfoTextStyle,
-              )),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            alignment: Alignment.topLeft,
+            child: Text(
+              localization.privacy_policy,
+              style: settingsInfoTextStyle,
+            ),
+          ),
           Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-              alignment: Alignment.topLeft,
-              child: Text(
-                localization.terms_of_service,
-                style: settingsInfoTextStyle,
-              )),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            alignment: Alignment.topLeft,
+            child: Text(
+              localization.terms_of_service,
+              style: settingsInfoTextStyle,
+            ),
+          ),
         ],
       ),
     );

@@ -2,6 +2,9 @@
 gen:
 	flutter packages pub run build_runner build --delete-conflicting-outputs
 
+analyze_all:
+	./scripts/analyze_all.sh
+
 # Generate ui_kit (just assets now)
 gen_kit:
 	cd packages/ui_kit && flutter pub get && flutter packages pub run build_runner build --delete-conflicting-outputs
