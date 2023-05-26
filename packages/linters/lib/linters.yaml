@@ -40,8 +40,6 @@ dart_code_metrics:
         severity: warning
     - avoid-unused-parameters:
         severity: warning
-    - avoid-unused-imports:
-        severity: warning
     - avoid-nested-conditional-expressions:
         severity: warning
     - newline-before-return:

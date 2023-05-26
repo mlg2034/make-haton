@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:localization/localization.dart';
-import 'package:make_haton/src/domain/entities/language_enum.dart';
-import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class SettingsPage extends StatefulWidget {

@@ -23,8 +23,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  dart_code_metrics: ^5.7.4
   linters:
-    path: ./packages/linters
+      path: packages/linters
 
 flutter:
   uses-material-design: true
