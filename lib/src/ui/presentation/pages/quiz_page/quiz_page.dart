@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:make_haton/src/ui/presentation/style/colors.dart';
+import 'package:ui_kit/ui_kit.dart';
 
 class QuizPage extends StatelessWidget {
   const QuizPage({super.key});
@@ -24,7 +24,7 @@ class QuizPage extends StatelessWidget {
                       ),
                       color: AppColors.white
                     ),
-                    child: SvgPicture.asset('assets/images/cancel'))
+                    child: SvgPicture.asset(UiKitAssets.images.icCancel.keyName))
               ],
             )
           ],
