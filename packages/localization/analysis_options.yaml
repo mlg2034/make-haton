@@ -1,0 +1,8 @@
+include: package:linters/linters.yaml
+
+analyzer:
+  exclude: [lib/src/app_localization**.dart]
+
+dart_code_metrics:
+  metrics-exclude:
+    - lib/src/app_localization**.dart

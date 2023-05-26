@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:make_haton/src/ui/presentation/pages/settings/settings_page.dart';
+import 'package:make_haton/src/ui/presentation/pages/settings_page/settings_page.dart';
 
 import 'package:ui_kit/ui_kit.dart';
 

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:localization/localization.dart';
+import 'package:make_haton/src/domain/entities/language_enum.dart';
+import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -11,8 +15,10 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
+    final localization = context.locale;
+
     return Scaffold(
-      appBar: const CustomAppBar(title: 'SETTINGS'),
+      appBar: CustomAppBar(title: localization.settings),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -20,25 +26,27 @@ class _SettingsPageState extends State<SettingsPage> {
             height: 6,
           ),
           const Divider(),
-          const SettingsTile(
-            title: 'Dark theme',
+          SettingsTile(
+            title: localization.dark_theme,
           ),
           const Divider(),
-          const SettingsTile(
-            title: 'Sounds',
+          SettingsTile(
+            title: localization.dark_theme,
           ),
           const Divider(),
-          const SettingsTile(
-            title: 'Notifications',
+          SettingsTile(
+            title: localization.notifications,
           ),
           const Divider(),
-          const SettingsTile(
-            title: 'Language',
-            customActionWidget: Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Text(
-                'English',
-                style: languageTextStyle,
+          SettingsTile(
+            title: localization.language,
+            customActionWidget: GestureDetector(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Text(
+                  localization.selectedLanguage,
+                  style: languageTextStyle,
+                ),
               ),
             ),
           ),
@@ -46,15 +54,15 @@ class _SettingsPageState extends State<SettingsPage> {
           Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
               alignment: Alignment.topLeft,
-              child: const Text(
-                'Pivacy Policy',
+              child: Text(
+                localization.privacy_policy,
                 style: settingsInfoTextStyle,
               )),
           Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
               alignment: Alignment.topLeft,
-              child: const Text(
-                'Terms of Sevice',
+              child: Text(
+                localization.terms_of_service,
                 style: settingsInfoTextStyle,
               )),
         ],

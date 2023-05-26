@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/src/theme/app_colors.dart';
 import 'package:ui_kit/src/theme/text_theme.dart';
 
-
 class SettingsTile extends StatelessWidget {
   final String title;
   final ValueChanged<bool>? onChanged;
@@ -28,13 +27,14 @@ class SettingsTile extends StatelessWidget {
             title,
             style: dartThemeTextStyle,
           ),
-          customActionWidget ?? Switch(
-            inactiveTrackColor: AppColors.white,
-            activeColor: AppColors.white,
-            activeTrackColor: AppColors.activeTrack,
-            value: value,
-            onChanged: onChanged,
-          ),
+          customActionWidget ??
+              Switch(
+                inactiveTrackColor: AppColors.white,
+                activeColor: AppColors.white,
+                activeTrackColor: AppColors.activeTrack,
+                value: value,
+                onChanged: onChanged,
+              ),
         ],
       ),
     );
