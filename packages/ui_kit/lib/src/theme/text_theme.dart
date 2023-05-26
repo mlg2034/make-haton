@@ -20,12 +20,10 @@ const languageTextStyle = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 18,
     height: 21.11 / 18,
-    color: AppColors.primary
-);
+    color: AppColors.primary);
 const settingsInfoTextStyle = TextStyle(
     fontFamily: 'Work Sans',
     fontWeight: FontWeight.w700,
     fontSize: 16,
     height: 18 / 16,
-    color: AppColors.primary
-);
+    color: AppColors.primary);

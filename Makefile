@@ -24,7 +24,7 @@ format_fvm:
 
 ### Format using std flutter
 format:
-	find . -not -path './.git/*' -not -path '*/.dart_tool/*' -name "*.dart" ! -name "*.g.dart" ! -name "*.mocks.dart" ! -name "*_test.dart" ! -name '*.swagger.*' ! -name '*.config.dart' ! -name '*.chopper.dart' ! -name '*.freezed.dart' ! -name 'app_localization*.dart' | tr '\n' ' ' | xargs flutter format --line-length=100
+	find . -not -path './.git/*' -not -path '*/.dart_tool/*' -name "*.dart" ! -name "*.g.dart" ! -name "*.mocks.dart" ! -name "*_test.dart" ! -name '*.swagger.*' ! -name '*.config.dart' ! -name '*.chopper.dart' ! -name '*.freezed.dart' ! -name 'app_localization*.dart' | tr '\n' ' ' | xargs dart format --line-length=100
 
 # Rule for creating feature structure
 new_feature:

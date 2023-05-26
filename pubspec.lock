@@ -118,6 +118,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  flutter_localizations:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -131,6 +136,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: a3715e3bc90294e971cb7dc063fbf3cd9ee0ebf8604ffeafabd9e6f16abbdbe6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.0"
   js:
     dependency: transitive
     description:
@@ -154,6 +167,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  localization:
+    dependency: "direct main"
+    description:
+      path: "packages/localization"
+      relative: true
+    source: path
+    version: "0.0.1"
   lottie:
     dependency: transitive
     description:
@@ -343,5 +363,5 @@ packages:
     source: hosted
     version: "6.3.0"
 sdks:
-  dart: ">=3.0.1 <4.0.0"
+  dart: ">=3.0.2 <4.0.0"
   flutter: ">=3.7.0-0"
