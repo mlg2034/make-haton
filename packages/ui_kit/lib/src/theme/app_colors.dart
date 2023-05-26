@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppColors{
-  //TODO:refactor naming
   static const primary= Color.fromRGBO(0, 148, 255, 1);
   static const border= Color.fromRGBO(211, 211, 211, 1);
   static const white = Colors.white;

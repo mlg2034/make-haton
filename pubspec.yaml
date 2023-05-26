@@ -37,12 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.1.3
   flutter_svg: ^2.0.6
-  # Для адаптивности экрана 
-  flutter_screenutil: ^5.8.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  ui_kit:
+    path: "packages/ui_kit"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
