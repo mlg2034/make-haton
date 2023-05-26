@@ -48,3 +48,8 @@ app.*.map.json
 # Ignore lock files
 pubspec.lock
 Podfile.lock
+ios/Flutter/Debug.xcconfig
+*.xcconfig
+*.xcconfig
+ios/Podfile
+pubspec.lock
