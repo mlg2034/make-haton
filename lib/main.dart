@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
-import 'package:make_haton/src/ui/presentation/pages/settings/settings_page.dart';
 
 void main() {
   runApp(const MyApp());
