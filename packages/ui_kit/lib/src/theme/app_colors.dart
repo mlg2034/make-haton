@@ -7,4 +7,5 @@ class AppColors {
   static const black = Colors.black;
   static const settingTitle = Color.fromRGBO(51, 51, 51, 1);
   static const activeTrack = Color.fromRGBO(0, 148, 255, 1);
+  static const lightGreen = Color.fromRGBO(101, 189, 105, 1);
 }
