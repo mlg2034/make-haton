@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: const SafeArea(
+       body: const SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
