@@ -26,6 +26,35 @@ class $AssetsFontsGen {
   List<String> get values => [workSansItalicVariableFontWght, workSansVariableFontWght];
 }
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/ic_arrow_back.svg
+  SvgGenImage get icArrowBack => const SvgGenImage('assets/icons/ic_arrow_back.svg');
+
+  /// File path: assets/icons/ic_arrow_next_green.svg
+  SvgGenImage get icArrowNextGreen => const SvgGenImage('assets/icons/ic_arrow_next_green.svg');
+
+  /// File path: assets/icons/ic_arrow_next_red.svg
+  SvgGenImage get icArrowNextRed => const SvgGenImage('assets/icons/ic_arrow_next_red.svg');
+
+  /// File path: assets/icons/ic_close.svg
+  SvgGenImage get icClose => const SvgGenImage('assets/icons/ic_close.svg');
+
+  /// File path: assets/icons/ic_collections.svg
+  SvgGenImage get icCollections => const SvgGenImage('assets/icons/ic_collections.svg');
+
+  /// File path: assets/icons/ic_settings.svg
+  SvgGenImage get icSettings => const SvgGenImage('assets/icons/ic_settings.svg');
+
+  /// File path: assets/icons/ic_speach.svg
+  SvgGenImage get icSpeach => const SvgGenImage('assets/icons/ic_speach.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values =>
+      [icArrowBack, icArrowNextGreen, icArrowNextRed, icClose, icCollections, icSettings, icSpeach];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -41,14 +70,23 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_settings.svg
   SvgGenImage get icSettings => const SvgGenImage('assets/images/ic_settings.svg');
 
+  /// File path: assets/images/im_notebook-front-gradient.svg
+  SvgGenImage get imNotebookFrontGradient =>
+      const SvgGenImage('assets/images/im_notebook-front-gradient.svg');
+
+  /// File path: assets/images/im_toroid.svg
+  SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [icArrowBack, icCancel, icHelp, icSettings];
+  List<SvgGenImage> get values =>
+      [icArrowBack, icCancel, icHelp, icSettings, imNotebookFrontGradient, imToroid];
 }
 
 class UiKitAssets {
   UiKitAssets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
