@@ -45,81 +45,55 @@ class AuthPage extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 48),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 28, horizontal: 70),
-                  child: Column(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: Text(
-                          localization.hello,
-                          style: greetingsTextStyle,
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        alignment: Alignment.center,
-                        child: Text(
-                          localization.welcome,
-                          textAlign: TextAlign.center,
-                          style: welcomeToWordMentorTextStyle,
-                        ),
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        child: Text(
-                          localization.authorize,
-                          textAlign: TextAlign.center,
-                          style: authorizeToLearnTextStyle,
-                        ),
-                      ),
-                    ],
+                Text(
+                  localization.hello,
+                  style: titleScript,
+                ),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+                Text(
+                  localization.welcome,
+                  textAlign: TextAlign.center,
+                  style: body,
+                ),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+                Text(
+                  localization.authorize,
+                  textAlign: TextAlign.center,
+                  style: header_3,
+                ),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 16)),
+                SizedBox(
+                  width: double.infinity,
+                  height: 54,
+                  child: AuthButton(
+                    icon: SvgPicture.asset(
+                      UiKitAssets.icons.icGoogleIcon.keyName,
+                    ),
+                    text: localization.continueWithGoogle,
+                    onPressed: () {},
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 4, horizontal: 48),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        height: 54,
-                        child: Auth_button(
-                          icon: SvgPicture.asset(
-                            UiKitAssets.icons.icGoogleIcon.keyName,
-                          ),
-                          text: localization.continueWithGoogle,
-                          onPressed: () {},
-                        ),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
+                if (isIos)
+                  SizedBox(
+                    width: double.infinity,
+                    height: 54,
+                    child: AuthButton(
+                      icon: SvgPicture.asset(
+                        UiKitAssets.icons.icAppleWhite.keyName,
                       ),
-
-                      Padding(padding: EdgeInsets.symmetric(vertical: 8)),
-
-                      isIos
-                          ? Container(
-                              width: double.infinity,
-                              height: 54,
-                              child: Auth_button(
-                                icon: SvgPicture.asset(
-                                  UiKitAssets.icons.icAppleWhite.keyName,
-                                ),
-                                text: localization.continueWithApple,
-                                onPressed: () {},
-                              ),
-                            )
-                          : Padding(
-                              padding: EdgeInsets.all(0),
-                            ),
-                      // :Padding(padding: EdgeInsets.all(0),) ,
-                    ],
+                      text: localization.continueWithApple,
+                      onPressed: () {},
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 30, horizontal: 48),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 32),
                 ),
               ],
             ),

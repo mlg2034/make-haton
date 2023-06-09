@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ui_kit/src/theme/app_colors.dart';
 import 'package:ui_kit/ui_kit.dart';
 
-class Auth_button extends StatelessWidget {
+class AuthButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget icon;
   final String text;
 
 
-  const Auth_button({
+  const AuthButton({
     super.key,
     required this.icon,
     required this.text,
@@ -30,7 +29,7 @@ class Auth_button extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Text(
               text,
-              style: continueWithGoogleTextStyle,
+              style: buttonClassic,
             ),
           ),
         ],
