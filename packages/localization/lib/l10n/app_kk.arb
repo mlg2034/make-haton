@@ -9,5 +9,11 @@
     "terms_of_service":"Қызмет Көрсету Шарттары",
     "engLangTitle": "Ағылшынша",
     "rusLangTitle": "Орсыша",
-    "kazLangTitle": "Қазақша"
+    "kazLangTitle": "Қазақша",
+
+    "hello": "Сәлем",
+    "welcome": "WordMentor бағдарламасына қош келдіңіз! Мұнда сіз сөздерді үйрене аласыз!",
+    "authorize": "Сөздерді үйрену үшін жүйеге кіріңіз",
+    "continueWithGoogle": "Google-мен жалғастыру",
+    "continueWithApple": "AppleID-мен жалғастыру"
 }

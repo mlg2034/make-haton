@@ -160,6 +160,36 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Казахский'**
   String get kazLangTitle;
+
+  /// No description provided for @hello.
+  ///
+  /// In ru, this message translates to:
+  /// **'Привет'**
+  String get hello;
+
+  /// No description provided for @welcome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добро пожаловать в WordMentor! Здесь учат словам!'**
+  String get welcome;
+
+  /// No description provided for @authorize.
+  ///
+  /// In ru, this message translates to:
+  /// **'Авторизуйтесь чтобы начать!'**
+  String get authorize;
+
+  /// No description provided for @continueWithGoogle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить с Google'**
+  String get continueWithGoogle;
+
+  /// No description provided for @continueWithApple.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить с AppleID'**
+  String get continueWithApple;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -9,5 +9,12 @@
     "terms_of_service": "Terms of Service",
     "engLangTitle": "English",
     "rusLangTitle": "Russian",
-    "kazLangTitle": "Kazakh"
+    "kazLangTitle": "Kazakh",
+
+    "hello": "Hello",
+    "welcome": "Welcome to the WordMentor! Here you can learn words!",
+    "authorize": "Authorize to Learn Words!",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with AppleID"
+
 }

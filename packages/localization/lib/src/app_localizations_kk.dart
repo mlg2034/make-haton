@@ -36,4 +36,19 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get kazLangTitle => 'Қазақша';
+
+  @override
+  String get hello => 'Сәлем';
+
+  @override
+  String get welcome => 'WordMentor бағдарламасына қош келдіңіз! Мұнда сіз сөздерді үйрене аласыз!';
+
+  @override
+  String get authorize => 'Сөздерді үйрену үшін жүйеге кіріңіз';
+
+  @override
+  String get continueWithGoogle => 'Google-мен жалғастыру';
+
+  @override
+  String get continueWithApple => 'AppleID-мен жалғастыру';
 }

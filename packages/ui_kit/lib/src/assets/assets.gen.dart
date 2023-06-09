@@ -14,6 +14,9 @@ import 'package:flutter/services.dart';
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
+  /// File path: assets/fonts/OleoScript-Regular.ttf
+  String get oleoScriptRegular => 'packages/ui_kit/assets/fonts/OleoScript-Regular.ttf';
+
   /// File path: assets/fonts/WorkSans-Italic-VariableFont_wght.ttf
   String get workSansItalicVariableFontWght =>
       'packages/ui_kit/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf';
@@ -23,11 +26,15 @@ class $AssetsFontsGen {
       'packages/ui_kit/assets/fonts/WorkSans-VariableFont_wght.ttf';
 
   /// List of all assets
-  List<String> get values => [workSansItalicVariableFontWght, workSansVariableFontWght];
+  List<String> get values =>
+      [oleoScriptRegular, workSansItalicVariableFontWght, workSansVariableFontWght];
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
+
+  /// File path: assets/icons/ic_apple_white.svg
+  SvgGenImage get icAppleWhite => const SvgGenImage('assets/icons/ic_apple_white.svg');
 
   /// File path: assets/icons/ic_arrow_back.svg
   SvgGenImage get icArrowBack => const SvgGenImage('assets/icons/ic_arrow_back.svg');
@@ -44,6 +51,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_collections.svg
   SvgGenImage get icCollections => const SvgGenImage('assets/icons/ic_collections.svg');
 
+  /// File path: assets/icons/ic_google_icon.svg
+  SvgGenImage get icGoogleIcon => const SvgGenImage('assets/icons/ic_google_icon.svg');
+
   /// File path: assets/icons/ic_settings.svg
   SvgGenImage get icSettings => const SvgGenImage('assets/icons/ic_settings.svg');
 
@@ -51,24 +61,24 @@ class $AssetsIconsGen {
   SvgGenImage get icSpeach => const SvgGenImage('assets/icons/ic_speach.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [icArrowBack, icArrowNextGreen, icArrowNextRed, icClose, icCollections, icSettings, icSpeach];
+  List<SvgGenImage> get values => [
+        icAppleWhite,
+        icArrowBack,
+        icArrowNextGreen,
+        icArrowNextRed,
+        icClose,
+        icCollections,
+        icGoogleIcon,
+        icSettings,
+        icSpeach
+      ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/ic_arrow_back.svg
-  SvgGenImage get icArrowBack => const SvgGenImage('assets/images/ic_arrow_back.svg');
-
-  /// File path: assets/images/ic_cancel.svg
-  SvgGenImage get icCancel => const SvgGenImage('assets/images/ic_cancel.svg');
-
-  /// File path: assets/images/ic_help.svg
-  SvgGenImage get icHelp => const SvgGenImage('assets/images/ic_help.svg');
-
-  /// File path: assets/images/ic_settings.svg
-  SvgGenImage get icSettings => const SvgGenImage('assets/images/ic_settings.svg');
+  /// File path: assets/images/im_auth.jpg
+  AssetGenImage get imAuth => const AssetGenImage('assets/images/im_auth.jpg');
 
   /// File path: assets/images/im_notebook-front-gradient.svg
   SvgGenImage get imNotebookFrontGradient =>
@@ -78,8 +88,7 @@ class $AssetsImagesGen {
   SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [icArrowBack, icCancel, icHelp, icSettings, imNotebookFrontGradient, imToroid];
+  List<dynamic> get values => [imAuth, imNotebookFrontGradient, imToroid];
 }
 
 class UiKitAssets {

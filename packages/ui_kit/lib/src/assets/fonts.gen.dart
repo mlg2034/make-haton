@@ -10,6 +10,9 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: Oleo Script
+  static const String oleoScript = 'Oleo Script';
+
   /// Font family: Work Sans
   static const String workSans = 'Work Sans';
 }

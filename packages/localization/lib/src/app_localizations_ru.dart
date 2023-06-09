@@ -36,4 +36,19 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get kazLangTitle => 'Казахский';
+
+  @override
+  String get hello => 'Привет';
+
+  @override
+  String get welcome => 'Добро пожаловать в WordMentor! Здесь учат словам!';
+
+  @override
+  String get authorize => 'Авторизуйтесь чтобы начать!';
+
+  @override
+  String get continueWithGoogle => 'Продолжить с Google';
+
+  @override
+  String get continueWithApple => 'Продолжить с AppleID';
 }

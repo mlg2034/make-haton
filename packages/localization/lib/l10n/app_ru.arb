@@ -9,5 +9,11 @@
     "terms_of_service":"Условия Пользования",
     "engLangTitle": "Английский",
     "rusLangTitle": "Русский",
-    "kazLangTitle": "Казахский"
+    "kazLangTitle": "Казахский",
+
+    "hello": "Привет",
+    "welcome": "Добро пожаловать в WordMentor! Здесь учат словам!",
+    "authorize": "Авторизуйтесь чтобы начать!",
+    "continueWithGoogle": "Продолжить с Google",
+    "continueWithApple": "Продолжить с AppleID"
 }

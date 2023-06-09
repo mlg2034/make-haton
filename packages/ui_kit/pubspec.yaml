@@ -31,6 +31,9 @@ flutter:
       fonts:
         - asset: assets/fonts/WorkSans-Italic-VariableFont_wght.ttf
         - asset: assets/fonts/WorkSans-VariableFont_wght.ttf
+    - family: Oleo Script
+      fonts:
+        - asset: assets/fonts/OleoScript-Regular.ttf
 flutter_gen:
   output: lib/src/assets/
   line_length: 100
@@ -39,6 +42,7 @@ flutter_gen:
     outputs:
       package_parameter_enabled: true
       class_name: UiKitAssets
+
 
   integrations:
     flutter_svg: true
