@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui_kit/ui_kit.dart';
 
-
-
 class QuizPage extends StatelessWidget {
   const QuizPage({super.key});
 
@@ -25,10 +23,8 @@ class QuizPage extends StatelessWidget {
                   ),
                   child: SvgPicture.asset(UiKitAssets.images.icCancel.keyName),
                 ),
-
               ],
             ),
-
           ],
         ),
       ),

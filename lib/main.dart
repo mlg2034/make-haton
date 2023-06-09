@@ -5,9 +5,6 @@ import 'package:make_haton/src/domain/entities/language_enum.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
 import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart';
 
-
-
-
 void main() {
   runApp(const MyApp());
 }
