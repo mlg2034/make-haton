@@ -6,8 +6,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? onLeadingTap;
   final Widget? trailing;
 
-  const CustomAppBar({Key? key, this.title, this.onLeadingTap, this.trailing})
-      : super(key: key);
+  const CustomAppBar({Key? key, this.title, this.onLeadingTap, this.trailing}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +31,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 )
               : const Spacer(),
-          if(title!=null)Text(
-            title,
-            style: settingsTextStyle,
-          ),
+          if (title != null)
+            Text(
+              title,
+              style: settingsTextStyle,
+            ),
           const Spacer(),
           if (trailing != null) trailing
         ],

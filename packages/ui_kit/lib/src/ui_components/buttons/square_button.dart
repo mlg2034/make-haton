@@ -25,7 +25,10 @@ class SquareButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               color: AppColors.white,
             ),
-            child: child,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: child,
+            ),
           ),
         ),
       ),

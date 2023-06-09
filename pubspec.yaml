@@ -15,6 +15,10 @@ dependencies:
   flutter_svg: ^2.0.6
   ui_kit:
     path: "packages/ui_kit"
+  localization:
+    path: "packages/localization"
+  equatable: ^2.0.5
+  shared_preferences: ^2.1.1
   firebase_core: ^2.13.0
   cloud_firestore: ^4.7.1
   firebase_auth: ^4.6.1
@@ -24,17 +28,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  dart_code_metrics: ^5.7.4
   linters:
-    path: ./packages/linters
+      path: packages/linters
 
 flutter:
   uses-material-design: true
-  assets:
-    - assets/fonts/
-    - assets/images/
-  fonts:
-    - family: Work Sans
-      fonts:
-        - asset: assets/fonts/WorkSans-Italic-VariableFont_wght.ttf
-        - asset: assets/fonts/WorkSans-VariableFont_wght.ttf
-          weight: 700

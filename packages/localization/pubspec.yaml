@@ -1,0 +1,24 @@
+name: localization
+description: localization plugin for makeathon 2023
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+      sdk: flutter
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  linters:
+    path: ../linters
+
+flutter:
+  generate: true
