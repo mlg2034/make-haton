@@ -10,6 +10,13 @@
     "engLangTitle": "Ағылшынша",
     "rusLangTitle": "Орсыша",
     "kazLangTitle": "Қазақша",
+
+    "hello": "Сәлем",
+    "welcome": "WordMentor бағдарламасына қош келдіңіз! Мұнда сіз сөздерді үйрене аласыз!",
+    "authorize": "Сөздерді үйрену үшін жүйеге кіріңіз",
+    "continueWithGoogle": "Google-мен жалғастыру",
+    "continueWithApple": "AppleID-мен жалғастыру"
+
     "lesson": "Сабақ",
     "learn_the_world":"СӨЗДЕРДІ ҮЙРЕНІҢІЗ",
     "transport":"КӨЛІК",

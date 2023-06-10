@@ -6,6 +6,7 @@ export 'src/ui_components/tiles/setting_tile.dart';
 export 'src/ui_components/buttons/square_button.dart';
 export 'src/ui_components/buttons/custom_button.dart';
 export 'src/ui_components/app_bar/app_bar.dart';
+export 'src/ui_components/buttons/authorize_button.dart';
 export 'src/ui_components/app_bar/learn_app_bar.dart';
 export 'src/ui_components/buttons/select_letter_button.dart';
 export 'src/ui_components/buttons/continue_button.dart';

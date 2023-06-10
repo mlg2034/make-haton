@@ -38,6 +38,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get kazLangTitle => 'Kazakh';
 
   @override
+  String get hello => 'Hello';
+
+  @override
+  String get welcome => 'Welcome to the WordMentor! Here you can learn words!';
+
+  @override
+  String get authorize => 'Authorize to Learn Words!';
+
+  @override
+  String get continueWithGoogle => 'Continue with Google';
+
+  @override
+  String get continueWithApple => 'Continue with AppleID';
+
+  @override
   String get lesson => 'Lesson';
 
   @override

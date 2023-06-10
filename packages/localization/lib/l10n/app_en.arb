@@ -10,6 +10,11 @@
     "engLangTitle": "English",
     "rusLangTitle": "Russian",
     "kazLangTitle": "Kazakh",
+    "hello": "Hello",
+    "welcome": "Welcome to the WordMentor! Here you can learn words!",
+    "authorize": "Authorize to Learn Words!",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with AppleID"
     "lesson": "Lesson",
     "learn_the_world":"LEARN THE WORDS FROM",
     "transport":"TRANSPORT",
@@ -28,7 +33,7 @@
     "just_follow":"Just follow this process!",
     "book_example_one_sentences":"An item that people read to gain knowledge",
     "book_example_two_sentences":"THE $val"
-    
-    
+
+
 
 }

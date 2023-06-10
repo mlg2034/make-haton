@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           onPressed: () => Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
           child: SvgPicture.asset(
-            UiKitAssets.images.icSettings.keyName,
+            UiKitAssets.icons.icSettings.keyName,
           ),
         ),
       ),
