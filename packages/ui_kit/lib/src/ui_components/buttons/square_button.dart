@@ -4,11 +4,13 @@ import 'package:ui_kit/src/theme/app_colors.dart';
 class SquareButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
+  final double sizeFactor;
 
   const SquareButton({
     super.key,
     required this.child,
     this.onPressed,
+    this.sizeFactor = 1.0,
   });
 
   @override
@@ -16,7 +18,7 @@ class SquareButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: SizedBox(
-        width: 50,
+        width: 50*sizeFactor,
         child: AspectRatio(
           aspectRatio: 1.0,
           child: DecoratedBox(

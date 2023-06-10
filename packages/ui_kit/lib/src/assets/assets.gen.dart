@@ -44,6 +44,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/book.png
   AssetGenImage get book => const AssetGenImage('assets/icons/book.png');
 
+  /// File path: assets/icons/books.svg
+  SvgGenImage get books => const SvgGenImage('assets/icons/books.svg');
+
   /// File path: assets/icons/exit.svg
   SvgGenImage get exit => const SvgGenImage('assets/icons/exit.svg');
 
@@ -83,9 +86,13 @@ class $AssetsIconsGen {
   /// File path: assets/icons/sound.svg
   SvgGenImage get sound => const SvgGenImage('assets/icons/sound.svg');
 
+  /// File path: assets/icons/trencher.svg
+  SvgGenImage get trencher => const SvgGenImage('assets/icons/trencher.svg');
+
   /// List of all assets
   List<dynamic> get values => [
         book,
+        books,
         exit,
         icAppleWhite,
         icArrowBack,
@@ -98,7 +105,8 @@ class $AssetsIconsGen {
         icSettings,
         icSpeach,
         questionMark,
-        sound
+        sound,
+        trencher
       ];
 }
 

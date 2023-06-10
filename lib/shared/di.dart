@@ -1,6 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:make_haton/src/ui/blocs/navigator_bloc/navigation_service.dart';
 
+typedef NavigatorKey = GlobalKey<NavigatorState>;
 final getIt = GetIt.instance;
 
 @InjectableInit(
@@ -8,8 +11,7 @@ final getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: true, // default
 )
-
-void setupDi() {
+void configDi() {
   ///example:
   ///  Register your repository/service
   ///  GetIt.I.registerFactory<ServiceName>(ServiceName());
@@ -19,5 +21,12 @@ void setupDi() {
   ///   child: Text("Update"),
   ///   onPressed: getIt<AppModel>().update   // given that your AppModel has a method update
   /// ),
-    ///add dependencies here:
+  ///add dependencies here:
+  GetIt.I.registerSingleton<NavigatorKey>(GlobalKey<NavigatorState>(debugLabel: 'navigatorStateKeyProvider'));
+  GetIt.I.registerSingleton<NavigatorManager>(NavigatorManager(getIt.get<GlobalKey<NavigatorState>>()));
+  GetIt.I.registerLazySingleton<Test>(() => const Test());
+}
+
+class Test{
+  const Test();
 }

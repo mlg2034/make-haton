@@ -19,11 +19,34 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Divider(),
+            const Divider(),
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SquareButton(
+                    sizeFactor: 2.5,
+                    child: SvgPicture.asset(
+                      UiKitAssets.icons.trencher.keyName,
+                    ),
+                  ),
+                  const SizedBox(width: 8,),
+                  SquareButton(
+                    sizeFactor: 2.5,
+                    child: SvgPicture.asset(
+                      UiKitAssets.icons.books.keyName,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 32,),
           ],
         ),
       ),
