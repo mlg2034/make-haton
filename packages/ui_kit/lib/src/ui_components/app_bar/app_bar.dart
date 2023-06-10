@@ -16,6 +16,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 48, left: 16, right: 16),
       child: Row(
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           onLeadingTap != null
               ? Padding(
@@ -30,14 +31,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     ),
                   ),
                 )
-              : const Spacer(),
+              : const Spacer(flex: 6,),
+              const Spacer(flex: 4,),
           if (title != null)
-            Text(
-              title,
-              style: settingsTextStyle,
+            Center(
+              child: Text(
+                  title,
+                  style: settingsTextStyle,
+                ),
             ),
-          const Spacer(),
-          if (trailing != null) trailing
+          
+          const Spacer(flex: 6,),
+          
+          if (trailing != null) trailing, 
+          
         ],
       ),
     );

@@ -9,5 +9,15 @@
     "terms_of_service":"Условия Пользования",
     "engLangTitle": "Английский",
     "rusLangTitle": "Русский",
-    "kazLangTitle": "Казахский"
+    "kazLangTitle": "Казахский",
+    "lesson": "Урок",
+    "learn_the_world":"УЧИТЕ СЛОВА ИЗ",
+    "transport":"ТРАНСПОРТ",
+    "category":"КАТЕГОРИИ",
+    "start":"НАЧАТЬ",
+    "book":"КНИГА",
+    "learn":"УЧИТЬ",
+    "check":"ПРОВЕРИТЬ",
+    "fill_the_blank":"ПОДСТАВЬТЕ ПРАВИЛЬНО БУКВУ",
+    "got_it":"ПОНЯТНО"
 }
