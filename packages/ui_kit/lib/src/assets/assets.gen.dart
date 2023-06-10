@@ -47,6 +47,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/books.svg
   SvgGenImage get books => const SvgGenImage('assets/icons/books.svg');
 
+  /// File path: assets/icons/coin.svg
+  SvgGenImage get coin => const SvgGenImage('assets/icons/coin.svg');
+
   /// File path: assets/icons/exit.svg
   SvgGenImage get exit => const SvgGenImage('assets/icons/exit.svg');
 
@@ -93,6 +96,7 @@ class $AssetsIconsGen {
   List<dynamic> get values => [
         book,
         books,
+        coin,
         exit,
         icAppleWhite,
         icArrowBack,

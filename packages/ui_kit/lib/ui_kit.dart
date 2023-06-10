@@ -12,3 +12,4 @@ export 'src/ui_components/buttons/select_letter_button.dart';
 export 'src/ui_components/buttons/continue_button.dart';
 export 'src/ui_components/bottomsheet/answer_bottomsheet.dart';
 export 'src/ui_components/lottie.dart';
+export 'src/theme/decorations/fake_button.dart';

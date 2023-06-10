@@ -304,6 +304,12 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'PRACTICED {count} words today'**
   String wordsLearnedTitle(Object count);
+
+  /// No description provided for @welcomeText.
+  ///
+  /// In ru, this message translates to:
+  /// **'👋 Good morning,'**
+  String get welcomeText;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

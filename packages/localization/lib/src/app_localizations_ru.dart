@@ -112,4 +112,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String wordsLearnedTitle(Object count) {
     return 'PRACTICED $count words today';
   }
+
+  @override
+  String get welcomeText => '👋 Good morning,';
 }

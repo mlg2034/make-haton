@@ -16,22 +16,51 @@ class HomePage extends StatelessWidget {
     final l = context.locale;
 
     return Scaffold(
-      appBar: const CustomAppBar(
-          // trailing: AppOutlinedButton.square(
-          //   onPressed: () => Navigator.of(context)
-          //       .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
-          //   child: SvgPicture.asset(
-          //     UiKitAssets.icons.icSettings.keyName,
-          //   ),
-          // ),
+      appBar: AppBar(
+        title: Padding(
+          padding: const EdgeInsets.all(48.0),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Text(l.welcomeText),
+                  const Text('User'),
+                ],
+              ),
+              const Spacer(),
+              FakeButton(
+                child: Center(
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        UiKitAssets.icons.coin.keyName,
+                      ),
+                      const Text('200'),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
+        ),
+        // trailing: AppOutlinedButton.square(
+        //   onPressed: () => Navigator.of(context)
+        //       .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
+        //   child: SvgPicture.asset(
+        //     UiKitAssets.icons.icSettings.keyName,
+        //   ),
+        // ),
+      ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Divider(),
             const Spacer(),
-            LottieWidget(lottieKeyName: UiKitAssets.lottie.robot.keyName),
+            SvgPicture.asset(
+              UiKitAssets.images.imNotebookFrontGradient.keyName,
+            ),
+            // LottieWidget(lottieKeyName: UiKitAssets.lottie.robot.keyName),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 24),
               child: Row(
@@ -52,12 +81,15 @@ class HomePage extends StatelessWidget {
                   ),
                   Expanded(
                     child: AppOutlinedButton.rect(
+                      onPressed: () => Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
                       aspectRatio: 158 / 64,
                       child: Center(
-                          child: SvgPicture.asset(
-                        UiKitAssets.icons.icSettings.keyName,
-                            width: 25,
-                      ),),
+                        child: SvgPicture.asset(
+                          UiKitAssets.icons.icSettings.keyName,
+                          width: 25,
+                        ),
+                      ),
                     ),
                   ),
                 ],
