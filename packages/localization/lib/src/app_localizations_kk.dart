@@ -65,7 +65,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get category => 'САНАТ';
 
   @override
-  String get start => 'НАЧАТЬ';
+  String get start => 'БАСТАУ';
 
   @override
   String get book => 'КІТАП';
@@ -81,4 +81,35 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get got_it => 'ТҮСІНІКТІ';
+
+  @override
+  String get learn_session => 'Learn Session';
+
+  @override
+  String get example_help_main_text => 'During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:';
+
+  @override
+  String get example_help_first_sub_text => '1. Learn a Word';
+
+  @override
+  String get example_help_second_sub_text => '2. Learn example of its use in sentences';
+
+  @override
+  String get example_help_third_sub_text => '3. Fill a blank Letter in a Word';
+
+  @override
+  String get just_follow => 'Just follow this process!';
+
+  @override
+  String get book_example_one_sentences => 'An item that people read to gain knowledge';
+
+  @override
+  String book_example_two_sentences(Object val) {
+    return 'THE $val';
+  }
+
+  @override
+  String wordsLearnedTitle(Object count) {
+    return 'PRACTICED $count words today';
+  }
 }

@@ -23,7 +23,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
                   child: GestureDetector(
                     onTap: onLeadingTap,
-                    child: const SquareButton(
+                    child: const AppOutlinedButton.square(
                       child: Icon(
                         Icons.arrow_back_ios_outlined,
                         color: AppColors.black,

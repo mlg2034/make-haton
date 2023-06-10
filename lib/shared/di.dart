@@ -22,11 +22,25 @@ void configDi() {
   ///   onPressed: getIt<AppModel>().update   // given that your AppModel has a method update
   /// ),
   ///add dependencies here:
-  GetIt.I.registerSingleton<NavigatorKey>(GlobalKey<NavigatorState>(debugLabel: 'navigatorStateKeyProvider'));
-  GetIt.I.registerSingleton<NavigatorManager>(NavigatorManager(getIt.get<GlobalKey<NavigatorState>>()));
-  GetIt.I.registerLazySingleton<Test>(() => const Test());
+  GetIt.I.registerSingleton<NavigatorKey>(
+      GlobalKey<NavigatorState>(debugLabel: 'navigatorStateKeyProvider'));
+  GetIt.I.registerSingleton<NavigatorManager>(
+      NavigatorManager(getIt.get<GlobalKey<NavigatorState>>()));
+  GetIt.I.registerLazySingleton<TestUseCase>(() => const TestUseCase());
 }
 
-class Test{
-  const Test();
+class TestUseCase {
+  const TestUseCase();
+}
+
+class TestBloc {
+  final TestUseCase createUser;
+  const TestBloc({required this.createUser});
+
+  onChange(event) {
+    // if(event is CreateUser){
+    //   final a = createUser.call();
+    //   yield State.copyWith(salary: 1000000);
+    // }
+  }
 }

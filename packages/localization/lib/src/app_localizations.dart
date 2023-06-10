@@ -250,6 +250,60 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'ПОНЯТНО'**
   String get got_it;
+
+  /// No description provided for @learn_session.
+  ///
+  /// In ru, this message translates to:
+  /// **'Learn Session'**
+  String get learn_session;
+
+  /// No description provided for @example_help_main_text.
+  ///
+  /// In ru, this message translates to:
+  /// **'During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:'**
+  String get example_help_main_text;
+
+  /// No description provided for @example_help_first_sub_text.
+  ///
+  /// In ru, this message translates to:
+  /// **'1. Learn a Word'**
+  String get example_help_first_sub_text;
+
+  /// No description provided for @example_help_second_sub_text.
+  ///
+  /// In ru, this message translates to:
+  /// **'2. Learn example of its use in sentences'**
+  String get example_help_second_sub_text;
+
+  /// No description provided for @example_help_third_sub_text.
+  ///
+  /// In ru, this message translates to:
+  /// **'3. Fill a blank Letter in a Word'**
+  String get example_help_third_sub_text;
+
+  /// No description provided for @just_follow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Just follow this process!'**
+  String get just_follow;
+
+  /// No description provided for @book_example_one_sentences.
+  ///
+  /// In ru, this message translates to:
+  /// **'An item that people read to gain knowledge'**
+  String get book_example_one_sentences;
+
+  /// No description provided for @book_example_two_sentences.
+  ///
+  /// In ru, this message translates to:
+  /// **'THE {val}'**
+  String book_example_two_sentences(Object val);
+
+  /// No description provided for @wordsLearnedTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'PRACTICED {count} words today'**
+  String wordsLearnedTitle(Object count);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

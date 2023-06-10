@@ -10,21 +10,28 @@
     "engLangTitle": "Ағылшынша",
     "rusLangTitle": "Орсыша",
     "kazLangTitle": "Қазақша",
-
     "hello": "Сәлем",
     "welcome": "WordMentor бағдарламасына қош келдіңіз! Мұнда сіз сөздерді үйрене аласыз!",
     "authorize": "Сөздерді үйрену үшін жүйеге кіріңіз",
     "continueWithGoogle": "Google-мен жалғастыру",
-    "continueWithApple": "AppleID-мен жалғастыру"
-
+    "continueWithApple": "AppleID-мен жалғастыру",
     "lesson": "Сабақ",
     "learn_the_world":"СӨЗДЕРДІ ҮЙРЕНІҢІЗ",
     "transport":"КӨЛІК",
     "category":"САНАТ",
-    "START":"БАСТАУ",
+    "start":"БАСТАУ",
     "book":"КІТАП",
     "learn": "ОҚУ",
     "check":"ТЕКСЕРУ",
     "fill_the_blank":"БОС ОРЫНАДЫ ТОЛТЫРЫНЫЗ",
-    "got_it": "ТҮСІНІКТІ"
+    "got_it": "ТҮСІНІКТІ",
+    "learn_session":"Learn Session",
+    "example_help_main_text":"During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:",
+    "example_help_first_sub_text":"1. Learn a Word",
+    "example_help_second_sub_text":"2. Learn example of its use in sentences",
+    "example_help_third_sub_text":"3. Fill a blank Letter in a Word",
+    "just_follow":"Just follow this process!",
+    "book_example_one_sentences":"An item that people read to gain knowledge",
+    "book_example_two_sentences":"THE {val}",
+    "wordsLearnedTitle": "PRACTICED {count} words today"
 }
