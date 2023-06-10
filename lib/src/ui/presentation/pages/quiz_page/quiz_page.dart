@@ -13,6 +13,11 @@ class QuizPage extends StatelessWidget {
           children: [
             Row(
               children: [
+                SquareButton(
+                  child: SvgPicture.asset(
+                    UiKitAssets.images.icCancel.keyName,
+                  ),
+                ),
                 Container(
                   width: 53,
                   height: 53,
