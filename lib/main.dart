@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ), 
-            home: const LessonPreviewPage(),
+            home: const HomePage(),
             // locale: state.selectedLanguage.value, 
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,

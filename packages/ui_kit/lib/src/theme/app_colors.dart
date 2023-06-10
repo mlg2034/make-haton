@@ -12,4 +12,6 @@ class AppColors {
   static const learnButtonColor = Color.fromRGBO(71, 89, 108, 1);
   static const checkButtonColor= Color.fromRGBO(101, 189, 105, 1);
   static const lightGreen = Color.fromRGBO(101, 189, 105, 1);
+  static const coinColor = Color.fromRGBO(135, 128, 178, 1);
+  static const coinContainerColor= Color.fromRGBO(242, 243, 243, 1);
 }
