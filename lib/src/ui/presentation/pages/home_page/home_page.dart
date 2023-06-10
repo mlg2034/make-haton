@@ -16,14 +16,14 @@ class HomePage extends StatelessWidget {
     final l = context.locale;
 
     return Scaffold(
-      appBar: const CustomAppBar(
-          // trailing: AppOutlinedButton.square(
-          //   onPressed: () => Navigator.of(context)
-          //       .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
-          //   child: SvgPicture.asset(
-          //     UiKitAssets.icons.icSettings.keyName,
-          //   ),
-          // ),
+      appBar: CustomAppBar(
+          trailing: AppOutlinedButton.square(
+            onPressed: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
+            child: SvgPicture.asset(
+              UiKitAssets.icons.icSettings.keyName,
+            ),
+          ),
           ),
       body: SafeArea(
         child: Column(
@@ -54,10 +54,11 @@ class HomePage extends StatelessWidget {
                     child: AppOutlinedButton.rect(
                       aspectRatio: 158 / 64,
                       child: Center(
-                          child: SvgPicture.asset(
-                        UiKitAssets.icons.icSettings.keyName,
-                            width: 25,
-                      ),),
+                        child: SvgPicture.asset(
+                          UiKitAssets.icons.icSettings.keyName,
+                          width: 25,
+                        ),
+                      ),
                     ),
                   ),
                 ],

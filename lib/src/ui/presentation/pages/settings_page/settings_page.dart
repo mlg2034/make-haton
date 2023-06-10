@@ -15,26 +15,23 @@ class _SettingsPageState extends State<SettingsPage> {
     final localization = context.locale;
 
     return Scaffold(
-      appBar: CustomAppBar(title: localization.settings),
+      backgroundColor: Colors.white,
+      appBar: CustomAppBar(title: localization.settings, onLeadingTap: () => Navigator.pop(context)),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 6,
-          ),
-          const Divider(),
           SettingsTile(
             title: localization.dark_theme,
           ),
-          const Divider(),
+          const Divider(color: AppColors.border,),
           SettingsTile(
             title: localization.dark_theme,
           ),
-          const Divider(),
+          const Divider(color: AppColors.border,),
           SettingsTile(
             title: localization.notifications,
           ),
-          const Divider(),
+          const Divider(color: AppColors.border,),
           SettingsTile(
             title: localization.language,
             customActionWidget: GestureDetector(
@@ -48,20 +45,26 @@ class _SettingsPageState extends State<SettingsPage> {
             ),
           ),
           const Divider(),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-            alignment: Alignment.topLeft,
-            child: Text(
-              localization.privacy_policy,
-              style: settingsInfoTextStyle,
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-            alignment: Alignment.topLeft,
-            child: Text(
-              localization.terms_of_service,
-              style: settingsInfoTextStyle,
+          Padding(
+            padding: const EdgeInsets.all(48),
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    localization.privacy_policy,
+                    style: settingsInfoTextStyle,
+                  ),
+                ),
+                SizedBox(height: 24,),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    localization.terms_of_service,
+                    style: settingsInfoTextStyle,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
