@@ -20,11 +20,11 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
         automaticallyImplyLeading: false,
         title: LearnAppBar(
           title: localization.lesson,
-          onLeadingTapExit: (){
+          onLeadingTapExit: () {
             Navigator.of(context).pop();
           },
           onLeadingTapHelp: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HelpPage()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => HelpPage()));
           },
         ),
       ),

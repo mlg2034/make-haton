@@ -24,7 +24,11 @@ class _LessonPageState extends State<LessonPage> {
         title: LearnAppBar(
           title: localization.lesson,
           onLeadingTapExit: () => Navigator.of(context).pop(),
-          onLeadingTapHelp:()=> Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HelpPage(),),),
+          onLeadingTapHelp: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => HelpPage(),
+            ),
+          ),
         ),
       ),
       body: Center(
@@ -122,8 +126,8 @@ class _LessonPageState extends State<LessonPage> {
             ),
             GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => LessonExample()));
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => LessonExample()));
                 },
                 child: ContinueButton(
                   color: AppColors.learnButtonColor,

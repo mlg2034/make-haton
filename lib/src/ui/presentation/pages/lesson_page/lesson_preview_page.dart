@@ -17,7 +17,7 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
-    
+
     return Scaffold(
       appBar: AppBar(
         title: LearnAppBar(

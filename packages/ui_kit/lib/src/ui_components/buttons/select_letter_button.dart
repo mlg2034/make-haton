@@ -21,7 +21,7 @@ class _SelectLettersButtonState extends State<SelectLettersButton> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          isSelected = !isSelected; 
+          isSelected = !isSelected;
         });
       },
       child: Container(

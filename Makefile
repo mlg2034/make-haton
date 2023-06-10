@@ -7,7 +7,7 @@ analyze_all:
 
 # Generate ui_kit (just assets now)
 gen_kit:
-	cd packages/ui_kit && flutter pub get && flutter packages pub run build_runner build --delete-conflicting-outputs
+	cd packages/ui_kit && flutter pub get && dart run build_runner build --delete-conflicting-outputs
 
 ### need to create localization package
 loc:

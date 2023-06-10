@@ -16,7 +16,12 @@ class LessonExample extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: LearnAppBar(title: 'LESSON', onLeadingTapExit: () => Navigator.of(context).pop(),onLeadingTapHelp: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context) =>HelpPage() )),),
+        title: LearnAppBar(
+          title: 'LESSON',
+          onLeadingTapExit: () => Navigator.of(context).pop(),
+          onLeadingTapHelp: () =>
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HelpPage())),
+        ),
       ),
       body: Center(
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -97,16 +102,16 @@ class LessonExample extends StatelessWidget {
             height: 15,
           ),
           GestureDetector(
-            onTap: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>LessonAttetionPage()));
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => LessonAttetionPage()));
             },
             child: Container(
               alignment: Alignment.center,
               width: 332,
               height: 56,
               decoration: BoxDecoration(
-                  color: AppColors.learnButtonColor,
-                  borderRadius: BorderRadius.circular(16)),
+                  color: AppColors.learnButtonColor, borderRadius: BorderRadius.circular(16)),
               child: Text(
                 'GOT IT',
                 style: buttonTextTextStyle,

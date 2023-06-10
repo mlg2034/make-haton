@@ -6,7 +6,6 @@ part 'learn_pages_state.dart';
 
 class LearnPagesBloc extends Bloc<LearnPagesEvent, LearnPagesState> {
   LearnPagesBloc() : super(LearnPagesInitial()) {
-    on<LearnPagesEvent>((event, emit) {
-    });
+    on<LearnPagesEvent>((event, emit) {});
   }
 }

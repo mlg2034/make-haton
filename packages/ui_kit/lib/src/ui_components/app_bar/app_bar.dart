@@ -31,20 +31,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     ),
                   ),
                 )
-              : const Spacer(flex: 6,),
-              const Spacer(flex: 4,),
+              : const Spacer(
+                  flex: 6,
+                ),
+          const Spacer(
+            flex: 4,
+          ),
           if (title != null)
             Center(
               child: Text(
-                  title,
-                  style: settingsTextStyle,
-                ),
+                title,
+                style: settingsTextStyle,
+              ),
             ),
-          
-          const Spacer(flex: 6,),
-          
-          if (trailing != null) trailing, 
-          
+          const Spacer(
+            flex: 6,
+          ),
+          if (trailing != null) trailing,
         ],
       ),
     );

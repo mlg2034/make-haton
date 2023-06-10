@@ -7,7 +7,6 @@ import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-
 import 'package:make_haton/domain/repository/firebase/authentication.dart';
 
 class AuthPage extends StatefulWidget {
@@ -84,7 +83,9 @@ class _AuthPageState extends State<AuthPage> {
                       UiKitAssets.icons.icGoogleIcon.keyName,
                     ),
                     text: localization.continueWithGoogle,
-                    onPressed: (){AuthServise().signInWithGoogle();},
+                    onPressed: () {
+                      AppAuthService().signInWithGoogle();
+                    },
                   ),
                 ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
@@ -97,7 +98,9 @@ class _AuthPageState extends State<AuthPage> {
                         UiKitAssets.icons.icAppleWhite.keyName,
                       ),
                       text: localization.continueWithApple,
-                      onPressed: (){AuthServise().signInWithGoogle();},
+                      onPressed: () {
+                        AppAuthService().signInWithGoogle();
+                      },
                     ),
                   ),
                 const Padding(

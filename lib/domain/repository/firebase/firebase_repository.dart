@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirebaseRepository {
-  final CollectionReference _usersCollection =
-      FirebaseFirestore.instance.collection('users');
+  final CollectionReference _usersCollection = FirebaseFirestore.instance.collection('users');
 
   Future<void> addUser(String name, String email) async {
     try {
