@@ -6,7 +6,7 @@ import 'package:make_haton/src/domain/entities/language_enum.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
 import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart';
 import 'package:make_haton/src/ui/presentation/pages/auth_page/auth_page.dart';
-
+import 'package:make_haton/domain/repository/firebase/authentication.dart';
 import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_preview_page.dart';
 
 void main() async{
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: const LessonPreviewPage(),
+            home: AuthServise().handleAuthState(),
             locale: state.selectedLanguage.value,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,

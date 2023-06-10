@@ -7,9 +7,17 @@ import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-class AuthPage extends StatelessWidget {
+
+import 'package:make_haton/domain/repository/firebase/authentication.dart';
+
+class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
 
+  @override
+  _AuthPageState createState() => _AuthPageState();
+}
+
+class _AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
@@ -76,7 +84,7 @@ class AuthPage extends StatelessWidget {
                       UiKitAssets.icons.icGoogleIcon.keyName,
                     ),
                     text: localization.continueWithGoogle,
-                    onPressed: () {},
+                    onPressed: (){AuthServise().signInWithGoogle();},
                   ),
                 ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
@@ -89,7 +97,7 @@ class AuthPage extends StatelessWidget {
                         UiKitAssets.icons.icAppleWhite.keyName,
                       ),
                       text: localization.continueWithApple,
-                      onPressed: () {},
+                      onPressed: (){AuthServise().signInWithGoogle();},
                     ),
                   ),
                 const Padding(
