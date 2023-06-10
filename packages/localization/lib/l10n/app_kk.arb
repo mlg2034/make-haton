@@ -9,5 +9,15 @@
     "terms_of_service":"Қызмет Көрсету Шарттары",
     "engLangTitle": "Ағылшынша",
     "rusLangTitle": "Орсыша",
-    "kazLangTitle": "Қазақша"
+    "kazLangTitle": "Қазақша",
+    "lesson": "Сабақ",
+    "learn_the_world":"СӨЗДЕРДІ ҮЙРЕНІҢІЗ",
+    "transport":"КӨЛІК",
+    "category":"САНАТ",
+    "START":"БАСТАУ",
+    "book":"КІТАП",
+    "learn": "ОҚУ",
+    "check":"ТЕКСЕРУ",
+    "fill_the_blank":"БОС ОРЫНАДЫ ТОЛТЫРЫНЫЗ",
+    "got_it": "ТҮСІНІКТІ"
 }

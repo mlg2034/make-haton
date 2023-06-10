@@ -36,4 +36,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get kazLangTitle => 'Kazakh';
+
+  @override
+  String get lesson => 'Lesson';
+
+  @override
+  String get learn_the_world => 'LEARN THE WORDS FROM';
+
+  @override
+  String get transport => 'TRANSPORT';
+
+  @override
+  String get category => 'CATEGORY';
+
+  @override
+  String get start => 'START';
+
+  @override
+  String get book => 'BOOK';
+
+  @override
+  String get learn => 'LEARN';
+
+  @override
+  String get check => 'CHECK';
+
+  @override
+  String get fill_the_blank => 'FILL THE BLANK LETTER';
+
+  @override
+  String get got_it => 'GOT IT';
 }
