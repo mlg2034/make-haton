@@ -33,13 +33,10 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             home: const LessonPreviewPage(),
-            // locale: state.selectedLanguage.value,
-            ),
-            home: const AuthPage(),
             locale: state.selectedLanguage.value,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
-          );
+            );
         },
       ),
     );

@@ -41,14 +41,14 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/ic_apple_white.svg
-  SvgGenImage get icAppleWhite => const SvgGenImage('assets/icons/ic_apple_white.svg');
-
   /// File path: assets/icons/book.png
   AssetGenImage get book => const AssetGenImage('assets/icons/book.png');
 
   /// File path: assets/icons/exit.svg
   SvgGenImage get exit => const SvgGenImage('assets/icons/exit.svg');
+
+  /// File path: assets/icons/ic_apple_white.svg
+  SvgGenImage get icAppleWhite => const SvgGenImage('assets/icons/ic_apple_white.svg');
 
   /// File path: assets/icons/ic_arrow_back.svg
   SvgGenImage get icArrowBack => const SvgGenImage('assets/icons/ic_arrow_back.svg');
@@ -84,26 +84,17 @@ class $AssetsIconsGen {
   SvgGenImage get sound => const SvgGenImage('assets/icons/sound.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
-        icAppleWhite,
-        icArrowBack,
-        icArrowNextGreen,
-        icArrowNextRed,
-        icClose,
-        icCollections,
-        icGoogleIcon,
-        icSettings,
-        icSpeach
-      ];
   List<dynamic> get values => [
         book,
         exit,
+        icAppleWhite,
         icArrowBack,
         icArrowGo,
         icArrowNextGreen,
         icArrowNextRed,
         icClose,
         icCollections,
+        icGoogleIcon,
         icSettings,
         icSpeach,
         questionMark,
