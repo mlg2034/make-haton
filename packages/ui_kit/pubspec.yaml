@@ -34,6 +34,10 @@ flutter:
     - family: Oleo Script
       fonts:
         - asset: assets/fonts/OleoScript-Regular.ttf
+    - family: Pacifico
+      fonts:
+        - asset: assets/fonts/Pacifico-Regular.ttf
+
 flutter_gen:
   output: lib/src/assets/
   line_length: 100

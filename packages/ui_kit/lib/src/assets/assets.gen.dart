@@ -17,6 +17,9 @@ class $AssetsFontsGen {
   /// File path: assets/fonts/OleoScript-Regular.ttf
   String get oleoScriptRegular => 'packages/ui_kit/assets/fonts/OleoScript-Regular.ttf';
 
+  /// File path: assets/fonts/Pacifico-Regular.ttf
+  String get pacificoRegular => 'packages/ui_kit/assets/fonts/Pacifico-Regular.ttf';
+
   /// File path: assets/fonts/WorkSans-Italic-VariableFont_wght.ttf
   String get workSansItalicVariableFontWght =>
       'packages/ui_kit/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf';
@@ -26,8 +29,12 @@ class $AssetsFontsGen {
       'packages/ui_kit/assets/fonts/WorkSans-VariableFont_wght.ttf';
 
   /// List of all assets
-  List<String> get values =>
-      [oleoScriptRegular, workSansItalicVariableFontWght, workSansVariableFontWght];
+  List<String> get values => [
+        oleoScriptRegular,
+        pacificoRegular,
+        workSansItalicVariableFontWght,
+        workSansVariableFontWght
+      ];
 }
 
 class $AssetsIconsGen {

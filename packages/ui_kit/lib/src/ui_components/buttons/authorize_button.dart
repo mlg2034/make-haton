@@ -17,6 +17,14 @@ class AuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: ButtonStyle(
+        shape: MaterialStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+      ),
+      onPressed: onPressed,
       child: Row(
         children: [
           Container(
@@ -26,7 +34,7 @@ class AuthButton extends StatelessWidget {
             child: icon,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Text(
               text,
               style: buttonClassic,
@@ -34,7 +42,6 @@ class AuthButton extends StatelessWidget {
           ),
         ],
       ),
-      onPressed: onPressed,
     );
   }
 }

@@ -13,6 +13,9 @@ class FontFamily {
   /// Font family: Oleo Script
   static const String oleoScript = 'Oleo Script';
 
+  /// Font family: Pacifico
+  static const String pacifico = 'Pacifico';
+
   /// Font family: Work Sans
   static const String workSans = 'Work Sans';
 }
