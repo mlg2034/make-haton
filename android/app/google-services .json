@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "617578075351",
+    "project_id": "make-haton",
+    "storage_bucket": "make-haton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617578075351:android:7e6855ffaaa18250964c92",
+        "android_client_info": {
+          "package_name": "com.example.make_haton"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYqTipnU75r8AWMg8mSALdNSnCjPW_wJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
