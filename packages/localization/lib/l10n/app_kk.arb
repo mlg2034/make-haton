@@ -16,4 +16,15 @@
     "authorize": "Сөздерді үйрену үшін жүйеге кіріңіз",
     "continueWithGoogle": "Google-мен жалғастыру",
     "continueWithApple": "AppleID-мен жалғастыру"
+
+    "lesson": "Сабақ",
+    "learn_the_world":"СӨЗДЕРДІ ҮЙРЕНІҢІЗ",
+    "transport":"КӨЛІК",
+    "category":"САНАТ",
+    "START":"БАСТАУ",
+    "book":"КІТАП",
+    "learn": "ОҚУ",
+    "check":"ТЕКСЕРУ",
+    "fill_the_blank":"БОС ОРЫНАДЫ ТОЛТЫРЫНЫЗ",
+    "got_it": "ТҮСІНІКТІ"
 }

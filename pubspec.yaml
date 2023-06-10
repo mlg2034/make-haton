@@ -22,6 +22,12 @@ dependencies:
   flutter_signin_button: ^2.0.0
   flutter_custom_clippers: ^2.1.0
 
+  flutter_tts: ^3.7.0
+  firebase_core: ^2.13.0
+  cloud_firestore: ^4.7.1
+  firebase_auth: ^4.6.1
+  firebase_database: ^10.2.1
+  firebase_storage: ^11.2.1
 
 dev_dependencies:
   flutter_test:

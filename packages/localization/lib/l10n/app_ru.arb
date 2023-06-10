@@ -10,10 +10,19 @@
     "engLangTitle": "Английский",
     "rusLangTitle": "Русский",
     "kazLangTitle": "Казахский",
-
     "hello": "Привет",
     "welcome": "Добро пожаловать в WordMentor! Здесь учат словам!",
     "authorize": "Авторизуйтесь чтобы начать!",
     "continueWithGoogle": "Продолжить с Google",
-    "continueWithApple": "Продолжить с AppleID"
+    "continueWithApple": "Продолжить с AppleID",
+    "lesson": "Урок",
+    "learn_the_world":"УЧИТЕ СЛОВА ИЗ",
+    "transport":"ТРАНСПОРТ",
+    "category":"КАТЕГОРИИ",
+    "start":"НАЧАТЬ",
+    "book":"КНИГА",
+    "learn":"УЧИТЬ",
+    "check":"ПРОВЕРИТЬ",
+    "fill_the_blank":"ПОДСТАВЬТЕ ПРАВИЛЬНО БУКВУ",
+    "got_it":"ПОНЯТНО"
 }

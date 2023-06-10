@@ -51,4 +51,34 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get continueWithApple => 'Продолжить с AppleID';
+
+  @override
+  String get lesson => 'Урок';
+
+  @override
+  String get learn_the_world => 'УЧИТЕ СЛОВА ИЗ';
+
+  @override
+  String get transport => 'ТРАНСПОРТ';
+
+  @override
+  String get category => 'КАТЕГОРИИ';
+
+  @override
+  String get start => 'НАЧАТЬ';
+
+  @override
+  String get book => 'КНИГА';
+
+  @override
+  String get learn => 'УЧИТЬ';
+
+  @override
+  String get check => 'ПРОВЕРИТЬ';
+
+  @override
+  String get fill_the_blank => 'ПОДСТАВЬТЕ ПРАВИЛЬНО БУКВУ';
+
+  @override
+  String get got_it => 'ПОНЯТНО';
 }

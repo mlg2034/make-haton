@@ -190,6 +190,66 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Продолжить с AppleID'**
   String get continueWithApple;
+
+  /// No description provided for @lesson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Урок'**
+  String get lesson;
+
+  /// No description provided for @learn_the_world.
+  ///
+  /// In ru, this message translates to:
+  /// **'УЧИТЕ СЛОВА ИЗ'**
+  String get learn_the_world;
+
+  /// No description provided for @transport.
+  ///
+  /// In ru, this message translates to:
+  /// **'ТРАНСПОРТ'**
+  String get transport;
+
+  /// No description provided for @category.
+  ///
+  /// In ru, this message translates to:
+  /// **'КАТЕГОРИИ'**
+  String get category;
+
+  /// No description provided for @start.
+  ///
+  /// In ru, this message translates to:
+  /// **'НАЧАТЬ'**
+  String get start;
+
+  /// No description provided for @book.
+  ///
+  /// In ru, this message translates to:
+  /// **'КНИГА'**
+  String get book;
+
+  /// No description provided for @learn.
+  ///
+  /// In ru, this message translates to:
+  /// **'УЧИТЬ'**
+  String get learn;
+
+  /// No description provided for @check.
+  ///
+  /// In ru, this message translates to:
+  /// **'ПРОВЕРИТЬ'**
+  String get check;
+
+  /// No description provided for @fill_the_blank.
+  ///
+  /// In ru, this message translates to:
+  /// **'ПОДСТАВЬТЕ ПРАВИЛЬНО БУКВУ'**
+  String get fill_the_blank;
+
+  /// No description provided for @got_it.
+  ///
+  /// In ru, this message translates to:
+  /// **'ПОНЯТНО'**
+  String get got_it;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
