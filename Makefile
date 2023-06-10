@@ -1,6 +1,6 @@
 ### generating
 gen:
-	flutter packages pub run build_runner build --delete-conflicting-outputs
+	dart run build_runner build --delete-conflicting-outputs
 
 analyze_all:
 	./scripts/analyze_all.sh

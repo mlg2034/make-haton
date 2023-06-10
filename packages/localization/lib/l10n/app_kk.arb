@@ -33,5 +33,6 @@
     "just_follow":"Just follow this process!",
     "book_example_one_sentences":"An item that people read to gain knowledge",
     "book_example_two_sentences":"THE {val}",
-    "wordsLearnedTitle": "PRACTICED {count} words today"
+    "wordsLearnedTitle": "PRACTICED {count} words today",
+    "welcomeText": "\uD83D\uDC4B Good morning,"
 }
