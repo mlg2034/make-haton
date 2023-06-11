@@ -14,32 +14,34 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-AppUser _$AppUserFromJson(Map<String, dynamic> json) {
-  return _AppUser.fromJson(json);
+UserEntity _$UserEntityFromJson(Map<String, dynamic> json) {
+  return _UserEntity.fromJson(json);
 }
 
 /// @nodoc
-mixin _$AppUser {
+mixin _$UserEntity {
   String get name => throw _privateConstructorUsedError;
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AppUserCopyWith<AppUser> get copyWith => throw _privateConstructorUsedError;
+  $UserEntityCopyWith<UserEntity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppUserCopyWith<$Res> {
-  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
-      _$AppUserCopyWithImpl<$Res, AppUser>;
+abstract class $UserEntityCopyWith<$Res> {
+  factory $UserEntityCopyWith(
+          UserEntity value, $Res Function(UserEntity) then) =
+      _$UserEntityCopyWithImpl<$Res, UserEntity>;
   @useResult
-  $Res call({String name, int id});
+  $Res call({String name, String id});
 }
 
 /// @nodoc
-class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
-    implements $AppUserCopyWith<$Res> {
-  _$AppUserCopyWithImpl(this._value, this._then);
+class _$UserEntityCopyWithImpl<$Res, $Val extends UserEntity>
+    implements $UserEntityCopyWith<$Res> {
+  _$UserEntityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -60,26 +62,28 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_AppUserCopyWith<$Res> implements $AppUserCopyWith<$Res> {
-  factory _$$_AppUserCopyWith(
-          _$_AppUser value, $Res Function(_$_AppUser) then) =
-      __$$_AppUserCopyWithImpl<$Res>;
+abstract class _$$_UserEntityCopyWith<$Res>
+    implements $UserEntityCopyWith<$Res> {
+  factory _$$_UserEntityCopyWith(
+          _$_UserEntity value, $Res Function(_$_UserEntity) then) =
+      __$$_UserEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, int id});
+  $Res call({String name, String id});
 }
 
 /// @nodoc
-class __$$_AppUserCopyWithImpl<$Res>
-    extends _$AppUserCopyWithImpl<$Res, _$_AppUser>
-    implements _$$_AppUserCopyWith<$Res> {
-  __$$_AppUserCopyWithImpl(_$_AppUser _value, $Res Function(_$_AppUser) _then)
+class __$$_UserEntityCopyWithImpl<$Res>
+    extends _$UserEntityCopyWithImpl<$Res, _$_UserEntity>
+    implements _$$_UserEntityCopyWith<$Res> {
+  __$$_UserEntityCopyWithImpl(
+      _$_UserEntity _value, $Res Function(_$_UserEntity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -88,7 +92,7 @@ class __$$_AppUserCopyWithImpl<$Res>
     Object? name = null,
     Object? id = null,
   }) {
-    return _then(_$_AppUser(
+    return _then(_$_UserEntity(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -96,34 +100,34 @@ class __$$_AppUserCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_AppUser implements _AppUser {
-  _$_AppUser({required this.name, required this.id});
+class _$_UserEntity implements _UserEntity {
+  _$_UserEntity({required this.name, required this.id});
 
-  factory _$_AppUser.fromJson(Map<String, dynamic> json) =>
-      _$$_AppUserFromJson(json);
+  factory _$_UserEntity.fromJson(Map<String, dynamic> json) =>
+      _$$_UserEntityFromJson(json);
 
   @override
   final String name;
   @override
-  final int id;
+  final String id;
 
   @override
   String toString() {
-    return 'AppUser(name: $name, id: $id)';
+    return 'UserEntity(name: $name, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AppUser &&
+            other is _$_UserEntity &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.id, id) || other.id == id));
   }
@@ -135,29 +139,30 @@ class _$_AppUser implements _AppUser {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AppUserCopyWith<_$_AppUser> get copyWith =>
-      __$$_AppUserCopyWithImpl<_$_AppUser>(this, _$identity);
+  _$$_UserEntityCopyWith<_$_UserEntity> get copyWith =>
+      __$$_UserEntityCopyWithImpl<_$_UserEntity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppUserToJson(
+    return _$$_UserEntityToJson(
       this,
     );
   }
 }
 
-abstract class _AppUser implements AppUser {
-  factory _AppUser({required final String name, required final int id}) =
-      _$_AppUser;
+abstract class _UserEntity implements UserEntity {
+  factory _UserEntity({required final String name, required final String id}) =
+      _$_UserEntity;
 
-  factory _AppUser.fromJson(Map<String, dynamic> json) = _$_AppUser.fromJson;
+  factory _UserEntity.fromJson(Map<String, dynamic> json) =
+      _$_UserEntity.fromJson;
 
   @override
   String get name;
   @override
-  int get id;
+  String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_AppUserCopyWith<_$_AppUser> get copyWith =>
+  _$$_UserEntityCopyWith<_$_UserEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }

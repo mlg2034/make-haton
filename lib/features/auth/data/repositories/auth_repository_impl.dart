@@ -1,11 +1,14 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:make_haton/features/auth/data/extensions.dart';
+import 'package:make_haton/features/auth/data/models/user_model.dart';
+import 'package:make_haton/features/auth/domain/entities/user_entity.dart';
 import 'package:make_haton/features/auth/domain/repositories/auth_repository.dart';
 
 class AppAuthService implements AppAuthRepository {
   @override
-  Future<User?> signInWithGoogle() async {
+  Future<UserEntity?>? signInWithGoogle() async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
 
@@ -36,15 +39,22 @@ class AppAuthService implements AppAuthRepository {
         // handle the error here
       }
     }
+    if (user == null) {
+      return null;
+    }
 
-    return user;
+    return UserModel.fromFirebase(user).toEntity();
   }
 
   @override
-  Future<User?> getUser() async {
+  Future<UserEntity?>? getUser() async {
     final user = FirebaseAuth.instance.currentUser;
 
-    return user;
+    if (user == null) {
+      return null;
+    }
+
+    return UserModel.fromFirebase(user).toEntity();
   }
 
   @override

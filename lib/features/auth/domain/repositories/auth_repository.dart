@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:make_haton/features/auth/domain/entities/user_entity.dart';
 
 abstract class AppAuthRepository {
-  Future<User?> signInWithGoogle();
+  Future<UserEntity?>? signInWithGoogle();
 
-  Future<User?> getUser();
+  Future<UserEntity?>? getUser();
 
   Future<void> signOut();
 }

@@ -1,12 +1,8 @@
 import 'dart:io' show Platform;
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
-import 'package:make_haton/shared/app_strings.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
@@ -17,10 +13,10 @@ class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
 
   @override
-  _AuthPageState createState() => _AuthPageState();
+  AuthPageState createState() => AuthPageState();
 }
 
-class _AuthPageState extends State<AuthPage> {
+class AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
@@ -30,13 +26,11 @@ class _AuthPageState extends State<AuthPage> {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: <Widget>[
-          Container(
-            child: Image.asset(
-              UiKitAssets.images.imAuth.keyName,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-            ),
+          Image.asset(
+            UiKitAssets.images.imAuth.keyName,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
           ),
           FractionallySizedBox(
             heightFactor: isIos ? 0.55 : 0.48,

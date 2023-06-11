@@ -1,3 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart' as fb;
+
+///GENERATED WITH ChatGTP
+
 class UserModel {
   final String? displayName;
   final String? email;
@@ -9,7 +13,7 @@ class UserModel {
   final List<UserInfo>? providerData;
   final String? refreshToken;
   final String? tenantId;
-  final String? uid;
+  final String uid;
 
   UserModel({
     this.displayName,
@@ -22,22 +26,22 @@ class UserModel {
     this.providerData,
     this.refreshToken,
     this.tenantId,
-    this.uid,
+    required this.uid,
   });
 
-  factory UserModel.fromJson(Map<String, dynamic> json) {
+  factory UserModel.fromFirebase(fb.User user) {
     return UserModel(
-      displayName: json['displayName'],
-      email: json['email'],
-      emailVerified: json['emailVerified'],
-      isAnonymous: json['isAnonymous'],
-      metadata: UserMetadata.fromJson(json['metadata']),
-      phoneNumber: json['phoneNumber'],
-      photoURL: json['photoURL'],
-      providerData: List<UserInfo>.from(json['providerData'].map((x) => UserInfo.fromJson(x))),
-      refreshToken: json['refreshToken'],
-      tenantId: json['tenantId'],
-      uid: json['uid'],
+      displayName: user.displayName,
+      email: user.email,
+      emailVerified: user.emailVerified,
+      isAnonymous: user.isAnonymous,
+      metadata: UserMetadata.fromFBUserMetadata(user.metadata),
+      phoneNumber: user.phoneNumber,
+      photoURL: user.photoURL,
+      providerData: List<UserInfo>.from(user.providerData.map((x) => UserInfo.fromFBUserInfo(x))),
+      refreshToken: user.refreshToken,
+      tenantId: user.tenantId,
+      uid: user.uid,
     );
   }
 
@@ -59,18 +63,18 @@ class UserModel {
 }
 
 class UserMetadata {
-  final String? creationTime;
-  final String? lastSignInTime;
+  final DateTime? creationTime;
+  final DateTime? lastSignInTime;
 
   UserMetadata({
     this.creationTime,
     this.lastSignInTime,
   });
 
-  factory UserMetadata.fromJson(Map<String, dynamic> json) {
+  factory UserMetadata.fromFBUserMetadata(fb.UserMetadata meta) {
     return UserMetadata(
-      creationTime: json['creationTime'],
-      lastSignInTime: json['lastSignInTime'],
+      creationTime: meta.creationTime,
+      lastSignInTime: meta.lastSignInTime,
     );
   }
 
@@ -87,7 +91,7 @@ class UserInfo {
   final String? email;
   final String? phoneNumber;
   final String? photoURL;
-  final String? providerId;
+  final String providerId;
   final String? uid;
 
   UserInfo({
@@ -95,18 +99,18 @@ class UserInfo {
     this.email,
     this.phoneNumber,
     this.photoURL,
-    this.providerId,
+    required this.providerId,
     this.uid,
   });
 
-  factory UserInfo.fromJson(Map<String, dynamic> json) {
+  factory UserInfo.fromFBUserInfo(fb.UserInfo info) {
     return UserInfo(
-      displayName: json['displayName'],
-      email: json['email'],
-      phoneNumber: json['phoneNumber'],
-      photoURL: json['photoURL'],
-      providerId: json['providerId'],
-      uid: json['uid'],
+      displayName: info.displayName,
+      email: info.email,
+      phoneNumber: info.phoneNumber,
+      photoURL: info.photoURL,
+      providerId: info.providerId,
+      uid: info.uid,
     );
   }
 
