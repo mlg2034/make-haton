@@ -18,7 +18,7 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: LearnAppBar(
+        title: BaseAppBar(
           title: localization.lesson,
           onLeadingTapExit: () {
             Navigator.of(context).pop();
@@ -108,16 +108,17 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                   context: context,
                   builder: (BuildContext context) {
                     return AnswerBottomSheets(
+
                       backgroundColor: AppColors.checkButtonColor,
                       mainText: 'WEEL DONE , IT IS RIGHT',
-                      subText: 'Keep going green!',
+                      subText: 'Keep going green!', onPressed: () {  },
                     );
                   },
                 );
               },
-              child: ContinueButton(
+              child: CheckButton(
                 color: AppColors.checkButtonColor,
-                title: 'CHECK',
+                title: 'CHECK', onPressed: () {  },
               ),
             ),
           ],

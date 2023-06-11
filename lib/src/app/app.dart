@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:localization/localization.dart';
 import 'package:make_haton/features/auth/ui/pages/auth_page.dart';
+import 'package:make_haton/features/practice/presentation/practice_preview_page.dart';
 import 'package:make_haton/shared/di.dart';
 import 'package:make_haton/src/app/provider_scope.dart';
 import 'package:make_haton/src/domain/entities/language_enum.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             ),
             builder: (context, child) => child ?? const SizedBox.shrink(),
             // initialRoute: Routes.homePage,
-            home: const AuthPage(),
+            home: const PracticePreviewPage(),
             locale: state.selectedLanguage.value,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
