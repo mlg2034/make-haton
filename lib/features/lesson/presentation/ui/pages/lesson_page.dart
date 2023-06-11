@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_example.dart';
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
-import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_attention_page.dart';
-import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_example.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class LessonPage extends StatefulWidget {
@@ -26,7 +25,7 @@ class _LessonPageState extends State<LessonPage> {
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () => Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => HelpPage(),
+              builder: (context) => const HelpPage(),
             ),
           ),
         ),
@@ -97,7 +96,7 @@ class _LessonPageState extends State<LessonPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'THE',
                   style: learnWordsTextStyle,
                 ),
@@ -111,7 +110,7 @@ class _LessonPageState extends State<LessonPage> {
                 const SizedBox(
                   width: 3,
                 ),
-                Text(
+                const Text(
                   'IS ON THE TABLE',
                   style: learnWordsTextStyle,
                 ),
@@ -125,14 +124,15 @@ class _LessonPageState extends State<LessonPage> {
               height: 16,
             ),
             GestureDetector(
-                onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => LessonExample()));
-                },
-                child: ContinueButton(
-                  color: AppColors.learnButtonColor,
-                  title: 'LEARN',
-                )),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const LessonExample()));
+              },
+              child: const ContinueButton(
+                color: AppColors.learnButtonColor,
+                title: 'LEARN',
+              ),
+            ),
           ],
         ),
       ),

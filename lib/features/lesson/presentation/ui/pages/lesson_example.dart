@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_attention_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 import 'package:ui_kit/ui_kit.dart';
-
-import 'lesson_attention_page.dart';
 
 class LessonExample extends StatelessWidget {
   const LessonExample({super.key});
@@ -20,7 +18,7 @@ class LessonExample extends StatelessWidget {
           title: 'LESSON',
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () =>
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HelpPage())),
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HelpPage())),
         ),
       ),
       body: Center(
@@ -32,14 +30,14 @@ class LessonExample extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          Text(
+          const Text(
             'EXAMPLE OF USE',
             style: lessonCategoryTextStyle,
           ),
           const SizedBox(
             height: 32,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('THE '),
@@ -55,7 +53,7 @@ class LessonExample extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -75,7 +73,7 @@ class LessonExample extends StatelessWidget {
             width: 262,
             child: Flexible(
               child: RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   children: [
                     TextSpan(
                       text: 'THIS ',
@@ -104,15 +102,17 @@ class LessonExample extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => LessonAttetionPage()));
+                  .push(MaterialPageRoute(builder: (context) => const LessonAttetionPage()));
             },
             child: Container(
               alignment: Alignment.center,
               width: 332,
               height: 56,
               decoration: BoxDecoration(
-                  color: AppColors.learnButtonColor, borderRadius: BorderRadius.circular(16)),
-              child: Text(
+                color: AppColors.learnButtonColor,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Text(
                 'GOT IT',
                 style: buttonTextTextStyle,
               ),

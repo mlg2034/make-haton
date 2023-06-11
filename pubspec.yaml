@@ -41,6 +41,7 @@ dev_dependencies:
       path: packages/linters
   injectable_generator:
   build_runner:
+  json_serializable:
 
 flutter:
   uses-material-design: true

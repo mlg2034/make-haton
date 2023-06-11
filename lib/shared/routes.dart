@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:make_haton/src/ui/presentation/pages/auth_page/auth_page.dart';
+import 'package:make_haton/features/auth/ui/pages/auth_page.dart';
+import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
-import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/settings_page/settings_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 
