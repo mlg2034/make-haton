@@ -8,6 +8,8 @@ import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart
 import 'package:make_haton/src/ui/presentation/pages/auth_page/auth_page.dart';
 import 'package:make_haton/domain/repository/firebase/authentication.dart';
 import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_preview_page.dart';
+import 'package:make_haton/src/ui/presentation/pages/dictionary/dictionary_page.dart';
+import 'package:make_haton/src/ui/presentation/pages/no_connection_page/no_connection_page.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +34,11 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: AuthServise().handleAuthState(),
+            home: NoConnection(),
+            /*Dictionary(
+              titleList: ['Animals','transport','emotions'],
+              itemsList: ['Dog','Cat','Bird','Dog','Cat',],
+            ),*/
             locale: state.selectedLanguage.value,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,

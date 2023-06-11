@@ -81,4 +81,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get got_it => 'GOT IT';
+
+  @override
+  String get dictionary => 'DICTIONARY';
+
+  @override
+  String get words => 'слов';
+
+  @override
+  String get connection_is_lost => 'CONNECTION IS LOST';
+
+  @override
+  String get check_your_network => 'Check your network and reload the page';
+
+  @override
+  String get reload => 'RELOAD';
 }

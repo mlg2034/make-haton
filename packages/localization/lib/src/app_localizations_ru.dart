@@ -81,4 +81,19 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get got_it => 'ПОНЯТНО';
+
+  @override
+  String get dictionary => 'СЛОВАРЬ';
+
+  @override
+  String get words => 'слов';
+
+  @override
+  String get connection_is_lost => 'СОЕДИНЕНИЕ ПОТЕРЯНО';
+
+  @override
+  String get check_your_network => 'Проверьте вашу сеть и перезагрузите страницу';
+
+  @override
+  String get reload => 'Перезагрузить';
 }

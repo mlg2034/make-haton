@@ -250,6 +250,36 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'ПОНЯТНО'**
   String get got_it;
+
+  /// No description provided for @dictionary.
+  ///
+  /// In ru, this message translates to:
+  /// **'СЛОВАРЬ'**
+  String get dictionary;
+
+  /// No description provided for @words.
+  ///
+  /// In ru, this message translates to:
+  /// **'слов'**
+  String get words;
+
+  /// No description provided for @connection_is_lost.
+  ///
+  /// In ru, this message translates to:
+  /// **'СОЕДИНЕНИЕ ПОТЕРЯНО'**
+  String get connection_is_lost;
+
+  /// No description provided for @check_your_network.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проверьте вашу сеть и перезагрузите страницу'**
+  String get check_your_network;
+
+  /// No description provided for @reload.
+  ///
+  /// In ru, this message translates to:
+  /// **'Перезагрузить'**
+  String get reload;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

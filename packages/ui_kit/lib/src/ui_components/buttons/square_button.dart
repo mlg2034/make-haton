@@ -4,11 +4,14 @@ import 'package:ui_kit/src/theme/app_colors.dart';
 class SquareButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
+  final Color? backgroundColor;
+
 
   const SquareButton({
     super.key,
     required this.child,
-    this.onPressed,
+    this.onPressed, this.backgroundColor,
+
   });
 
   @override
@@ -23,7 +26,7 @@ class SquareButton extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(color: AppColors.border),
               borderRadius: BorderRadius.circular(12),
-              color: AppColors.white,
+              color: backgroundColor ?? AppColors.white,
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),

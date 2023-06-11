@@ -128,6 +128,9 @@ class $AssetsLottieGen {
   /// File path: assets/lottie/help.json
   LottieGenImage get help => const LottieGenImage('assets/lottie/help.json');
 
+  /// File path: assets/lottie/no_connection.json
+  LottieGenImage get noConnection => const LottieGenImage('assets/lottie/no_connection.json');
+
   /// File path: assets/lottie/robot.json
   LottieGenImage get robot => const LottieGenImage('assets/lottie/robot.json');
 
@@ -135,7 +138,7 @@ class $AssetsLottieGen {
   LottieGenImage get success => const LottieGenImage('assets/lottie/success.json');
 
   /// List of all assets
-  List<LottieGenImage> get values => [confetti, help, robot, success];
+  List<LottieGenImage> get values => [confetti, help, noConnection, robot, success];
 }
 
 class UiKitAssets {

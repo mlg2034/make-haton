@@ -19,7 +19,7 @@ class _LessonPageState extends State<LessonPage> {
     final localization = context.locale;
 
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
         automaticallyImplyLeading: false,
         title: LearnAppBar(
           title: localization.lesson,

@@ -15,7 +15,7 @@
     "welcome": "WordMentor бағдарламасына қош келдіңіз! Мұнда сіз сөздерді үйрене аласыз!",
     "authorize": "Сөздерді үйрену үшін жүйеге кіріңіз",
     "continueWithGoogle": "Google-мен жалғастыру",
-    "continueWithApple": "AppleID-мен жалғастыру"
+    "continueWithApple": "AppleID-мен жалғастыру",
 
     "lesson": "Сабақ",
     "learn_the_world":"СӨЗДЕРДІ ҮЙРЕНІҢІЗ",
@@ -26,5 +26,10 @@
     "learn": "ОҚУ",
     "check":"ТЕКСЕРУ",
     "fill_the_blank":"БОС ОРЫНАДЫ ТОЛТЫРЫНЫЗ",
-    "got_it": "ТҮСІНІКТІ"
+    "got_it": "ТҮСІНІКТІ",
+    "dictionary": "СӨЗДІК",
+    "words": "сөз",
+    "connection_is_lost": "Қосылым жоқ",
+    "check_your_network": "Желінізді тексеріп, бетті қайта жүктеңіз",
+    "reload": "Қайта жүктеу"
 }

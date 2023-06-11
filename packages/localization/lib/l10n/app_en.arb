@@ -14,7 +14,7 @@
     "welcome": "Welcome to the WordMentor! Here you can learn words!",
     "authorize": "Authorize to Learn Words!",
     "continueWithGoogle": "Continue with Google",
-    "continueWithApple": "Continue with AppleID"
+    "continueWithApple": "Continue with AppleID",
     "lesson": "Lesson",
     "learn_the_world":"LEARN THE WORDS FROM",
     "transport":"TRANSPORT",
@@ -32,8 +32,9 @@
 "example_help_third_sub_text":"3. Fill a blank Letter in a Word",
     "just_follow":"Just follow this process!",
     "book_example_one_sentences":"An item that people read to gain knowledge",
-    "book_example_two_sentences":"THE $val"
-
-
-
+    "book_example_two_sentences":"THE $val",
+    "dictionary": "DICTIONARY",
+    "connection_is_lost": "CONNECTION IS LOST",
+    "check_your_network": "Check your network and reload the page",
+    "reload": "RELOAD"
 }
