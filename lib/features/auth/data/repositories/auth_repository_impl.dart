@@ -6,7 +6,7 @@ import 'package:make_haton/features/auth/data/models/user_model.dart';
 import 'package:make_haton/features/auth/domain/entities/user_entity.dart';
 import 'package:make_haton/features/auth/domain/repositories/auth_repository.dart';
 
-class AppAuthService implements AppAuthRepository {
+class AppAuthRepositoryImpl implements AppAuthRepository {
   @override
   Future<UserEntity?>? signInWithGoogle() async {
     FirebaseAuth auth = FirebaseAuth.instance;

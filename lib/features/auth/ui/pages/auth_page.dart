@@ -82,7 +82,7 @@ class AuthPageState extends State<AuthPage> {
                     ),
                     text: localization.continueWithGoogle,
                     onPressed: () {
-                      AppAuthService().signInWithGoogle();
+                      AppAuthRepositoryImpl().signInWithGoogle();
                     },
                   ),
                 ),
@@ -97,7 +97,7 @@ class AuthPageState extends State<AuthPage> {
                       ),
                       text: localization.continueWithApple,
                       onPressed: () {
-                        AppAuthService().signInWithGoogle();
+                        AppAuthRepositoryImpl().signInWithGoogle();
                       },
                     ),
                   ),
