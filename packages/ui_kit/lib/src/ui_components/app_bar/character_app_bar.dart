@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ui_kit/ui_kit.dart';
 
-import '../../../ui_kit.dart';
 
 class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -33,7 +32,7 @@ class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
                       const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
                   child: GestureDetector(
                     onTap: onLeadingTapExit,
-                    child: const SquareButton(
+                    child: const AppOutlinedButton.square(
                       child: Icon(
                         Icons.arrow_back_ios_outlined,
                         color: AppColors.black,
@@ -54,7 +53,7 @@ class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
                       const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
                   child: GestureDetector(
                     onTap: onLeadingTapExit,
-                    child: SquareButton(
+                    child: AppOutlinedButton.square(
                       child: SvgPicture.asset(
                         UiKitAssets.icons.questionMark.keyName,
                       ),

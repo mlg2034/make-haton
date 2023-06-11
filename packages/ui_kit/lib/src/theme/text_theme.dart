@@ -136,3 +136,116 @@ const characterTextStyle = TextStyle(
   height: 16.42 / 14,
   color: AppColors.title,
 );
+
+const titleScript = TextStyle(
+  fontFamily: 'Oleo Script',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 64,
+  height: 88.51 / 64,
+);
+const title = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.46 / 20,
+);
+const header_1 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 20,
+  height: 23.46 / 20,
+);
+const header_2 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w900,
+  fontSize: 18,
+  height: 21.11 / 18,
+);
+const header_3 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
+  height: 16.42 / 14,
+);
+const subtitle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+  fontSize: 16,
+  height: 18.77 / 16,
+);
+const subtitle_2 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  fontSize: 16,
+  height: 18.77 / 16,
+);
+const body = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
+  height: 16.42 / 14,
+);
+const link = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w600,
+  fontSize: 16,
+  height: 18.77 / 16,
+);
+const button = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w900,
+  fontSize: 14,
+  height: 16.42 / 14,
+);
+const button_2 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
+  height: 16.42 / 14,
+);
+const buttonClassic = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+  fontSize: 16,
+  height: 18.77 / 16,
+);
+const info = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w900,
+  fontSize: 16,
+  height: 18.77 / 16,
+);
+const info_2 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 16,
+  height: 18.77 / 16,
+);
+const wordQuiz = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 30,
+  height: 35.19 / 14,
+);
+const letterQuiz = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 32,
+  height: 37.54 / 32,
+);

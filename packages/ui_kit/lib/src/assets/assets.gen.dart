@@ -110,6 +110,12 @@ class $AssetsCustomizationsOptionsGen {
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
+  /// File path: assets/fonts/OleoScript-Regular.ttf
+  String get oleoScriptRegular => 'packages/ui_kit/assets/fonts/OleoScript-Regular.ttf';
+
+  /// File path: assets/fonts/Pacifico-Regular.ttf
+  String get pacificoRegular => 'packages/ui_kit/assets/fonts/Pacifico-Regular.ttf';
+
   /// File path: assets/fonts/WorkSans-Italic-VariableFont_wght.ttf
   String get workSansItalicVariableFontWght =>
       'packages/ui_kit/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf';
@@ -119,7 +125,12 @@ class $AssetsFontsGen {
       'packages/ui_kit/assets/fonts/WorkSans-VariableFont_wght.ttf';
 
   /// List of all assets
-  List<String> get values => [workSansItalicVariableFontWght, workSansVariableFontWght];
+  List<String> get values => [
+        oleoScriptRegular,
+        pacificoRegular,
+        workSansItalicVariableFontWght,
+        workSansVariableFontWght
+      ];
 }
 
 class $AssetsIconsGen {
@@ -128,8 +139,17 @@ class $AssetsIconsGen {
   /// File path: assets/icons/book.png
   AssetGenImage get book => const AssetGenImage('assets/icons/book.png');
 
+  /// File path: assets/icons/books.svg
+  SvgGenImage get books => const SvgGenImage('assets/icons/books.svg');
+
+  /// File path: assets/icons/coin.svg
+  SvgGenImage get coin => const SvgGenImage('assets/icons/coin.svg');
+
   /// File path: assets/icons/exit.svg
   SvgGenImage get exit => const SvgGenImage('assets/icons/exit.svg');
+
+  /// File path: assets/icons/ic_apple_white.svg
+  SvgGenImage get icAppleWhite => const SvgGenImage('assets/icons/ic_apple_white.svg');
 
   /// File path: assets/icons/ic_arrow_back.svg
   SvgGenImage get icArrowBack => const SvgGenImage('assets/icons/ic_arrow_back.svg');
@@ -152,6 +172,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_computer.svg
   SvgGenImage get icComputer => const SvgGenImage('assets/icons/ic_computer.svg');
 
+  /// File path: assets/icons/ic_google_icon.svg
+  SvgGenImage get icGoogleIcon => const SvgGenImage('assets/icons/ic_google_icon.svg');
+
   /// File path: assets/icons/ic_settings.svg
   SvgGenImage get icSettings => const SvgGenImage('assets/icons/ic_settings.svg');
 
@@ -164,10 +187,16 @@ class $AssetsIconsGen {
   /// File path: assets/icons/sound.svg
   SvgGenImage get sound => const SvgGenImage('assets/icons/sound.svg');
 
+  /// File path: assets/icons/trencher.svg
+  SvgGenImage get trencher => const SvgGenImage('assets/icons/trencher.svg');
+
   /// List of all assets
   List<dynamic> get values => [
         book,
+        books,
+        coin,
         exit,
+        icAppleWhite,
         icArrowBack,
         icArrowGo,
         icArrowNextGreen,
@@ -175,10 +204,12 @@ class $AssetsIconsGen {
         icClose,
         icCollections,
         icComputer,
+        icGoogleIcon,
         icSettings,
         icSpeach,
         questionMark,
-        sound
+        sound,
+        trencher
       ];
 }
 
@@ -202,6 +233,8 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/ic_settings.svg
   SvgGenImage get icSettings => const SvgGenImage('assets/images/ic_settings.svg');
+  /// File path: assets/images/im_auth.jpg
+  AssetGenImage get imAuth => const AssetGenImage('assets/images/im_auth.jpg');
 
   /// File path: assets/images/im_notebook-front-gradient.svg
   SvgGenImage get imNotebookFrontGradient =>

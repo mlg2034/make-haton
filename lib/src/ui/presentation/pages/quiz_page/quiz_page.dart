@@ -21,7 +21,7 @@ class QuizPage extends StatelessWidget {
                     border: Border.all(color: AppColors.border, width: 1),
                     color: AppColors.white,
                   ),
-                  child: SvgPicture.asset(UiKitAssets.images.icCancel.keyName),
+                  child: SvgPicture.asset(UiKitAssets.icons.icClose.keyName),
                 ),
               ],
             ),

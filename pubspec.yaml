@@ -19,6 +19,9 @@ dependencies:
     path: "packages/localization"
   equatable: ^2.0.5
   shared_preferences: ^2.1.1
+  flutter_signin_button: ^2.0.0
+  flutter_custom_clippers: ^2.1.0
+
   flutter_tts: ^3.7.0
   firebase_core: ^2.13.0
   cloud_firestore: ^4.7.1
@@ -27,13 +30,20 @@ dependencies:
   firebase_storage: ^11.2.1
   carousel_slider: ^4.2.1
   get_it: ^7.6.0
+  google_sign_in: ^6.1.4
+  injectable: ^2.1.2
+  bloc: ^8.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  freezed: ^2.3.5
   dart_code_metrics: ^5.7.4
   linters:
       path: packages/linters
+  injectable_generator:
+  build_runner:
+  json_serializable:
 
 flutter:
   uses-material-design: true
