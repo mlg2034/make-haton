@@ -10,7 +10,6 @@ class HelpPage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'HELP',
-        
         onLeadingTap: () => Navigator.of(context).pop(),
       ),
       body: Padding(
@@ -52,12 +51,16 @@ class HelpPage extends StatelessWidget {
               style: helpTextTextSyle,
             ),
             Text(
-              
               '3. Fill a blank Letter in a Word',
               style: helpTextTextSyle,
             ),
-            const SizedBox(height: 32,),
-            Text('Just follow this process!' , style: lessonPropolsolTextStyle  ,)
+            const SizedBox(
+              height: 32,
+            ),
+            Text(
+              'Just follow this process!',
+              style: lessonPropolsolTextStyle,
+            )
           ],
         ),
       ),

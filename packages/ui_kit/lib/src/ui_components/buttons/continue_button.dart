@@ -6,7 +6,8 @@ class ContinueButton extends StatelessWidget {
   final Color color;
   final String title;
   const ContinueButton({
-    required this.color , required this.title,
+    required this.color,
+    required this.title,
     super.key,
   });
 
@@ -20,8 +21,8 @@ class ContinueButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: color,
       ),
-      child:  Text(
-       title,
+      child: Text(
+        title,
         style: buttonTextTextStyle,
       ),
     );

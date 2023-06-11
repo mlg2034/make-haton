@@ -6,7 +6,6 @@ class AuthButton extends StatelessWidget {
   final Widget icon;
   final String text;
 
-
   const AuthButton({
     super.key,
     required this.icon,
@@ -19,7 +18,6 @@ class AuthButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(16),
@@ -28,7 +26,6 @@ class AuthButton extends StatelessWidget {
             color: AppColors.border,
           ),
         ),
-
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -48,10 +45,6 @@ class AuthButton extends StatelessWidget {
           ],
         ),
       ),
-
-
-
-
     );
   }
 }

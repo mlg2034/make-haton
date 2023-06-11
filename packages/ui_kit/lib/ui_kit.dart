@@ -13,3 +13,5 @@ export 'src/ui_components/buttons/continue_button.dart';
 export 'src/ui_components/bottomsheet/answer_bottomsheet.dart';
 export 'src/ui_components/app_bar/dictionary_app_bar.dart';
 export 'src/ui_components/lottie.dart';
+export 'src/ui_components/app_bar/character_app_bar.dart';
+export 'src/theme/decorations/fake_button.dart';
