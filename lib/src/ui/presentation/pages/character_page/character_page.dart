@@ -19,9 +19,7 @@ class _CharacterPageState extends State<CharacterPage> {
     'Clothes',
     'Hats',
   ];
-  List<SvgPicture> characterIcon = [
-  
-  ];
+  List<SvgPicture> characterIcon = [];
 
   @override
   Widget build(BuildContext context) {
@@ -112,9 +110,10 @@ class _CharacterPageState extends State<CharacterPage> {
                                       height: 16,
                                     ),
                                     const Divider(),
-                                    Expanded(child:ListView.builder(itemBuilder: (BuildContext context , int index){
+                                    Expanded(child: ListView.builder(
+                                        itemBuilder: (BuildContext context, int index) {
                                       return Padding(padding: EdgeInsets.symmetric(horizontal: 24));
-                                    }) )
+                                    }))
                                   ],
                                 ),
                               );
@@ -128,8 +127,7 @@ class _CharacterPageState extends State<CharacterPage> {
                             border: Border.all(color: AppColors.border),
                             borderRadius: BorderRadius.circular(16),
                           ),
-                          padding:const EdgeInsets.symmetric(
-                              vertical: 30, horizontal: 10),
+                          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
                           child: characterIcon[index],
                         ),
                       ),

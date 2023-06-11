@@ -17,7 +17,7 @@ class CharacterIconRepository {
     SvgPicture.asset(UiKitAssets.customizations.colorRed.keyName),
     SvgPicture.asset(UiKitAssets.customizations.colorYellow.keyName),
   ];
-  List<SvgPicture> characterEyesIcons= [
+  List<SvgPicture> characterEyesIcons = [
     SvgPicture.asset(UiKitAssets.customizations.eyesAngry.keyName),
     SvgPicture.asset(UiKitAssets.customizations.eyesCute.keyName),
     SvgPicture.asset(UiKitAssets.customizations.eyesDefault.keyName),

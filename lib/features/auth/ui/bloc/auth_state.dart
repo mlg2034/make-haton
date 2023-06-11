@@ -7,4 +7,3 @@ sealed class AuthState with _$AuthState {
   const factory AuthState.loading(UserEntity? userEntity) = Loading;
   const factory AuthState.error(UserEntity? userEntity, [String? message]) = Error;
 }
-

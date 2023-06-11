@@ -1,6 +1,6 @@
 import '../../repository/character_repository/character_icons_repository.dart';
 
-class CoinAmountUseCase{
+class CoinAmountUseCase {
   final CharacterIconRepository characterIconRepository;
   CoinAmountUseCase({required this.characterIconRepository});
 

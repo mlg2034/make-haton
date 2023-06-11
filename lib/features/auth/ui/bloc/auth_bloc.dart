@@ -27,7 +27,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
   }
 
-  Future<void> _signOut()async{
+  Future<void> _signOut() async {
     emit(AuthState.loading(state.userEntity));
     final nullUser = await signOutUseCase.execute();
     emit(AuthState.unauthorized(nullUser));
@@ -35,16 +35,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Future<void> _handleSigningIn() async {
     emit(const AuthState.loading(null));
-    try{
+    try {
       final user = await signingInUseCase.execute();
-      if(user==null){
+      if (user == null) {
         emit(const AuthState.unauthorized(null));
 
         return;
       }
       emit(AuthState.authorized(user));
-
-    }catch (err){
+    } catch (err) {
       emit(const AuthState.error(null));
     }
   }

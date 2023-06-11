@@ -16,22 +16,29 @@ class _SettingsPageState extends State<SettingsPage> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CustomAppBar(title: localization.settings, onLeadingTap: () => Navigator.pop(context)),
+      appBar:
+          CustomAppBar(title: localization.settings, onLeadingTap: () => Navigator.pop(context)),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SettingsTile(
             title: localization.dark_theme,
           ),
-          const Divider(color: AppColors.border,),
+          const Divider(
+            color: AppColors.border,
+          ),
           SettingsTile(
             title: localization.dark_theme,
           ),
-          const Divider(color: AppColors.border,),
+          const Divider(
+            color: AppColors.border,
+          ),
           SettingsTile(
             title: localization.notifications,
           ),
-          const Divider(color: AppColors.border,),
+          const Divider(
+            color: AppColors.border,
+          ),
           SettingsTile(
             title: localization.language,
             customActionWidget: GestureDetector(
@@ -56,7 +63,9 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: settingsInfoTextStyle,
                   ),
                 ),
-                SizedBox(height: 24,),
+                SizedBox(
+                  height: 24,
+                ),
                 Container(
                   alignment: Alignment.topLeft,
                   child: Text(

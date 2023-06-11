@@ -3,14 +3,16 @@ import 'package:make_haton/src/domain/repository/character_repository/character_
 
 import '../../repository/character_repository/character_icons_repository.dart';
 
-class CharacterColorUseCase{
+class CharacterColorUseCase {
   final CharacterIconRepository characterIconRepository;
   final CharacterTextRepository characterTextRepository;
-  CharacterColorUseCase({required this.characterIconRepository , required this.characterTextRepository});
+  CharacterColorUseCase(
+      {required this.characterIconRepository, required this.characterTextRepository});
   List<SvgPicture> getCharacterColorIcon() {
     return characterIconRepository.chracterColorIcons;
   }
-  List<String> getCharacterColorsText(){
+
+  List<String> getCharacterColorsText() {
     return characterTextRepository.chracterColorText;
   }
 }

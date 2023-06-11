@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui_kit/ui_kit.dart';
 
-
 class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final String? subTitle;
@@ -28,8 +27,7 @@ class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           onLeadingTapExit != null
               ? Padding(
-                  padding:
-                      const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
+                  padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
                   child: GestureDetector(
                     onTap: onLeadingTapExit,
                     child: const AppOutlinedButton.square(
@@ -49,8 +47,7 @@ class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           onLeadingTapHelp != null
               ? Padding(
-                  padding:
-                      const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
+                  padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
                   child: GestureDetector(
                     onTap: onLeadingTapExit,
                     child: AppOutlinedButton.square(

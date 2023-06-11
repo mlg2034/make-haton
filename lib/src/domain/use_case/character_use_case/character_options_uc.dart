@@ -5,13 +5,15 @@ import '../../repository/character_repository/character_icons_repository.dart';
 
 class CharacterOptionsUseCase {
   final CharacterIconRepository characterIconRepository;
-final CharacterTextRepository characterTextRepository;
-  CharacterOptionsUseCase({required this.characterIconRepository , required this.characterTextRepository});
+  final CharacterTextRepository characterTextRepository;
+  CharacterOptionsUseCase(
+      {required this.characterIconRepository, required this.characterTextRepository});
 
   List<SvgPicture> getCharacterOptionsIcon() {
     return characterIconRepository.characterOptionsIcons;
   }
-  List<String> getCharacterOptionsText(){
+
+  List<String> getCharacterOptionsText() {
     return characterTextRepository.characterOptionsText;
   }
 }
