@@ -32,6 +32,7 @@ class _DictionaryState extends State<Dictionary> {
           onLeadingTapExit: () => Navigator.of(context).pop(),
           title: localization.dictionary,
           wordsCount: widget.itemsList.length,
+          subtitle: localization.words,
         ),
       ),
       body:

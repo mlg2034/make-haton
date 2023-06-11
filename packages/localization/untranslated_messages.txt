@@ -1,6 +1,7 @@
 {
   "en": [
-    "words"
+    "words",
+    "reload"
   ],
 
   "kk": [

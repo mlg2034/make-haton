@@ -31,5 +31,7 @@
     "words": "сөз",
     "connection_is_lost": "Қосылым жоқ",
     "check_your_network": "Желінізді тексеріп, бетті қайта жүктеңіз",
-    "reload": "Қайта жүктеу"
+    "reload": "Қайта жүктеу",
+    "collections": "КОЛЛЕКЦИЯЛАР",
+    "learned": "ОҚЫҒАН"
 }

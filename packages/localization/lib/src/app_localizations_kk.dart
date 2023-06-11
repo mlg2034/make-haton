@@ -96,4 +96,10 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get reload => 'Қайта жүктеу';
+
+  @override
+  String get collections => 'КОЛЛЕКЦИЯЛАР';
+
+  @override
+  String get learned => 'ОҚЫҒАН';
 }

@@ -95,5 +95,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get check_your_network => 'Check your network and reload the page';
 
   @override
-  String get reload => 'RELOAD';
+  String get reload => 'Перезагрузить';
+
+  @override
+  String get collections => 'Collections';
+
+  @override
+  String get learned => 'LEARNED';
 }

@@ -96,4 +96,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get reload => 'Перезагрузить';
+
+  @override
+  String get collections => 'КОЛЛЕКЦИИ';
+
+  @override
+  String get learned => 'ИЗУЧЕНО';
 }

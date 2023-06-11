@@ -280,6 +280,18 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Перезагрузить'**
   String get reload;
+
+  /// No description provided for @collections.
+  ///
+  /// In ru, this message translates to:
+  /// **'КОЛЛЕКЦИИ'**
+  String get collections;
+
+  /// No description provided for @learned.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИЗУЧЕНО'**
+  String get learned;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
