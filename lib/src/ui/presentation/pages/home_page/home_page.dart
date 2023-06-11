@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/auth/ui/bloc/auth_bloc.dart';
 import 'package:make_haton/src/ui/presentation/pages/settings_page/settings_page.dart';
 import 'package:make_haton/src/ui/presentation/widgets/progress_bar.dart';
 
@@ -14,6 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = context.locale;
+    final state = context.read<AuthBloc>().state;
 
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +28,12 @@ class HomePage extends StatelessWidget {
               Column(
                 children: [
                   Text(l.welcomeText),
-                  const Text('User'),
+                  Text(state.map(
+                    authorized: (user)=>user.userEntity.name,
+                    unauthorized: (user)=> 'Guest',
+                    loading: (user)=> 'Guest',
+                    error: (user)=> 'Guest',
+                  )),
                 ],
               ),
               const Spacer(),

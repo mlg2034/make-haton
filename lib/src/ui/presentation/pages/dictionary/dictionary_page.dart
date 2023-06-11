@@ -60,9 +60,10 @@ class _DictionaryState extends State<Dictionary> {
                                 AppOutlinedButton.square(
                                   backgroundColor: AppColors.primary,
                                   child: Center(
-                                      child: SvgPicture.asset(
-                                    UiKitAssets.icons.icSpeach.keyName,
-                                  )),
+                                    child: SvgPicture.asset(
+                                      UiKitAssets.icons.icSpeach.keyName,
+                                    ),
+                                  ),
                                   onPressed: () {},
                                 ),
                                 const SizedBox(

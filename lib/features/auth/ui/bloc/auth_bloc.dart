@@ -16,6 +16,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final GetUserUseCase getUserUseCase;
   final SignOutUseCase signOutUseCase;
 
+
   AuthBloc(super.initialState, this.signingInUseCase, this.getUserUseCase, this.signOutUseCase) {
     on<AuthEvent>(
       (event, emit) {
