@@ -228,3 +228,19 @@ const letterQuiz = TextStyle(
   fontSize: 32,
   height: 37.54 / 32,
 );
+const splash1 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w900,
+  fontSize: 40,
+  height: 0.77,
+  color: Color.fromRGBO(4, 171, 223, 1.0),
+);
+const splash2 = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 24,
+  height: 0.77,
+  color: Color.fromRGBO(4, 171, 223, 0.5),
+);

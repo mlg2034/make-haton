@@ -10,6 +10,7 @@ import 'package:make_haton/src/domain/entities/language_enum.dart';
 import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart';
 import 'package:make_haton/domain/repository/firebase/authentication.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
+import 'package:make_haton/src/ui/presentation/pages/splash_page/splash_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,24 +31,27 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarContrastEnforced: false,
+      systemNavigationBarDividerColor: Colors.transparent,
+    ));
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          LocalizationBloc(const LocalizationState(selectedLanguage: Language.english)),
+      create: (context) => LocalizationBloc(
+          const LocalizationState(selectedLanguage: Language.english)),
       child: BlocBuilder<LocalizationBloc, LocalizationState>(
         builder: (_, state) {
           return MaterialApp(
@@ -60,7 +64,7 @@ class _MyAppState extends State<MyApp> {
             ),
             builder: (context, child) => child ?? const SizedBox.shrink(),
             // initialRoute: Routes.homePage,
-            home: const HomePage(),
+            home: const SplashPage(),
             locale: state.selectedLanguage.value,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
