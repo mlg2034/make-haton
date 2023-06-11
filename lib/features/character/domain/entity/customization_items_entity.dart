@@ -11,4 +11,7 @@ class CustomizationItemsEntity with _$CustomizationItemsEntity {
     required bool isBought,
     required bool isSelected,
   }) = _CustomizationItemsEntity;
+
+  factory CustomizationItemsEntity.fromJson(Map<String, dynamic> json) => _$CustomizationItemsEntityFromJson(json);
+
 }

@@ -13,4 +13,7 @@ class CharacterEntity with _$CharacterEntity {
     required String hatId,
     required CustomizationItemsEntity itemsEntity,
   }) = _CharacterEntity;
+
+  factory CharacterEntity.fromJson(Map<String, dynamic> json) => _$CharacterEntityFromJson(json);
+
 }

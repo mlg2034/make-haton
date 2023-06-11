@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CharacterEntity _$CharacterEntityFromJson(Map<String, dynamic> json) {
+  return _CharacterEntity.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CharacterEntity {
   String get userUid => throw _privateConstructorUsedError;
@@ -24,6 +28,7 @@ mixin _$CharacterEntity {
   CustomizationItemsEntity get itemsEntity =>
       throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CharacterEntityCopyWith<CharacterEntity> get copyWith =>
       throw _privateConstructorUsedError;
@@ -171,7 +176,7 @@ class __$$_CharacterEntityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CharacterEntity implements _CharacterEntity {
   _$_CharacterEntity(
       {required this.userUid,
@@ -180,6 +185,9 @@ class _$_CharacterEntity implements _CharacterEntity {
       required this.eyeId,
       required this.hatId,
       required this.itemsEntity});
+
+  factory _$_CharacterEntity.fromJson(Map<String, dynamic> json) =>
+      _$$_CharacterEntityFromJson(json);
 
   @override
   final String userUid;
@@ -214,6 +222,7 @@ class _$_CharacterEntity implements _CharacterEntity {
                 other.itemsEntity == itemsEntity));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, userUid, clothesId, colorId, eyeId, hatId, itemsEntity);
@@ -223,6 +232,13 @@ class _$_CharacterEntity implements _CharacterEntity {
   @pragma('vm:prefer-inline')
   _$$_CharacterEntityCopyWith<_$_CharacterEntity> get copyWith =>
       __$$_CharacterEntityCopyWithImpl<_$_CharacterEntity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CharacterEntityToJson(
+      this,
+    );
+  }
 }
 
 abstract class _CharacterEntity implements CharacterEntity {
@@ -234,6 +250,9 @@ abstract class _CharacterEntity implements CharacterEntity {
           required final String hatId,
           required final CustomizationItemsEntity itemsEntity}) =
       _$_CharacterEntity;
+
+  factory _CharacterEntity.fromJson(Map<String, dynamic> json) =
+      _$_CharacterEntity.fromJson;
 
   @override
   String get userUid;

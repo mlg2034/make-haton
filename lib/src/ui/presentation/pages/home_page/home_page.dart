@@ -20,6 +20,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final l = context.locale;
     final state = context.read<AuthBloc>().state;
+    final user = state.map(
+      authorized: (user) => user,
+      unauthorized: (user) => user,
+      loading: (user) => user,
+      error: (user) => user,
+    ).userEntity;
 
     return Scaffold(
       appBar: AppBar(
@@ -31,12 +37,7 @@ class HomePage extends StatelessWidget {
               Column(
                 children: [
                   Text(l.welcomeText),
-                  Text(state.map(
-                    authorized: (user) => user.userEntity.name,
-                    unauthorized: (user) => 'Guest',
-                    loading: (user) => 'Guest',
-                    error: (user) => 'Guest',
-                  )),
+                  Text(user.name),
                 ],
               ),
               const Spacer(),
@@ -49,7 +50,7 @@ class HomePage extends StatelessWidget {
                         SvgPicture.asset(
                           UiKitAssets.icons.coin.keyName,
                         ),
-                        const Text('200'),
+                        Text('${user.coins}'),
                       ],
                     ),
                   ),
@@ -58,13 +59,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        // trailing: AppOutlinedButton.square(
-        //   onPressed: () => Navigator.of(context)
-        //       .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
-        //   child: SvgPicture.asset(
-        //     UiKitAssets.icons.icSettings.keyName,
-        //   ),
-        // ),
       ),
       body: SafeArea(
         child: Column(
@@ -120,7 +114,7 @@ class HomePage extends StatelessWidget {
               height: 16,
             ),
             Text(
-              l.wordsLearnedTitle(15),
+              l.wordsLearnedTitle(user.practicedWords),
               style: button,
             ),
             const SizedBox(

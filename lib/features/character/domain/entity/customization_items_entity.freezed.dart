@@ -14,6 +14,11 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CustomizationItemsEntity _$CustomizationItemsEntityFromJson(
+    Map<String, dynamic> json) {
+  return _CustomizationItemsEntity.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CustomizationItemsEntity {
   String get svgPicture => throw _privateConstructorUsedError;
@@ -22,6 +27,7 @@ mixin _$CustomizationItemsEntity {
   bool get isBought => throw _privateConstructorUsedError;
   bool get isSelected => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CustomizationItemsEntityCopyWith<CustomizationItemsEntity> get copyWith =>
       throw _privateConstructorUsedError;
@@ -147,7 +153,7 @@ class __$$_CustomizationItemsEntityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CustomizationItemsEntity implements _CustomizationItemsEntity {
   _$_CustomizationItemsEntity(
       {required this.svgPicture,
@@ -155,6 +161,9 @@ class _$_CustomizationItemsEntity implements _CustomizationItemsEntity {
       required this.price,
       required this.isBought,
       required this.isSelected});
+
+  factory _$_CustomizationItemsEntity.fromJson(Map<String, dynamic> json) =>
+      _$$_CustomizationItemsEntityFromJson(json);
 
   @override
   final String svgPicture;
@@ -187,6 +196,7 @@ class _$_CustomizationItemsEntity implements _CustomizationItemsEntity {
                 other.isSelected == isSelected));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, svgPicture, title, price, isBought, isSelected);
@@ -197,6 +207,13 @@ class _$_CustomizationItemsEntity implements _CustomizationItemsEntity {
   _$$_CustomizationItemsEntityCopyWith<_$_CustomizationItemsEntity>
       get copyWith => __$$_CustomizationItemsEntityCopyWithImpl<
           _$_CustomizationItemsEntity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CustomizationItemsEntityToJson(
+      this,
+    );
+  }
 }
 
 abstract class _CustomizationItemsEntity implements CustomizationItemsEntity {
@@ -206,6 +223,9 @@ abstract class _CustomizationItemsEntity implements CustomizationItemsEntity {
       required final int price,
       required final bool isBought,
       required final bool isSelected}) = _$_CustomizationItemsEntity;
+
+  factory _CustomizationItemsEntity.fromJson(Map<String, dynamic> json) =
+      _$_CustomizationItemsEntity.fromJson;
 
   @override
   String get svgPicture;
