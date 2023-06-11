@@ -7,16 +7,16 @@ import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-import 'package:make_haton/domain/repository/firebase/authentication.dart';
+import 'package:make_haton/features/auth/data/repositories/auth_repository_impl.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
 
   @override
-  _AuthPageState createState() => _AuthPageState();
+  AuthPageState createState() => AuthPageState();
 }
 
-class _AuthPageState extends State<AuthPage> {
+class AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
@@ -26,13 +26,11 @@ class _AuthPageState extends State<AuthPage> {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: <Widget>[
-          Container(
-            child: Image.asset(
-              UiKitAssets.images.imAuth.keyName,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-            ),
+          Image.asset(
+            UiKitAssets.images.imAuth.keyName,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
           ),
           FractionallySizedBox(
             heightFactor: isIos ? 0.55 : 0.48,
@@ -84,7 +82,7 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                     text: localization.continueWithGoogle,
                     onPressed: () {
-                      AppAuthService().signInWithGoogle();
+                      AppAuthRepositoryImpl().signInWithGoogle();
                     },
                   ),
                 ),
@@ -99,7 +97,7 @@ class _AuthPageState extends State<AuthPage> {
                       ),
                       text: localization.continueWithApple,
                       onPressed: () {
-                        AppAuthService().signInWithGoogle();
+                        AppAuthRepositoryImpl().signInWithGoogle();
                       },
                     ),
                   ),

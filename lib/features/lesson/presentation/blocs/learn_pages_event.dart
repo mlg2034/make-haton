@@ -1,4 +1,4 @@
-part of 'learn_pages_bloc.dart';
+part of '../../../../features/lesson/presentation/blocs/learn_pages_bloc.dart';
 
 abstract class LearnPagesEvent extends Equatable {
   const LearnPagesEvent();

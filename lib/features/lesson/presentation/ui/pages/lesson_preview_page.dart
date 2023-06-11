@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
-import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 import 'package:lottie/lottie.dart';
 
@@ -25,7 +24,7 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () => Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => HelpPage(),
+              builder: (context) => const HelpPage(),
             ),
           ),
         ),
@@ -72,7 +71,7 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => LessonPage(),
+                    builder: (context) => const LessonPage(),
                   ),
                 );
               },
@@ -90,7 +89,7 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
                     ],
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'START',
                   style: buttonTextTextStyle,
                 ),
