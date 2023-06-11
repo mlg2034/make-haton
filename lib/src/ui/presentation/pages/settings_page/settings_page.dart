@@ -63,7 +63,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: settingsInfoTextStyle,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
                 Container(

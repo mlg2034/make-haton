@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:make_haton/features/auth/domain/entities/user_entity.dart';
 import 'package:make_haton/features/auth/domain/use_cases/get_current_user_usecase.dart';
 import 'package:make_haton/features/auth/domain/use_cases/sign_in_usecase.dart';
 import 'package:make_haton/features/auth/domain/use_cases/sign_out_usecase.dart';
@@ -23,11 +24,11 @@ class ProviderScope extends StatelessWidget {
         ),
         BlocProvider<AuthBloc>(
           create: (context) => AuthBloc(
-            const AuthState.unauthorized(null),
+            AuthState.unauthorized(UserEntity.empty()),
             getIt.get<SigningInUseCase>(),
             getIt.get<GetUserUseCase>(),
             getIt.get<SignOutUseCase>(),
-          ),
+          )..getUserUseCase,
         ),
       ],
       child: Builder(

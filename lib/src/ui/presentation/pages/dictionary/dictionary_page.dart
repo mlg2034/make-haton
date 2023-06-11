@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
 import 'package:ui_kit/ui_kit.dart';
-import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 
 class Dictionary extends StatefulWidget {
   final List<String> titleList;

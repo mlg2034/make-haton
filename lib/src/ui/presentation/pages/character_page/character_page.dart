@@ -3,8 +3,6 @@ import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:carousel_slider/carousel_slider.dart';
-
 class CharacterPage extends StatefulWidget {
   const CharacterPage({Key? key}) : super(key: key);
 
@@ -29,7 +27,7 @@ class _CharacterPageState extends State<CharacterPage> {
         onLeadingTapExit: () => Navigator.of(context).pop(),
         onLeadingTapHelp: () => Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => HelpPage(),
+            builder: (context) => const HelpPage(),
           ),
         ),
       ),
@@ -67,7 +65,7 @@ class _CharacterPageState extends State<CharacterPage> {
                   const SizedBox(
                     width: 8,
                   ),
-                  Text(
+                  const Text(
                     '1000',
                     style: coinsCountTextStyle,
                   ),
@@ -85,7 +83,7 @@ class _CharacterPageState extends State<CharacterPage> {
               itemCount: character.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
                   child: Column(
                     children: [
                       GestureDetector(
@@ -102,7 +100,7 @@ class _CharacterPageState extends State<CharacterPage> {
                                     const SizedBox(
                                       height: 49,
                                     ),
-                                    Text(
+                                    const Text(
                                       'CLOTHES',
                                       style: characterTitleTextStyle,
                                     ),
@@ -111,9 +109,11 @@ class _CharacterPageState extends State<CharacterPage> {
                                     ),
                                     const Divider(),
                                     Expanded(child: ListView.builder(
-                                        itemBuilder: (BuildContext context, int index) {
-                                      return Padding(padding: EdgeInsets.symmetric(horizontal: 24));
-                                    }))
+                                      itemBuilder: (BuildContext context, int index) {
+                                        return const Padding(
+                                            padding: EdgeInsets.symmetric(horizontal: 24));
+                                      },
+                                    )),
                                   ],
                                 ),
                               );

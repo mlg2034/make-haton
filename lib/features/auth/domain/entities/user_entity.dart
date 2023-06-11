@@ -8,4 +8,6 @@ class UserEntity with _$UserEntity {
   factory UserEntity({required String name, required String id}) = _UserEntity;
 
   factory UserEntity.fromJson(Map<String, dynamic> json) => _$UserEntityFromJson(json);
+
+  factory UserEntity.empty({@Default('') String name, @Default('') String id}) = _EmptyUser;
 }

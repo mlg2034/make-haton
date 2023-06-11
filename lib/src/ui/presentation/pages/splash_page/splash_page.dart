@@ -23,8 +23,8 @@ class _SplashPageState extends State<SplashPage> {
       body: SafeArea(
         child: Column(children: [
           Stack(
-            children: [body, glow],
             alignment: Alignment.center,
+            children: [body, glow],
           ),
         ]),
       ),

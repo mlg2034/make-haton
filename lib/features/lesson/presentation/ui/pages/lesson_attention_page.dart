@@ -24,7 +24,7 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
             Navigator.of(context).pop();
           },
           onLeadingTapHelp: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => HelpPage()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HelpPage()));
           },
         ),
       ),
@@ -107,7 +107,7 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                 showModalBottomSheet(
                   context: context,
                   builder: (BuildContext context) {
-                    return AnswerBottomSheets(
+                    return const AnswerBottomSheets(
                       backgroundColor: AppColors.checkButtonColor,
                       mainText: 'WEEL DONE , IT IS RIGHT',
                       subText: 'Keep going green!',
@@ -115,7 +115,7 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                   },
                 );
               },
-              child: ContinueButton(
+              child: const ContinueButton(
                 color: AppColors.checkButtonColor,
                 title: 'CHECK',
               ),

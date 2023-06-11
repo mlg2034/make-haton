@@ -10,10 +10,10 @@ class SelectLettersButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SelectLettersButtonState createState() => _SelectLettersButtonState();
+  SelectLettersButtonState createState() => SelectLettersButtonState();
 }
 
-class _SelectLettersButtonState extends State<SelectLettersButton> {
+class SelectLettersButtonState extends State<SelectLettersButton> {
   bool isSelected = false;
 
   @override

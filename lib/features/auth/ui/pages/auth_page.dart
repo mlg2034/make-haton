@@ -9,8 +9,6 @@ import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-import 'package:make_haton/features/auth/data/repositories/auth_repository_impl.dart';
-
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
 
@@ -23,7 +21,6 @@ class AuthPageState extends State<AuthPage> {
   Widget build(BuildContext context) {
     final localization = context.locale;
     bool isIos = Platform.isIOS;
-    print('asd');
 
     return Scaffold(
       body: Stack(

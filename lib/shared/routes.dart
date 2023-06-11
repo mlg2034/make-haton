@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:make_haton/features/auth/ui/pages/auth_page.dart';
 import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_page.dart';
+import 'package:make_haton/src/ui/presentation/pages/character_page/character_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/settings_page/settings_page.dart';
 import 'package:ui_kit/ui_kit.dart';
@@ -20,6 +21,7 @@ final Map<String, Widget Function(BuildContext context, Object? arguments)> page
   Routes.authPage: (context, arguments) => const AuthPage(),
   Routes.settingsPage: (context, arguments) => const SettingsPage(),
   Routes.learnPage: (context, arguments) => const LessonPage(),
+  Routes.characterPage: (context, arguments) => const CharacterPage(),
 };
 
 final Map<
