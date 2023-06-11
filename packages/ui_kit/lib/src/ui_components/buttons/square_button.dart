@@ -6,12 +6,14 @@ class AppOutlinedButton extends StatelessWidget {
   final Widget child;
   final double aspectRatio;
   final EdgeInsets? innerPadding;
+  final double sizeFactor;
 
   const AppOutlinedButton.square({
     super.key,
     required this.child,
     this.onPressed,
     this.innerPadding,
+    this.sizeFactor=1,
   }) : aspectRatio = 1.0;
 
   const AppOutlinedButton.rect({
@@ -20,6 +22,7 @@ class AppOutlinedButton extends StatelessWidget {
     this.onPressed,
     required this.aspectRatio,
     this.innerPadding, //never used
+    this.sizeFactor=1, //always used
   });
 
   @override
@@ -27,6 +30,8 @@ class AppOutlinedButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: SizedBox(
+        height: 72*sizeFactor,
+        width: 72*sizeFactor,
         child: AspectRatio(
           aspectRatio: aspectRatio,
           child: _Decoration(
@@ -53,7 +58,7 @@ class _Decoration extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.border),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
         color: AppColors.white,
       ),
       child: Padding(

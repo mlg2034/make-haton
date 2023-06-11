@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -6,7 +7,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? onLeadingTap;
   final Widget? trailing;
 
-  const CustomAppBar({Key? key, this.title, this.onLeadingTap, this.trailing}) : super(key: key);
+  const CustomAppBar({Key? key, this.title, this.onLeadingTap, this.trailing})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,18 +16,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     final title = this.title;
 
     return Padding(
-      padding: const EdgeInsets.only(top: 48, left: 16, right: 16),
+      padding: const EdgeInsets.only(left: 48, right: 48, top: 80, bottom: 48),
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           onLeadingTap != null
-              ? Padding(
-                  padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
-                  child: GestureDetector(
-                    onTap: onLeadingTap,
-                    child: const AppOutlinedButton.square(
-                      child: Icon(
-                        Icons.arrow_back_ios_outlined,
+              ? GestureDetector(
+                  onTap: onLeadingTap,
+                  child: AppOutlinedButton.square(
+                    child: Center(
+                      child: SvgPicture.asset(
+                        UiKitAssets.icons.icArrowBack.keyName,
                         color: AppColors.black,
                       ),
                     ),
@@ -38,14 +40,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             flex: 4,
           ),
           if (title != null)
-            Center(
-              child: Text(
-                title,
-                style: settingsTextStyle,
-              ),
+            Text(
+              title.toUpperCase(),
+              style: settingsTextStyle,
             ),
           const Spacer(
-            flex: 6,
+            flex: 4,
+          ),
+          const SizedBox(
+            width: 64,
           ),
           if (trailing != null) trailing,
         ],
@@ -54,5 +57,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 150);
 }
