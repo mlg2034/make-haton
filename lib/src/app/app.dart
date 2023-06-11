@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
             authorized: (user) {
               final navigatorManager =  getIt.get<NavigatorManager>();
               navigatorManager.pushReplacementNamed(Routes.homePage);
-              Navigator.pop(context)
             },
             unauthorized: (user) {},
             loading: (user) {},
