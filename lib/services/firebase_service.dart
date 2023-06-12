@@ -6,7 +6,8 @@ class FirebaseDataSource {
 
   ///[queryingUIdField] это ключ, по которому мы определяем, есть ли у [user]
   ///объектs [collectionName]
-  Future<Map<String, dynamic>?> getDataLinkedToUserID(String  collectionName, String queryingUIdField,UserEntity user) async {
+  Future<Map<String, dynamic>?> getDataLinkedToUserID(
+      String collectionName, String queryingUIdField, UserEntity user) async {
     final query = (await FirebaseFirestore.instance
         .collection(collectionName)
         .where(queryingUIdField, isEqualTo: user.id)
@@ -16,7 +17,9 @@ class FirebaseDataSource {
     return object;
   }
 
-  delete(String  collectionName, String queryingUIdField,UserEntity user,) async{
-
-  }
+  delete(
+    String collectionName,
+    String queryingUIdField,
+    UserEntity user,
+  ) async {}
 }

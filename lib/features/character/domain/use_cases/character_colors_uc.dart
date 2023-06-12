@@ -17,7 +17,7 @@ class CharacterColorsUseCase extends UseCase {
     return _characterIconRepository.chracterColorIcons;
   }
 
-   getCharacterColorsText() {
+  getCharacterColorsText() {
     return _characterTextRepository.colorMap;
   }
 

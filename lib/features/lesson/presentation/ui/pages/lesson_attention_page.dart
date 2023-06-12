@@ -108,17 +108,18 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                   context: context,
                   builder: (BuildContext context) {
                     return AnswerBottomSheets(
-
                       backgroundColor: AppColors.checkButtonColor,
                       mainText: 'WEEL DONE , IT IS RIGHT',
-                      subText: 'Keep going green!', onPressed: () {  },
+                      subText: 'Keep going green!',
+                      onPressed: () {},
                     );
                   },
                 );
               },
               child: CheckButton(
                 color: AppColors.checkButtonColor,
-                title: 'CHECK', onPressed: () {  },
+                title: 'CHECK',
+                onPressed: () {},
               ),
             ),
           ],

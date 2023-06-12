@@ -59,15 +59,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthState.error(UserEntity.empty()));
     }
   }
-  
 
-  Future<Map <String, dynamic>>  storeData() async{
+  Future<Map<String, dynamic>> storeData() async {
     return Map.fromIterable((await store.get()).docs.map((e) => e.data()));
   }
 
-  _saveToFirestore(UserEntity user)async{
+  _saveToFirestore(UserEntity user) async {
     final docs = (await store.get()).docs;
-    final userFromStore =  docs.where((element) => element.data()['id']==user.id).firstOrNull;
+    final userFromStore = docs.where((element) => element.data()['id'] == user.id).firstOrNull;
     final ex = (await store.where('id', isEqualTo: user.id).get());
     // ex.
     // if(userFromStore != null){

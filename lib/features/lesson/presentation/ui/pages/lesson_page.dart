@@ -121,5 +121,3 @@ class _LessonPageState extends State<LessonPage> {
     );
   }
 }
-
-

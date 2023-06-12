@@ -47,7 +47,6 @@ class AnswerBottomSheets extends StatelessWidget {
           ),
           GestureDetector(
             onTap: onPressed,
-            
             child: Container(
               alignment: Alignment.center,
               width: 145,

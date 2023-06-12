@@ -21,108 +21,119 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
       appBar: BaseAppBar(
         title: 'Practice',
       ),
-      body:Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 50,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          SoundButton(),
+          const SizedBox(
+            height: 16,
+          ),
+          Text(
+            localizations.book,
+            style: lessonCategoryTextStyle,
+          ),
+          const SizedBox(
+            height: 32,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 48),
+            child: AppOutlinedButton.rect(
+              child: Flexible(
+                child: Center(
+                  child: Text(
+                    'An item tha people read to gain knowledge',
+                    style: lessonPropolsolTextStyle,
+                  ),
+                ),
+              ),
+              aspectRatio: 5,
             ),
-            SoundButton(),
-            const SizedBox(
-              height: 16,
-            ),
-            Text(
-              localizations.book,
-              style: lessonCategoryTextStyle,
-            ),
-            const SizedBox(
-              height: 32,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 48),
-              child: AppOutlinedButton.rect(
-                child: Flexible(
-                  child: Center(
-                    child: Text(
-                      'An item tha people read to gain knowledge',
-                      style: lessonPropolsolTextStyle,
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 48),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: AppOutlinedButton.square(
+                      child: Image.asset(
+                        UiKitAssets.icons.book.keyName,
+                      ),
                     ),
                   ),
                 ),
-                aspectRatio: 5,
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 48),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AppOutlinedButton.square(
-                        child: Image.asset(
-                          UiKitAssets.icons.book.keyName,
-                        ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: AppOutlinedButton.square(
+                      child: Image.asset(
+                        UiKitAssets.icons.book.keyName,
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AppOutlinedButton.square(
-                        child: Image.asset(
-                          UiKitAssets.icons.book.keyName,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 48),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AppOutlinedButton.square(
-                        child: Image.asset(
-                          UiKitAssets.icons.book.keyName,
-                        ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 48),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: AppOutlinedButton.square(
+                      child: Image.asset(
+                        UiKitAssets.icons.book.keyName,
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AppOutlinedButton.square(
-                        child: Image.asset(
-                          UiKitAssets.icons.book.keyName,
-                        ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: AppOutlinedButton.square(
+                      child: Image.asset(
+                        UiKitAssets.icons.book.keyName,
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            const SizedBox(height: 28,),
-            Text('Choose the image that describe the word' ,style: exampleLetterTextStyle,),
-            const Divider(color: AppColors.border,),
-            const SizedBox(height: 24,),
-            CheckButton(onPressed:() {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PracticeFinishPage()));
-              
-            }, color: AppColors.border, title: 'CHECK',),
-
-          ],
-        ),
-      
+          ),
+          const SizedBox(
+            height: 28,
+          ),
+          Text(
+            'Choose the image that describe the word',
+            style: exampleLetterTextStyle,
+          ),
+          const Divider(
+            color: AppColors.border,
+          ),
+          const SizedBox(
+            height: 24,
+          ),
+          CheckButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => PracticeFinishPage()));
+            },
+            color: AppColors.border,
+            title: 'CHECK',
+          ),
+        ],
+      ),
     );
   }
 }

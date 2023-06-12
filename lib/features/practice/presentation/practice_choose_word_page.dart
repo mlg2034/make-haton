@@ -67,13 +67,14 @@ class _PracticeChooseWordState extends State<PracticeChooseWord> {
             color: AppColors.border,
           ),
           CheckButton(
-              onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => PracticeChooseIcon(),
-                    ),
-                  ),
-              color: AppColors.border,
-              title: 'Check',),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => PracticeChooseIcon(),
+              ),
+            ),
+            color: AppColors.border,
+            title: 'Check',
+          ),
         ],
       ),
     );

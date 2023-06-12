@@ -16,7 +16,5 @@ void main() async {
   FirebaseAuth.instanceFor(app: app);
   FirebaseFirestore.instanceFor(app: app);
 
-
   runApp(const MyApp());
 }
-

@@ -14,9 +14,7 @@ class DictionaryAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.title,
     this.wordsCount,
     this.subtitle,
-
     super.key,
-
   });
 
   @override

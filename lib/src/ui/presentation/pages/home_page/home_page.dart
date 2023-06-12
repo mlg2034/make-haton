@@ -28,7 +28,8 @@ class _HomePageState extends State<HomePage> {
   // sy(UserEntity user)async{
 
   Future<void> customizeRobot() async {
-    final res = await getIt.get<NavigatorManager>().pushNamed(Routes.characterPage, arguments: robot);
+    final res =
+        await getIt.get<NavigatorManager>().pushNamed(Routes.characterPage, arguments: robot);
 
     if (res != null) {
       robot = res as Widget;

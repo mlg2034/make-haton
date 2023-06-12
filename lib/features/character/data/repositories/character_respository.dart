@@ -15,20 +15,20 @@ class CharacterRepository {
       UiKitAssets.customizationsOptions.eyes.keyName,
     ],
   );
-   Map<String, Map<String, String>> get optionMapDetailed => Map.fromIterables(
-    [
-      'Color',
-      'Hats',
-      "Clothes",
-      'Eyes',
-    ],
-    [
-      colorMap,
-      hatMap,
-      chestMap,
-      eyesMap,
-    ],
-  );
+  Map<String, Map<String, String>> get optionMapDetailed => Map.fromIterables(
+        [
+          'Color',
+          'Hats',
+          "Clothes",
+          'Eyes',
+        ],
+        [
+          colorMap,
+          hatMap,
+          chestMap,
+          eyesMap,
+        ],
+      );
 
   final Map<String, String> chestMap = Map.fromIterables(
     [
@@ -75,8 +75,6 @@ class CharacterRepository {
     ],
   );
 
-
-
   final Map<String, String> colorMap = Map.fromIterables(
     [
       'Blue',
@@ -93,5 +91,4 @@ class CharacterRepository {
       UiKitAssets.customizations.colorPurple.keyName,
     ],
   );
-
 }

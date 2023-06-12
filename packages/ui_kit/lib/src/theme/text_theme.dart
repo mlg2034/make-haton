@@ -151,13 +151,12 @@ const titleScript = TextStyle(
   height: 88.51 / 64,
 );
 const title = TextStyle(
-  fontFamily: 'Work Sans',
-  fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w900,
-  fontSize: 20,
-  height: 23.46 / 20,
-  color: AppColors.title
-);
+    fontFamily: 'Work Sans',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w900,
+    fontSize: 20,
+    height: 23.46 / 20,
+    color: AppColors.title);
 const header_1 = TextStyle(
   fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
@@ -181,13 +180,12 @@ const header_3 = TextStyle(
   height: 16.42 / 14,
 );
 const subtitle = TextStyle(
-  fontFamily: 'Work Sans',
-  fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w500,
-  fontSize: 16,
-  height: 18.77 / 16,
-  color: AppColors.learnPropolsalColor
-);
+    fontFamily: 'Work Sans',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    height: 18.77 / 16,
+    color: AppColors.learnPropolsalColor);
 const subtitle_2 = TextStyle(
   fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
@@ -259,8 +257,8 @@ const letterQuiz = TextStyle(
   fontSize: 32,
   height: 37.54 / 32,
 );
-const coinsTextStyle=TextStyle(
-   fontFamily: 'Work Sans',
+const coinsTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w900,
   fontSize: 20,

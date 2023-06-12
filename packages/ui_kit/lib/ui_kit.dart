@@ -1,4 +1,4 @@
-export  'src/ui_components/buttons/sound_button.dart';
+export 'src/ui_components/buttons/sound_button.dart';
 export "src/assets/assets.gen.dart";
 export 'src/assets/fonts.gen.dart';
 export 'src/theme/app_colors.dart';

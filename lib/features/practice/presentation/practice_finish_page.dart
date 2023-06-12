@@ -118,7 +118,7 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
                 Text(
                   'OF 10',
                   style: title,
-                ), 
+                ),
               ],
             ),
           ),
@@ -132,42 +132,62 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
             height: 24,
           ),
           GestureDetector(
-            onTap: (){
-              showModalBottomSheet(context: context, builder:(BuildContext context){
-                return Container(
-                  height: 188,
-                  width: double.infinity,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const SizedBox(height: 28,),
-                       Container(
-                        width: 32,
-                        height: 5,
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(32) , color: AppColors.border),
-                      ),
-                      const SizedBox(height: 16,),
-                     
-                      Text('WANT TO EXIT?',style:settingsTextStyle ,),
-                      const SizedBox(height: 6,),
-                      Text('You progress will be lost!' ,style: subtitle,),
-                      const SizedBox(height: 24,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+            onTap: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Container(
+                      height: 188,
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            width: 162,
-                            child: ContinueButton(color: AppColors.checkButtonColor, title: 'NO')),
-                            const SizedBox(width: 8,),
-                          SizedBox(
-                            width: 162,
-                            child: CheckButton(onPressed: (){}, color: AppColors.white, title: 'YES'))
+                          const SizedBox(
+                            height: 28,
+                          ),
+                          Container(
+                            width: 32,
+                            height: 5,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(32), color: AppColors.border),
+                          ),
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            'WANT TO EXIT?',
+                            style: settingsTextStyle,
+                          ),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            'You progress will be lost!',
+                            style: subtitle,
+                          ),
+                          const SizedBox(
+                            height: 24,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                  width: 162,
+                                  child: ContinueButton(
+                                      color: AppColors.checkButtonColor, title: 'NO')),
+                              const SizedBox(
+                                width: 8,
+                              ),
+                              SizedBox(
+                                  width: 162,
+                                  child: CheckButton(
+                                      onPressed: () {}, color: AppColors.white, title: 'YES'))
+                            ],
+                          )
                         ],
-                      )
-                    ],
-                  ),
-                );
-              });
+                      ),
+                    );
+                  });
             },
             child: ContinueButton(
               color: AppColors.primary,
