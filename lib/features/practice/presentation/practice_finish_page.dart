@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:make_haton/shared/di.dart';
+import 'package:make_haton/shared/routes.dart';
+import 'package:make_haton/src/ui/blocs/navigator_bloc/navigation_service.dart';
 import 'package:ui_kit/ui_kit.dart';
 import 'package:lottie/lottie.dart';
 import 'package:localization/localization.dart';
@@ -28,7 +31,7 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-               localization.practice,
+                localization.practice,
                 style: categoryTextStyle,
               ),
               const SizedBox(
@@ -97,7 +100,8 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 48),
             child: Flexible(
-              child: Text(localization.keep_practicing_to_remember_more_words,
+              child: Text(
+                localization.keep_practicing_to_remember_more_words,
                 style: categoryTextStyle,
                 textAlign: TextAlign.center,
               ),
@@ -115,7 +119,6 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
                   localization.you_ve_got_of(a, b),
                   style: title,
                 ),
-
               ],
             ),
           ),
@@ -130,63 +133,65 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
           ),
           GestureDetector(
             onTap: () {
-              showModalBottomSheet(
-                  context: context,
-                  builder: (BuildContext context) {
-
-                    return Container(
-                      height: 188,
-                      width: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const SizedBox(
-                            height: 28,
-                          ),
-                          Container(
-                            width: 32,
-                            height: 5,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(32), color: AppColors.border),
-                          ),
-                          const SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            localization.want_to_exit,
-
-                            style: settingsTextStyle,
-                          ),
-                          const SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            localization.your_progress_will_be_lost,
-                            style: subtitle,
-                          ),
-                          const SizedBox(
-                            height: 24,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                  width: 162,
-                                  child: ContinueButton(
-                                      color: AppColors.checkButtonColor, title: localization.no)),
-                              const SizedBox(
-                                width: 8,
-                              ),
-                              SizedBox(
-                                  width: 162,
-                                  child: CheckButton(
-                                      onPressed: () {}, color: AppColors.white, title: localization.yes))
-                            ],
-                          )
-                        ],
-                      ),
-                    );
-                  });
+              getIt.get<NavigatorManager>().pushNamedAndRemoveUntil(Routes.homePage);
+              // showModalBottomSheet(
+              //   context: context,
+              //   builder: (BuildContext context) {
+              //     return Container(
+              //       height: 188,
+              //       width: double.infinity,
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.center,
+              //         children: [
+              //           const SizedBox(
+              //             height: 28,
+              //           ),
+              //           Container(
+              //             width: 32,
+              //             height: 5,
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(32), color: AppColors.border),
+              //           ),
+              //           const SizedBox(
+              //             height: 16,
+              //           ),
+              //           Text(
+              //             localization.want_to_exit,
+              //             style: settingsTextStyle,
+              //           ),
+              //           const SizedBox(
+              //             height: 6,
+              //           ),
+              //           Text(
+              //             localization.your_progress_will_be_lost,
+              //             style: subtitle,
+              //           ),
+              //           const SizedBox(
+              //             height: 24,
+              //           ),
+              //           Row(
+              //             mainAxisAlignment: MainAxisAlignment.center,
+              //             children: [
+              //               SizedBox(
+              //                   width: 162,
+              //                   child: ContinueButton(
+              //                       color: AppColors.checkButtonColor, title: localization.no)),
+              //               const SizedBox(
+              //                 width: 8,
+              //               ),
+              //               SizedBox(
+              //                   width: 162,
+              //                   child: CheckButton(
+              //                       onPressed: () {},
+              //                       color: AppColors.white,
+              //                       title: localization.yes))
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     );
+              //   },
+              // );
             },
             child: ContinueButton(
               color: AppColors.primary,

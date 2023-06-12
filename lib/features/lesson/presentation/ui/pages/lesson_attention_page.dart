@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/practice/presentation/practice_finish_page.dart';
+import 'package:make_haton/shared/di.dart';
+import 'package:make_haton/shared/routes.dart';
+import 'package:make_haton/src/ui/blocs/navigator_bloc/navigation_service.dart';
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 
@@ -14,6 +18,7 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
+    final manager = getIt.get<NavigatorManager>();
 
     return Scaffold(
       appBar: AppBar(
@@ -66,7 +71,7 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
             const SizedBox(
               height: 50,
             ),
-             Text(
+            Text(
               localization.fill_the_blank,
               style: lessonPropolsolTextStyle,
             ),
@@ -111,7 +116,10 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                       backgroundColor: AppColors.checkButtonColor,
                       mainText: localization.well_done_it_s_right,
                       subText: localization.keep_going_green,
-                      onPressed: () {},
+                      onPressed: () {
+                        // manager.pushNamed(Routes.pr)
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const PracticeFinishPage()));
+                      },
                     );
                   },
                 );
@@ -119,7 +127,10 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
               child: CheckButton(
                 color: AppColors.checkButtonColor,
                 title: localization.check,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const PracticeFinishPage()));
+
+                },
               ),
             ),
           ],
