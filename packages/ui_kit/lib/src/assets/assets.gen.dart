@@ -245,7 +245,8 @@ class $AssetsImagesGen {
   SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
 
   /// List of all assets
-  List<dynamic> get values =>[bike, dog, han, icCoin, icRobot, imAuth, imNotebookFrontGradient, imToroid];
+  List<dynamic> get values =>
+      [bike, dog, han, icCoin, icRobot, imAuth, imCar, imNotebookFrontGradient, imToroid];
 }
 
 class $AssetsLottieGen {
