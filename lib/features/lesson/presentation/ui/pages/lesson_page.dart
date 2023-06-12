@@ -5,6 +5,9 @@ import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_example.
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 
+import '../../../../../shared/di.dart';
+import '../../../../../src/services/app_tts.dart';
+
 class LessonPage extends StatefulWidget {
   const LessonPage({super.key});
 
@@ -13,6 +16,8 @@ class LessonPage extends StatefulWidget {
 }
 
 class _LessonPageState extends State<LessonPage> {
+  final tts = getIt.get<AppTTS>();
+  
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
@@ -42,7 +47,9 @@ class _LessonPageState extends State<LessonPage> {
               height: 30,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                tts.speak(localization.book);
+              },
               child: Container(
                 width: 76,
                 height: 48,
