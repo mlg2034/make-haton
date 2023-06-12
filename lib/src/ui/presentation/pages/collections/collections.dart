@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_preview_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_preview_page.dart';
 
 
 class Collections extends StatefulWidget {
