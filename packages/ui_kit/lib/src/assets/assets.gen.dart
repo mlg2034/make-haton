@@ -216,23 +216,11 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/ic_arrow_back.svg
-  SvgGenImage get icArrowBack => const SvgGenImage('assets/images/ic_arrow_back.svg');
-
-  /// File path: assets/images/ic_cancel.svg
-  SvgGenImage get icCancel => const SvgGenImage('assets/images/ic_cancel.svg');
-
   /// File path: assets/images/ic_coin.svg
   SvgGenImage get icCoin => const SvgGenImage('assets/images/ic_coin.svg');
 
-  /// File path: assets/images/ic_help.svg
-  SvgGenImage get icHelp => const SvgGenImage('assets/images/ic_help.svg');
-
   /// File path: assets/images/ic_robot.svg
   SvgGenImage get icRobot => const SvgGenImage('assets/images/ic_robot.svg');
-
-  /// File path: assets/images/ic_settings.svg
-  SvgGenImage get icSettings => const SvgGenImage('assets/images/ic_settings.svg');
 
   /// File path: assets/images/im_auth.jpg
   AssetGenImage get imAuth => const AssetGenImage('assets/images/im_auth.jpg');
@@ -245,16 +233,7 @@ class $AssetsImagesGen {
   SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
-        icArrowBack,
-        icCancel,
-        icCoin,
-        icHelp,
-        icRobot,
-        icSettings,
-        imNotebookFrontGradient,
-        imToroid
-      ];
+  List<dynamic> get values => [icCoin, icRobot, imAuth, imNotebookFrontGradient, imToroid];
 }
 
 class $AssetsLottieGen {
@@ -279,6 +258,19 @@ class $AssetsLottieGen {
   List<LottieGenImage> get values => [confetti, help, noConnection, robot, success];
 }
 
+class $AssetsRobotsGen {
+  const $AssetsRobotsGen();
+
+  /// File path: assets/robots/robot.svg
+  SvgGenImage get robot => const SvgGenImage('assets/robots/robot.svg');
+
+  /// File path: assets/robots/robot_glowing.svg
+  SvgGenImage get robotGlowing => const SvgGenImage('assets/robots/robot_glowing.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [robot, robotGlowing];
+}
+
 class UiKitAssets {
   UiKitAssets._();
 
@@ -289,6 +281,7 @@ class UiKitAssets {
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottieGen lottie = $AssetsLottieGen();
+  static const $AssetsRobotsGen robots = $AssetsRobotsGen();
 }
 
 class AssetGenImage {
