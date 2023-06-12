@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -87,18 +86,18 @@ const selectedLetterTextStyle = TextStyle(
   height: 37.54 / 32,
   color: AppColors.white,
 );
-const mainTextBottomSheetTextStyle= TextStyle(
-    fontFamily: 'Work Sans',
+const mainTextBottomSheetTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
   fontWeight: FontWeight.w900,
   fontSize: 20,
-  height: 23.46 / 20  ,
+  height: 23.46 / 20,
   color: AppColors.white,
 );
 const subTextBottomSheetTextStyle = TextStyle(
-    fontFamily: 'Work Sans',
+  fontFamily: 'Work Sans',
   fontWeight: FontWeight.w400,
   fontSize: 14,
-  height: 16.42 / 14  ,
+  height: 16.42 / 14,
   color: AppColors.white,
 );
 const learnSession = TextStyle(
@@ -108,21 +107,41 @@ const learnSession = TextStyle(
   height: 21.18 / 18,
   color: AppColors.learnPropolsalColor,
 );
-const helpTextTextSyle= TextStyle(
-    fontFamily: 'Work Sans',
+const helpTextTextSyle = TextStyle(
+  fontFamily: 'Work Sans',
   fontWeight: FontWeight.w400,
   fontSize: 14,
-  height: 16.42 / 14  ,
+  height: 16.42 / 14,
   color: AppColors.learnButtonColor,
 );
-
+const characterTitleTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.46 / 20,
+  color: AppColors.black,
+);
+const coinsCountTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.46 / 20,
+  color: AppColors.coinColor,
+);
+const characterTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
+  height: 16.42 / 14,
+  color: AppColors.title,
+);
 
 const titleScript = TextStyle(
-    fontFamily: 'Oleo Script',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    fontSize: 64,
-    height: 88.51 / 64,
+  fontFamily: 'Oleo Script',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
+  fontSize: 64,
+  height: 88.51 / 64,
 );
 const title = TextStyle(
   fontFamily: 'Work Sans',
@@ -229,4 +248,3 @@ const letterQuiz = TextStyle(
   fontSize: 32,
   height: 37.54 / 32,
 );
-

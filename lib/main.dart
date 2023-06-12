@@ -1,7 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
 import 'package:make_haton/src/domain/entities/language_enum.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
@@ -11,12 +12,19 @@ import 'package:make_haton/domain/repository/firebase/authentication.dart';
 import 'package:make_haton/src/ui/presentation/pages/lesson_page/lesson_preview_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/dictionary/dictionary_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/no_connection_page/no_connection_page.dart';
-import 'package:make_haton/src/ui/presentation/pages/collections/collections.dart';
-import 'package:ui_kit/ui_kit.dart';
 
-void main() async{
+void main() async {
+  configDi();
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
+  final app = await Firebase.initializeApp();
+  FirebaseAuth.instanceFor(app: app);
+  FirebaseFirestore.instanceFor(app: app);
+  print(Firebase.apps);
+
+
   runApp(const MyApp());
 }
 
@@ -37,10 +45,7 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: Collections(
-              titleList: [Text("data"),Text("2sasdadaf")],
-              itemsList: [SvgPicture.asset(UiKitAssets.images.imToroid.keyName),SvgPicture.asset(UiKitAssets.images.imCar.keyName)],
-            ),
+            home: NoConnection(),
             /*Dictionary(
               titleList: ['Animals','transport','emotions'],
               itemsList: ['Dog','Cat','Bird','Dog','Cat',],

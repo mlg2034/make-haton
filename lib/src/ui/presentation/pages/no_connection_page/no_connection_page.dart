@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
 import 'package:ui_kit/ui_kit.dart';
 
@@ -21,7 +20,7 @@ class _NoConnectionState extends State<NoConnection> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding: EdgeInsets.only(bottom: 128),
+              padding: const EdgeInsets.only(bottom: 128),
               child: SizedBox(
                 child: LottieWidget(
                   asset: UiKitAssets.lottie.noConnection.keyName,

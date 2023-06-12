@@ -10,10 +10,10 @@ class SelectLettersButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SelectLettersButtonState createState() => _SelectLettersButtonState();
+  SelectLettersButtonState createState() => SelectLettersButtonState();
 }
 
-class _SelectLettersButtonState extends State<SelectLettersButton> {
+class SelectLettersButtonState extends State<SelectLettersButton> {
   bool isSelected = false;
 
   @override
@@ -21,7 +21,7 @@ class _SelectLettersButtonState extends State<SelectLettersButton> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          isSelected = !isSelected; 
+          isSelected = !isSelected;
         });
       },
       child: Container(

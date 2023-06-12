@@ -23,7 +23,7 @@ class LearnAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SquareButton(
+        AppOutlinedButton.square(
           onPressed: onLeadingTapExit,
           child: Container(
             alignment: Alignment.center,
@@ -46,13 +46,13 @@ class LearnAppBar extends StatelessWidget implements PreferredSizeWidget {
                 width: 178,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(48),
-                  color: AppColors.progresBar,
+                  color: AppColors.secondaryInactive,
                 ),
               ),
             ],
           ),
         ),
-        SquareButton(
+        AppOutlinedButton.square(
           onPressed: onLeadingTapHelp,
           child: Container(
             alignment: Alignment.center,
