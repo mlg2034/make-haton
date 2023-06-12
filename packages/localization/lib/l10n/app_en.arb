@@ -38,5 +38,44 @@
     "dictionary": "DICTIONARY",
     "connection_is_lost": "CONNECTION IS LOST",
     "check_your_network": "Check your network and reload the page",
-    "reload": "RELOAD"
+    "reload": "RELOAD",
+
+
+    "well_done_it_s_right": "Well Done, it’s right",
+    "keep_going_green": "Keep going green!",
+    "that_s_a_mistake": "That’s a mistake",
+    "try_again": "Try again!",
+    "PRACTICE": "PRACTICE",
+    "can_you_complete_with": "Can you complete with no mistakes?",
+    "want_to_exit": "Want to exit?",
+    "your_progress_will_be_lost!":"Your progress will be lost!",
+    "keep_practicing_to_remember_more_words": "Keep practicing to remember more words",
+    "you_ve_got_of": "You’ve got {count} of {num}",
+    "practice_session": "Practice Session",
+
+    "color": "Color",
+    "color_blue": "Blue",
+    "color_red": "Red",
+    "color_purple": "Purple",
+    "color_yellow": "Yellow",
+
+    "cap": "Cap",
+    "none": "None",
+
+    "scarf": "Scarf",
+    "hat":  "Hat",
+
+
+    "clothes":"Clothes",
+    "no_Clothes": "No Clothes",
+    "cloak": "Cloak",
+    "shirt": "Shirt",
+    "hoodie": "Hoodie",
+
+    "eyes": "Eyes",
+    "eyes_default": "default",
+    "eyes_wink":"wink",
+    "eyes_angry": "angry",
+    "eyes_cute":"cute"
+
 }
