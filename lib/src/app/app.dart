@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
               ),
               builder: (context, child) => child ?? const SizedBox.shrink(),
               // initialRoute: Routes.homePage,
-              home: const HomePage(),
+              home: const AuthPage(),
               locale: state.selectedLanguage.value,
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
