@@ -187,7 +187,7 @@ class CharacterPageState extends State<CharacterPage> {
                       // height: 80,
                       width: 177,
                       decoration: BoxDecoration(
-                        color: AppColors.coinContainerColor,
+                        color: AppColors.secondaryInactive,
                         border: Border.all(color: AppColors.border),
                         borderRadius: BorderRadius.circular(24),
                       ),
