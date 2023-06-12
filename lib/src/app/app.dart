@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           state.map(
             authorized: (user) {
               final navigatorManager = getIt.get<NavigatorManager>();
-              navigatorManager.pushReplacementNamed(Routes.homePage);
+              navigatorManager.pushNamedAndRemoveUntil(Routes.homePage);
             },
             unauthorized: (user) {},
             loading: (user) {},
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
               ),
               builder: (context, child) => child ?? const SizedBox.shrink(),
               // initialRoute: Routes.homePage,
-              home: const HomePage(),
+              home: const AuthPage(),
               locale: state.selectedLanguage.value,
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,

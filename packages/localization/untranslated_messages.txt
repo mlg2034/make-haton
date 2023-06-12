@@ -6,5 +6,7 @@
 
   "kk": [
     "start"
+    "words",
+    "no_clothes"
   ]
 }

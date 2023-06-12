@@ -145,6 +145,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/coin.svg
   SvgGenImage get coin => const SvgGenImage('assets/icons/coin.svg');
 
+  /// File path: assets/icons/email.png
+  AssetGenImage get email => const AssetGenImage('assets/icons/email.png');
+
   /// File path: assets/icons/exit.svg
   SvgGenImage get exit => const SvgGenImage('assets/icons/exit.svg');
 
@@ -195,6 +198,7 @@ class $AssetsIconsGen {
         book,
         books,
         coin,
+        email,
         exit,
         icAppleWhite,
         icArrowBack,

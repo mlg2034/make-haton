@@ -16,10 +16,4 @@ class FirebaseDataSource {
 
     return object;
   }
-
-  delete(
-    String collectionName,
-    String queryingUIdField,
-    UserEntity user,
-  ) async {}
 }

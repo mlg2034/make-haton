@@ -53,6 +53,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get continueWithApple => 'AppleID-мен жалғастыру';
 
   @override
+  String get continueWithEmail => 'Email-мен жалғастыру';
+
+  @override
   String get lesson => 'Сабақ';
 
   @override
@@ -104,36 +107,137 @@ class AppLocalizationsKk extends AppLocalizations {
   String get learned => 'ОҚЫҒАН';
 
   @override
-  String get learn_session => 'Learn Session';
+  String get learn_session => 'Сабақ';
 
   @override
-  String get example_help_main_text => 'During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:';
+  String get example_help_main_text => 'Оқу барысында сізге берілген сөздерді үйрену керек. Бұл сөздер бір коллекцияға жатады. Оларды үйренгеннен кейін сіздің зейіндіңіз сыналады, әр сөзге сізге әріптер қою керек. Сессияның толық процесі:';
 
   @override
-  String get example_help_first_sub_text => '1. Learn a Word';
+  String get example_help_first_sub_text => '1. Сөзді үйрену';
 
   @override
-  String get example_help_second_sub_text => '2. Learn example of its use in sentences';
+  String get example_help_second_sub_text => '2. Сөзді сөйлемдерде қолданудың мысалын үйрену';
 
   @override
-  String get example_help_third_sub_text => '3. Fill a blank Letter in a Word';
+  String get example_help_third_sub_text => '3. Сөзге әріптер қою';
 
   @override
-  String get just_follow => 'Just follow this process!';
+  String get just_follow => 'Осы процесті орындап отырыңыз!';
 
   @override
-  String get book_example_one_sentences => 'An item that people read to gain knowledge';
+  String get book_example_one_sentences => 'Білімді алу үшін адамдар оқитын зат';
 
   @override
   String book_example_two_sentences(Object val) {
-    return 'THE $val';
+    return ' $val';
   }
 
   @override
   String wordsLearnedTitle(Object count) {
-    return 'PRACTICED $count words today';
+    return 'Бүгін сіз $count сөзді үйрендіңіз';
   }
 
   @override
-  String get welcomeText => '👋 Good morning,';
+  String get welcomeText => 'Сәлем!';
+
+  @override
+  String get well_done_it_s_right => 'Жақсы орындалды, дұрыс';
+
+  @override
+  String get keep_going_green => 'Жасыл түспен жалғастырыңыз!';
+
+  @override
+  String get that_s_a_mistake => 'Бұл қате';
+
+  @override
+  String get try_again => 'Тағы көріңіз!';
+
+  @override
+  String get practice => 'ТӘЖІРИБЕ';
+
+  @override
+  String get can_you_complete_with => 'қатесіз аяқтай аласыз ба?';
+
+  @override
+  String get want_to_exit => 'Шығуға бола ма?';
+
+  @override
+  String get your_progress_will_be_lost => 'Сіздің прогрессіңіз жоғалады!';
+
+  @override
+  String get keep_practicing_to_remember_more_words => 'Көбірек сөздерді есте сақтау үшін жаттығуды жалғастырыңыз';
+
+  @override
+  String you_ve_got_of(Object count, Object num) {
+    return '$num-нан $count алдыңыз';
+  }
+
+  @override
+  String get practice_session => 'Тәжірибе сабағы';
+
+  @override
+  String get examples_of_use => 'Мысалдар';
+
+  @override
+  String get help => 'Анықтама беті';
+
+  @override
+  String get wardrobe => 'гардероб';
+
+  @override
+  String get color => 'Түс';
+
+  @override
+  String get color_blue => 'Көк';
+
+  @override
+  String get color_red => 'Қызыл';
+
+  @override
+  String get color_purple => 'Қызғылт сары';
+
+  @override
+  String get color_yellow => 'Сары';
+
+  @override
+  String get cap => 'Бөрік';
+
+  @override
+  String get none => 'Жоқ';
+
+  @override
+  String get scarf => 'Шыбын';
+
+  @override
+  String get hat => 'Шляпа';
+
+  @override
+  String get clothes => 'Киім';
+
+  @override
+  String get no_clothes => 'Киім жоқ';
+
+  @override
+  String get cloak => 'Пальто';
+
+  @override
+  String get shirt => 'Топ';
+
+  @override
+  String get hoodie => 'Көйлек';
+
+  @override
+  String get eyes => 'Көздер';
+
+  @override
+  String get eyes_default => 'стандартты';
+
+  @override
+  String get eyes_wink => 'көзін жыбырлату';
+
+  @override
+  String get eyes_angry => 'ашулы';
+
+  @override
+  String get eyes_cute => 'әдемі';
 }
