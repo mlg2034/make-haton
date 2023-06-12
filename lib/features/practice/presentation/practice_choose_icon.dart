@@ -23,7 +23,7 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: BaseAppBar(
-        title: 'Practice',
+        title: localizations.practice,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -211,7 +211,7 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
             height: 28,
           ),
           Text(
-            'Choose the image that describes the word',
+            localizations.choose_the_image_that_describe_the_word,
             style: exampleLetterTextStyle,
           ),
           const Divider(
@@ -225,10 +225,10 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => PracticeFinishPage()));
             },
+            title: localizations.check,
             color: selectedIcon.isNotEmpty
                 ? AppColors.checkButtonColor
                 : AppColors.border,
-            title: 'CHECK',
           ),
         ],
       ),

@@ -20,7 +20,7 @@ class _PracticePreviewPageState extends State<PracticePreviewPage> {
 
     return Scaffold(
       appBar: BaseAppBar(
-        title: 'Practice',
+        title: localization.practice,
         onLeadingTapExit: () => Navigator.of(context).pop(),
         onLeadingTapHelp: () => Navigator.of(context).push(
           MaterialPageRoute(
@@ -36,14 +36,11 @@ class _PracticePreviewPageState extends State<PracticePreviewPage> {
           Lottie.asset(
             UiKitAssets.lottie.robot.keyName,
           ),
-          const Text(
-            'Can you complete',
+           Text(
+            localization.can_you_complete_with,
             style: learnWordsTextStyle,
           ),
-          Text(
-            ' with no mistakes?',
-            style: categoryTextStyle,
-          ),
+
           const SizedBox(
             height: 60,
           ),
@@ -73,8 +70,8 @@ class _PracticePreviewPageState extends State<PracticePreviewPage> {
                   ],
                 ),
               ),
-              child: const Text(
-                'START',
+              child:  Text(
+                localization.start,
                 style: buttonTextTextStyle,
               ),
             ),

@@ -182,6 +182,15 @@ class AppLocalizationsKk extends AppLocalizations {
   String get help => 'Анықтама беті';
 
   @override
+  String get yes => 'иә';
+
+  @override
+  String get no => 'жоқ';
+
+  @override
+  String get finish => 'аяқтау';
+
+  @override
   String get wardrobe => 'гардероб';
 
   @override
@@ -240,4 +249,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get eyes_cute => 'әдемі';
+
+  @override
+  String get choose_the_image_that_describe_the_word => 'Осы сөзді сипаттайтын суретті таңдаңыз';
 }

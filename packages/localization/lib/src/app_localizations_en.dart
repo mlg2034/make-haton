@@ -98,7 +98,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get check_your_network => 'Check your network and reload the page';
 
   @override
-  String get reload => 'Перезагрузить';
+  String get reload => 'RELOAD';
 
   @override
   String get collections => 'Collections';
@@ -182,6 +182,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get help => 'HELP';
 
   @override
+  String get yes => 'yes';
+
+  @override
+  String get no => 'no';
+
+  @override
+  String get finish => 'finish';
+
+  @override
   String get wardrobe => 'wardrobe';
 
   @override
@@ -240,4 +249,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get eyes_cute => 'cute';
+
+  @override
+  String get choose_the_image_that_describe_the_word => 'Choose the image that describe the word';
 }

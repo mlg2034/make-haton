@@ -1,12 +1,6 @@
 {
   "en": [
     "words",
-    "reload"
-  ],
-
-  "kk": [
-    "start"
-    "words",
     "no_clothes"
   ]
 }

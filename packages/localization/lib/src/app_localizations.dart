@@ -287,6 +287,18 @@ abstract class AppLocalizations {
   /// **'Перезагрузить'**
   String get reload;
 
+  /// No description provided for @collections.
+  ///
+  /// In ru, this message translates to:
+  /// **'КОЛЛЕКЦИИ'**
+  String get collections;
+
+  /// No description provided for @learned.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИЗУЧЕНО'**
+  String get learned;
+
   /// No description provided for @learn_session.
   ///
   /// In ru, this message translates to:
@@ -346,18 +358,6 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'👋 Доброе утро,'**
   String get welcomeText;
-
-  /// No description provided for @collections.
-  ///
-  /// In ru, this message translates to:
-  /// **'КОЛЛЕКЦИИ'**
-  String get collections;
-
-  /// No description provided for @learned.
-  ///
-  /// In ru, this message translates to:
-  /// **'ИЗУЧЕНО'**
-  String get learned;
 
   /// No description provided for @well_done_it_s_right.
   ///
@@ -436,6 +436,24 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Помощь'**
   String get help;
+
+  /// No description provided for @yes.
+  ///
+  /// In ru, this message translates to:
+  /// **'да'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In ru, this message translates to:
+  /// **'нет'**
+  String get no;
+
+  /// No description provided for @finish.
+  ///
+  /// In ru, this message translates to:
+  /// **'закончить'**
+  String get finish;
 
   /// No description provided for @wardrobe.
   ///
@@ -556,6 +574,12 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'милый'**
   String get eyes_cute;
+
+  /// No description provided for @choose_the_image_that_describe_the_word.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите изображение, которое описывает это слово'**
+  String get choose_the_image_that_describe_the_word;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

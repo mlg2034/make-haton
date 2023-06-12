@@ -6,6 +6,7 @@ import 'package:make_haton/src/services/app_tts.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import '../../../src/ui/presentation/pages/help_page/help_page.dart';
+import 'package:localization/localization.dart';
 
 class PracticeQuizePage extends StatefulWidget {
   const PracticeQuizePage({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: BaseAppBar(
-        title: 'Practice',
+        title: localization.practice,
         onLeadingTapExit: () => Navigator.of(context).pop(),
         onLeadingTapHelp: () => Navigator.of(context).push(
           MaterialPageRoute(
@@ -52,6 +53,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: const Text(
+
                   'An item that people read',
                   style: lessonPropolsolTextStyle,
                 ),
@@ -138,8 +140,8 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
             color: AppColors.border,
           ),
           CheckButton(
+            title: localization.check,
             color: selectedQuizButton.isEmpty? AppColors.border: AppColors.checkButtonColor,
-            title: 'Check',
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const PracticeChooseWord(),
