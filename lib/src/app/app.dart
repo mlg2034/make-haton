@@ -10,6 +10,7 @@ import 'package:make_haton/src/app/provider_scope.dart';
 import 'package:make_haton/src/domain/entities/language_enum.dart';
 import 'package:make_haton/src/ui/blocs/localization_bloc/localization_bloc.dart';
 import 'package:make_haton/src/ui/blocs/navigator_bloc/navigation_service.dart';
+import 'package:make_haton/src/ui/presentation/pages/dictionary/dictionary_page.dart';
 import 'package:make_haton/src/ui/presentation/pages/home_page/home_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -36,12 +37,13 @@ class MyApp extends StatelessWidget {
               title: 'Flutter Demo',
               navigatorKey: getIt.get<NavigatorKey>(),
               theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                colorScheme:
+                    ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
               ),
               builder: (context, child) => child ?? const SizedBox.shrink(),
               // initialRoute: Routes.homePage,
-              home: const HomePage(),
+              home: const AuthPage(),
               locale: state.selectedLanguage.value,
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,

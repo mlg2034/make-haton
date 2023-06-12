@@ -7,8 +7,8 @@ import 'package:make_haton/shared/di.dart';
 import 'package:make_haton/src/app/app.dart';
 
 void main() async {
-  configDi();
   WidgetsFlutterBinding.ensureInitialized();
+  configDi();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );

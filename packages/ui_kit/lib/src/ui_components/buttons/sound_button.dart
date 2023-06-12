@@ -4,14 +4,18 @@ import 'package:flutter_svg/svg.dart';
 import '../../../ui_kit.dart';
 
 class SoundButton extends StatelessWidget {
+  final VoidCallback? onPressedCallback;
+
   const SoundButton({
     super.key,
+    required this.onPressedCallback,
   });
 
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
-      onTap: () {},
+      onTap: onPressedCallback,
       child: Container(
         width: 76,
         height: 48,
