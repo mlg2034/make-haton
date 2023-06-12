@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
 import 'package:make_haton/features/practice/presentation/practice_finish_page.dart';
+import 'package:make_haton/shared/di.dart';
+import 'package:make_haton/src/services/app_tts.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class PracticeChooseIcon extends StatefulWidget {
@@ -15,6 +17,7 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
+    final tts = getIt.get<AppTTS>();
 
     return Scaffold(
       backgroundColor: AppColors.white,
@@ -27,7 +30,7 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
           const SizedBox(
             height: 50,
           ),
-          SoundButton(),
+          SoundButton(onPressedCallback: () => tts.speak(localizations.book),),
           const SizedBox(
             height: 16,
           ),

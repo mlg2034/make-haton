@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 import 'package:make_haton/features/practice/presentation/practice_choose_word_page.dart';
+import 'package:make_haton/shared/di.dart';
+import 'package:make_haton/src/services/app_tts.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import '../../../src/ui/presentation/pages/help_page/help_page.dart';
@@ -13,9 +16,12 @@ class PracticeQuizePage extends StatefulWidget {
 
 class _PracticeQuizePageState extends State<PracticeQuizePage> {
   bool isQuizButtonSelected = false;
+  final tts = getIt.get<AppTTS>();
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.locale;
+
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: BaseAppBar(
@@ -52,7 +58,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
               const SizedBox(
                 width: 6,
               ),
-              const SoundButton(),
+              SoundButton(onPressedCallback: () => tts.speak(localization.book)),
             ],
           ),
           const SizedBox(

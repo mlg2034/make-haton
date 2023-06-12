@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
 import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_example.dart';
+import 'package:make_haton/src/services/app_tts.dart';
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 import 'package:ui_kit/ui_kit.dart';
+
+import '../../../../../shared/di.dart';
 
 class LessonPage extends StatefulWidget {
   const LessonPage({super.key});
@@ -13,9 +16,11 @@ class LessonPage extends StatefulWidget {
 }
 
 class _LessonPageState extends State<LessonPage> {
+  
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
+    final tts = getIt.get<AppTTS>();
 
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +46,7 @@ class _LessonPageState extends State<LessonPage> {
             const SizedBox(
               height: 30,
             ),
-            SoundButton(),
+            SoundButton(onPressedCallback: () => tts.speak(localization.book),),
             const SizedBox(
               height: 15,
             ),

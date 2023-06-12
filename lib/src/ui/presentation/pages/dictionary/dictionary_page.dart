@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/shared/di.dart';
+import 'package:make_haton/src/services/app_tts.dart';
 import 'package:ui_kit/ui_kit.dart';
+
 
 class Dictionary extends StatefulWidget {
   final List<String> titleList;
@@ -18,9 +21,11 @@ class Dictionary extends StatefulWidget {
 }
 
 class _DictionaryState extends State<Dictionary> {
+
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
+    final tts = getIt.get<AppTTS>();
 
     return Scaffold(
       appBar: AppBar(
@@ -64,7 +69,9 @@ class _DictionaryState extends State<Dictionary> {
                                       UiKitAssets.icons.icSpeach.keyName,
                                     ),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    tts.speak(item);
+                                  },
                                 ),
                                 const SizedBox(
                                   width: 8,
