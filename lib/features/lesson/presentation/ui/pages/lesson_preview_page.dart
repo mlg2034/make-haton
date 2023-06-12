@@ -40,8 +40,8 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
                 UiKitAssets.lottie.robot.keyName,
               ),
             ),
-            const Text(
-              'LEARN THE WORDS FROM',
+            Text(
+              localization.learn_the_world,
               style: learnWordsTextStyle,
             ),
             const Row(
@@ -89,8 +89,8 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
                     ],
                   ),
                 ),
-                child: const Text(
-                  'START',
+                child:  Text(
+                  localization.start,
                   style: buttonTextTextStyle,
                 ),
               ),

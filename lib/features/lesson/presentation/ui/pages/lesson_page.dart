@@ -110,9 +110,9 @@ class _LessonPageState extends State<LessonPage> {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => const LessonExample()));
               },
-              child: const ContinueButton(
+              child: ContinueButton(
                 color: AppColors.learnButtonColor,
-                title: 'LEARN',
+                title: localization.learn,
               ),
             ),
           ],

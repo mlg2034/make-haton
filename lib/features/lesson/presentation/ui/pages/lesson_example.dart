@@ -15,7 +15,7 @@ class LessonExample extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: BaseAppBar(
-          title: 'LESSON',
+          title: localization.lesson,
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () =>
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HelpPage())),
@@ -30,8 +30,8 @@ class LessonExample extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const Text(
-            'EXAMPLE OF USE',
+          Text(
+            localization.examples_of_use,
             style: lessonCategoryTextStyle,
           ),
           const SizedBox(
@@ -112,8 +112,8 @@ class LessonExample extends StatelessWidget {
                 color: AppColors.learnButtonColor,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Text(
-                'GOT IT',
+              child: Text(
+              localization.got_it,
                 style: buttonTextTextStyle,
               ),
             ),

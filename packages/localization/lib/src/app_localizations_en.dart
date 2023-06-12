@@ -53,6 +53,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueWithApple => 'Continue with AppleID';
 
   @override
+  String get continueWithEmail => 'Continue with Email';
+
+  @override
   String get lesson => 'Lesson';
 
   @override
@@ -136,4 +139,105 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get welcomeText => '👋 Good morning,';
+
+  @override
+  String get well_done_it_s_right => 'Well Done, it’s right';
+
+  @override
+  String get keep_going_green => 'Keep going green!';
+
+  @override
+  String get that_s_a_mistake => 'That’s a mistake';
+
+  @override
+  String get try_again => 'Try again!';
+
+  @override
+  String get practice => 'PRACTICE';
+
+  @override
+  String get can_you_complete_with => 'Can you complete with no mistakes?';
+
+  @override
+  String get want_to_exit => 'Want to exit?';
+
+  @override
+  String get your_progress_will_be_lost => 'Your progress will be lost!';
+
+  @override
+  String get keep_practicing_to_remember_more_words => 'Keep practicing to remember more words';
+
+  @override
+  String you_ve_got_of(Object count, Object num) {
+    return 'You’ve got $count of $num';
+  }
+
+  @override
+  String get practice_session => 'Practice Session';
+
+  @override
+  String get examples_of_use => 'Examples of use';
+
+  @override
+  String get help => 'HELP';
+
+  @override
+  String get wardrobe => 'wardrobe';
+
+  @override
+  String get color => 'Color';
+
+  @override
+  String get color_blue => 'Blue';
+
+  @override
+  String get color_red => 'Red';
+
+  @override
+  String get color_purple => 'Purple';
+
+  @override
+  String get color_yellow => 'Yellow';
+
+  @override
+  String get cap => 'Cap';
+
+  @override
+  String get none => 'None';
+
+  @override
+  String get scarf => 'Scarf';
+
+  @override
+  String get hat => 'Hat';
+
+  @override
+  String get clothes => 'Clothes';
+
+  @override
+  String get no_clothes => 'Без одежды';
+
+  @override
+  String get cloak => 'Cloak';
+
+  @override
+  String get shirt => 'Shirt';
+
+  @override
+  String get hoodie => 'Hoodie';
+
+  @override
+  String get eyes => 'Eyes';
+
+  @override
+  String get eyes_default => 'default';
+
+  @override
+  String get eyes_wink => 'wink';
+
+  @override
+  String get eyes_angry => 'angry';
+
+  @override
+  String get eyes_cute => 'cute';
 }

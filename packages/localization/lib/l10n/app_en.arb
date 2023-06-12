@@ -15,6 +15,8 @@
     "authorize": "Authorize to Learn Words!",
     "continueWithGoogle": "Continue with Google",
     "continueWithApple": "Continue with AppleID",
+    "continueWithEmail": "Continue with Email",
+
     "lesson": "Lesson",
     "learn_the_world":"LEARN THE WORDS FROM",
     "transport":"TRANSPORT",
@@ -43,20 +45,22 @@
 
 
     "reload": "RELOAD",
-
+    "help": "HELP",
 
     "well_done_it_s_right": "Well Done, it’s right",
     "keep_going_green": "Keep going green!",
     "that_s_a_mistake": "That’s a mistake",
     "try_again": "Try again!",
-    "PRACTICE": "PRACTICE",
+    "practice": "PRACTICE",
     "can_you_complete_with": "Can you complete with no mistakes?",
     "want_to_exit": "Want to exit?",
-    "your_progress_will_be_lost!":"Your progress will be lost!",
+    "your_progress_will_be_lost":"Your progress will be lost!",
     "keep_practicing_to_remember_more_words": "Keep practicing to remember more words",
     "you_ve_got_of": "You’ve got {count} of {num}",
     "practice_session": "Practice Session",
+    "examples_of_use": "Examples of use",
 
+    "wardrobe": "wardrobe",
     "color": "Color",
     "color_blue": "Blue",
     "color_red": "Red",
