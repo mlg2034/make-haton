@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ui_kit/ui_kit.dart';
 import 'package:lottie/lottie.dart';
+import 'package:localization/localization.dart';
 
 class PracticeFinishPage extends StatefulWidget {
   const PracticeFinishPage({super.key});
@@ -13,6 +14,10 @@ class PracticeFinishPage extends StatefulWidget {
 class _PracticeFinishPageState extends State<PracticeFinishPage> {
   @override
   Widget build(BuildContext context) {
+    final localization = context.locale;
+    final a = 5;
+    final b = 10;
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -23,7 +28,7 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Practice',
+               localization.practice,
                 style: categoryTextStyle,
               ),
               const SizedBox(
@@ -92,8 +97,7 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 48),
             child: Flexible(
-              child: Text(
-                'Keep practicing to remember more words',
+              child: Text(localization.keep_practicing_to_remember_more_words,
                 style: categoryTextStyle,
                 textAlign: TextAlign.center,
               ),
@@ -108,17 +112,10 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'YOU HAVE GOT ',
+                  localization.you_ve_got_of(a, b),
                   style: title,
                 ),
-                Text(
-                  '5 ',
-                  style: wordCountTextSyle,
-                ),
-                Text(
-                  'OF 10',
-                  style: title,
-                ),
+
               ],
             ),
           ),
@@ -136,6 +133,7 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
               showModalBottomSheet(
                   context: context,
                   builder: (BuildContext context) {
+
                     return Container(
                       height: 188,
                       width: double.infinity,
@@ -155,14 +153,15 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
                             height: 16,
                           ),
                           Text(
-                            'WANT TO EXIT?',
+                            localization.want_to_exit,
+
                             style: settingsTextStyle,
                           ),
                           const SizedBox(
                             height: 6,
                           ),
                           Text(
-                            'You progress will be lost!',
+                            localization.your_progress_will_be_lost,
                             style: subtitle,
                           ),
                           const SizedBox(
@@ -174,14 +173,14 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
                               SizedBox(
                                   width: 162,
                                   child: ContinueButton(
-                                      color: AppColors.checkButtonColor, title: 'NO')),
+                                      color: AppColors.checkButtonColor, title: localization.no)),
                               const SizedBox(
                                 width: 8,
                               ),
                               SizedBox(
                                   width: 162,
                                   child: CheckButton(
-                                      onPressed: () {}, color: AppColors.white, title: 'YES'))
+                                      onPressed: () {}, color: AppColors.white, title: localization.yes))
                             ],
                           )
                         ],
@@ -191,7 +190,7 @@ class _PracticeFinishPageState extends State<PracticeFinishPage> {
             },
             child: ContinueButton(
               color: AppColors.primary,
-              title: 'FINISH',
+              title: localization.finish,
             ),
           ),
         ],

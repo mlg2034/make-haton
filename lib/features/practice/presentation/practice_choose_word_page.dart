@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:make_haton/features/practice/presentation/practice_choose_icon.dart';
 import 'package:ui_kit/ui_kit.dart';
+import 'package:localization/localization.dart';
 
 class PracticeChooseWord extends StatefulWidget {
   const PracticeChooseWord({super.key});
@@ -14,9 +15,12 @@ class _PracticeChooseWordState extends State<PracticeChooseWord> {
 
   @override
   Widget build(BuildContext context) {
+
+    final localization = context.locale;
+
     return Scaffold(
       appBar: BaseAppBar(
-        title: 'Practice',
+        title: localization.practice,
       ),
       backgroundColor: AppColors.white,
       body: Column(
@@ -73,7 +77,7 @@ class _PracticeChooseWordState extends State<PracticeChooseWord> {
               ),
             ),
             color: AppColors.border,
-            title: 'Check',
+            title: localization.check,
           ),
         ],
       ),

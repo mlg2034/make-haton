@@ -182,6 +182,15 @@ class AppLocalizationsRu extends AppLocalizations {
   String get help => 'Помощь';
 
   @override
+  String get yes => 'да';
+
+  @override
+  String get no => 'нет';
+
+  @override
+  String get finish => 'закончить';
+
+  @override
   String get wardrobe => 'гардероб';
 
   @override
@@ -240,4 +249,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get eyes_cute => 'милый';
+
+  @override
+  String get choose_the_image_that_describe_the_word => 'Выберите изображение, которое описывает это слово';
 }

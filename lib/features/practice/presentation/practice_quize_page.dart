@@ -3,6 +3,7 @@ import 'package:make_haton/features/practice/presentation/practice_choose_word_p
 import 'package:ui_kit/ui_kit.dart';
 
 import '../../../src/ui/presentation/pages/help_page/help_page.dart';
+import 'package:localization/localization.dart';
 
 class PracticeQuizePage extends StatefulWidget {
   const PracticeQuizePage({Key? key}) : super(key: key);
@@ -16,10 +17,12 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.locale;
+
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: BaseAppBar(
-        title: 'Practice',
+        title: localization.practice,
         onLeadingTapExit: () => Navigator.of(context).pop(),
         onLeadingTapHelp: () => Navigator.of(context).push(
           MaterialPageRoute(
@@ -45,6 +48,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: const Text(
+
                   'An item that people read',
                   style: lessonPropolsolTextStyle,
                 ),
@@ -98,7 +102,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
           ),
           CheckButton(
             color: AppColors.border,
-            title: 'Check',
+            title: localization.check,
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const PracticeChooseWord(),
