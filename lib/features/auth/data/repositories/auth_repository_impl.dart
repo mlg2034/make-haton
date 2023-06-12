@@ -15,6 +15,7 @@ class AppAuthRepositoryImpl implements AppAuthRepository {
     final GoogleSignIn googleSignIn = GoogleSignIn();
 
     final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
+    print(googleSignInAccount==null);
 
     if (googleSignInAccount != null) {
       final GoogleSignInAuthentication googleSignInAuthentication =
@@ -27,19 +28,23 @@ class AppAuthRepositoryImpl implements AppAuthRepository {
 
       try {
         final UserCredential userCredential = await auth.signInWithCredential(credential);
-
         user = userCredential.user;
+        print(user);
       } on FirebaseAuthException catch (e) {
         if (e.code == 'account-exists-with-different-credential') {
           // handle the error here
+          print(user);
         } else if (e.code == 'invalid-credential') {
           // handle the error here
+          print(user);
         }
       } catch (e) {
         // handle the error here
+        print(e);
       }
     }
     if (user == null) {
+      print('object');
       return null;
     }
 
@@ -54,6 +59,7 @@ class AppAuthRepositoryImpl implements AppAuthRepository {
       return null;
     }
 
+    print(user);
     return UserModel.fromFirebase(user).toEntity();
   }
 

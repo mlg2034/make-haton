@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:make_haton/features/practice/presentation/practice_choose_word_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 
@@ -40,12 +39,12 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 decoration: BoxDecoration(
                   border: Border.all(color: AppColors.border),
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: Text(
+                child: const Text(
                   'An item that people read',
                   style: lessonPropolsolTextStyle,
                 ),
@@ -53,7 +52,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
               const SizedBox(
                 width: 6,
               ),
-              SoundButton(),
+              const SoundButton(),
             ],
           ),
           const SizedBox(
@@ -66,22 +65,28 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
               crossAxisCount: 2,
               childAspectRatio: 2.0,
               children: [
-                QuizeButtons(
-                    widgetTools: Text('book' ,style: lessonPropolsolTextStyle,),
-                    onPressed: () =>
-                        setState(() => isQuizButtonSelected = true)),
-                QuizeButtons(
-                    widgetTools: Text('book',style: lessonPropolsolTextStyle,),
-                    onPressed: () =>
-                        setState(() => isQuizButtonSelected = true)),
-                QuizeButtons(
-                    widgetTools: Text('Askhat',style: lessonPropolsolTextStyle),
-                    onPressed: () =>
-                        setState(() => isQuizButtonSelected = true)),
-                QuizeButtons(
-                    widgetTools: Text('red',style: lessonPropolsolTextStyle),
-                    onPressed: () =>
-                        setState(() => isQuizButtonSelected = true)),
+                QuizButton(
+                  widgetTools: const Text(
+                    'book',
+                    style: lessonPropolsolTextStyle,
+                  ),
+                  onPressed: () => setState(() => isQuizButtonSelected = true),
+                ),
+                QuizButton(
+                  widgetTools: const Text(
+                    'book',
+                    style: lessonPropolsolTextStyle,
+                  ),
+                  onPressed: () => setState(() => isQuizButtonSelected = true),
+                ),
+                QuizButton(
+                  widgetTools: const Text('Askhat', style: lessonPropolsolTextStyle),
+                  onPressed: () => setState(() => isQuizButtonSelected = true),
+                ),
+                QuizButton(
+                  widgetTools: const Text('red', style: lessonPropolsolTextStyle),
+                  onPressed: () => setState(() => isQuizButtonSelected = true),
+                ),
               ],
             ),
           ),
@@ -96,7 +101,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
             title: 'Check',
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => PracticeChooseWord(),
+                builder: (context) => const PracticeChooseWord(),
               ),
             ),
           ),

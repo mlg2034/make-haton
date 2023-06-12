@@ -1,9 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:make_haton/features/auth/domain/entities/user_entity.dart';
 import 'package:make_haton/features/auth/domain/use_cases/get_current_user_usecase.dart';
 import 'package:make_haton/features/auth/domain/use_cases/sign_in_usecase.dart';
 import 'package:make_haton/features/auth/domain/use_cases/sign_out_usecase.dart';
+import 'package:make_haton/shared/app_strings.dart';
 
 part 'auth_event.dart';
 
@@ -15,7 +17,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final SigningInUseCase signingInUseCase;
   final GetUserUseCase getUserUseCase;
   final SignOutUseCase signOutUseCase;
-
+  final store = FirebaseFirestore.instance.collection(FirebaseKeys.usersKey);
   AuthBloc(super.initialState, this.signingInUseCase, this.getUserUseCase, this.signOutUseCase) {
     on<AuthEvent>(
       (event, emit) {
@@ -56,5 +58,20 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     } catch (err) {
       emit(AuthState.error(UserEntity.empty()));
     }
+  }
+  
+
+  Future<Map <String, dynamic>>  storeData() async{
+    return Map.fromIterable((await store.get()).docs.map((e) => e.data()));
+  }
+
+  _saveToFirestore(UserEntity user)async{
+    final docs = (await store.get()).docs;
+    final userFromStore =  docs.where((element) => element.data()['id']==user.id).firstOrNull;
+    final ex = (await store.where('id', isEqualTo: user.id).get());
+    // ex.
+    // if(userFromStore != null){
+    //   ;
+    // }
   }
 }

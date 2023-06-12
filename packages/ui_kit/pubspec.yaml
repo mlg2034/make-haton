@@ -29,6 +29,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/lottie/
+    - assets/robots/
   fonts:
     - family: Work Sans
       fonts:

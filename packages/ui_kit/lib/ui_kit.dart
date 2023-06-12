@@ -15,7 +15,6 @@ export 'src/ui_components/buttons/check_button.dart';
 export 'src/ui_components/buttons/custom_button.dart';
 export 'src/ui_components/buttons/quize_button.dart';
 export 'src/ui_components/buttons/select_letter_button.dart';
-export 'src/ui_components/buttons/square_button.dart';
 export 'src/ui_components/lottie.dart';
 export 'src/ui_components/tiles/setting_tile.dart';
 export 'src/ui_components/buttons/continue_button.dart';

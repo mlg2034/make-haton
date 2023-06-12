@@ -11,6 +11,7 @@ class QuizButton extends StatelessWidget {
     required this.widgetTools,
     required this.onPressed,
     this.isSelected = false,
+    super.key,
   });
 
   @override

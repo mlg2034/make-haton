@@ -8,9 +8,9 @@ class CoinAmountUseCase extends UseCase {
     required CharacterIconRepository characterIconRepository,
   }) : _characterIconRepository = characterIconRepository;
 
-  Future<int> getCoinAmount() async {
-    return _characterIconRepository.coinAmount;
-  }
+  // Future<int> getCoinAmount() async {
+  //   return _characterIconRepository.coinAmount;
+  // }
 
   @override
   execute() {
