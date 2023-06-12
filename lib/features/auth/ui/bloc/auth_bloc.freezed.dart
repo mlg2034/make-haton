@@ -20,18 +20,21 @@ mixin _$AuthEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() signIn,
     required TResult Function() signOut,
+    required TResult Function() getUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? signIn,
     TResult? Function()? signOut,
+    TResult? Function()? getUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signIn,
     TResult Function()? signOut,
+    TResult Function()? getUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$AuthEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(SignIn value) signIn,
     required TResult Function(SignOut value) signOut,
+    required TResult Function(GetUser value) getUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SignIn value)? signIn,
     TResult? Function(SignOut value)? signOut,
+    TResult? Function(GetUser value)? getUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignIn value)? signIn,
     TResult Function(SignOut value)? signOut,
+    TResult Function(GetUser value)? getUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -111,6 +117,7 @@ class _$SignIn implements SignIn {
   TResult when<TResult extends Object?>({
     required TResult Function() signIn,
     required TResult Function() signOut,
+    required TResult Function() getUser,
   }) {
     return signIn();
   }
@@ -120,6 +127,7 @@ class _$SignIn implements SignIn {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? signIn,
     TResult? Function()? signOut,
+    TResult? Function()? getUser,
   }) {
     return signIn?.call();
   }
@@ -129,6 +137,7 @@ class _$SignIn implements SignIn {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signIn,
     TResult Function()? signOut,
+    TResult Function()? getUser,
     required TResult orElse(),
   }) {
     if (signIn != null) {
@@ -142,6 +151,7 @@ class _$SignIn implements SignIn {
   TResult map<TResult extends Object?>({
     required TResult Function(SignIn value) signIn,
     required TResult Function(SignOut value) signOut,
+    required TResult Function(GetUser value) getUser,
   }) {
     return signIn(this);
   }
@@ -151,6 +161,7 @@ class _$SignIn implements SignIn {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SignIn value)? signIn,
     TResult? Function(SignOut value)? signOut,
+    TResult? Function(GetUser value)? getUser,
   }) {
     return signIn?.call(this);
   }
@@ -160,6 +171,7 @@ class _$SignIn implements SignIn {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignIn value)? signIn,
     TResult Function(SignOut value)? signOut,
+    TResult Function(GetUser value)? getUser,
     required TResult orElse(),
   }) {
     if (signIn != null) {
@@ -211,6 +223,7 @@ class _$SignOut implements SignOut {
   TResult when<TResult extends Object?>({
     required TResult Function() signIn,
     required TResult Function() signOut,
+    required TResult Function() getUser,
   }) {
     return signOut();
   }
@@ -220,6 +233,7 @@ class _$SignOut implements SignOut {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? signIn,
     TResult? Function()? signOut,
+    TResult? Function()? getUser,
   }) {
     return signOut?.call();
   }
@@ -229,6 +243,7 @@ class _$SignOut implements SignOut {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signIn,
     TResult Function()? signOut,
+    TResult Function()? getUser,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -242,6 +257,7 @@ class _$SignOut implements SignOut {
   TResult map<TResult extends Object?>({
     required TResult Function(SignIn value) signIn,
     required TResult Function(SignOut value) signOut,
+    required TResult Function(GetUser value) getUser,
   }) {
     return signOut(this);
   }
@@ -251,6 +267,7 @@ class _$SignOut implements SignOut {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SignIn value)? signIn,
     TResult? Function(SignOut value)? signOut,
+    TResult? Function(GetUser value)? getUser,
   }) {
     return signOut?.call(this);
   }
@@ -260,6 +277,7 @@ class _$SignOut implements SignOut {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignIn value)? signIn,
     TResult Function(SignOut value)? signOut,
+    TResult Function(GetUser value)? getUser,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -274,30 +292,136 @@ abstract class SignOut implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$GetUserCopyWith<$Res> {
+  factory _$$GetUserCopyWith(_$GetUser value, $Res Function(_$GetUser) then) =
+      __$$GetUserCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetUserCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$GetUser>
+    implements _$$GetUserCopyWith<$Res> {
+  __$$GetUserCopyWithImpl(_$GetUser _value, $Res Function(_$GetUser) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetUser implements GetUser {
+  const _$GetUser();
+
+  @override
+  String toString() {
+    return 'AuthEvent.getUser()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetUser);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signIn,
+    required TResult Function() signOut,
+    required TResult Function() getUser,
+  }) {
+    return getUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? signIn,
+    TResult? Function()? signOut,
+    TResult? Function()? getUser,
+  }) {
+    return getUser?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signIn,
+    TResult Function()? signOut,
+    TResult Function()? getUser,
+    required TResult orElse(),
+  }) {
+    if (getUser != null) {
+      return getUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignIn value) signIn,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(GetUser value) getUser,
+  }) {
+    return getUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SignIn value)? signIn,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(GetUser value)? getUser,
+  }) {
+    return getUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignIn value)? signIn,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(GetUser value)? getUser,
+    required TResult orElse(),
+  }) {
+    if (getUser != null) {
+      return getUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUser implements AuthEvent {
+  const factory GetUser() = _$GetUser;
+}
+
+/// @nodoc
 mixin _$AuthState {
-  UserEntity? get userEntity => throw _privateConstructorUsedError;
+  UserEntity get userEntity => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(UserEntity userEntity) authorized,
-    required TResult Function(UserEntity? userEntity) unauthorized,
-    required TResult Function(UserEntity? userEntity) loading,
-    required TResult Function(UserEntity? userEntity, String? message) error,
+    required TResult Function(UserEntity userEntity) unauthorized,
+    required TResult Function(UserEntity userEntity) loading,
+    required TResult Function(UserEntity userEntity, String? message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UserEntity userEntity)? authorized,
-    TResult? Function(UserEntity? userEntity)? unauthorized,
-    TResult? Function(UserEntity? userEntity)? loading,
-    TResult? Function(UserEntity? userEntity, String? message)? error,
+    TResult? Function(UserEntity userEntity)? unauthorized,
+    TResult? Function(UserEntity userEntity)? loading,
+    TResult? Function(UserEntity userEntity, String? message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UserEntity userEntity)? authorized,
-    TResult Function(UserEntity? userEntity)? unauthorized,
-    TResult Function(UserEntity? userEntity)? loading,
-    TResult Function(UserEntity? userEntity, String? message)? error,
+    TResult Function(UserEntity userEntity)? unauthorized,
+    TResult Function(UserEntity userEntity)? loading,
+    TResult Function(UserEntity userEntity, String? message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -339,7 +463,7 @@ abstract class $AuthStateCopyWith<$Res> {
   @useResult
   $Res call({UserEntity userEntity});
 
-  $UserEntityCopyWith<$Res>? get userEntity;
+  $UserEntityCopyWith<$Res> get userEntity;
 }
 
 /// @nodoc
@@ -359,7 +483,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   }) {
     return _then(_value.copyWith(
       userEntity: null == userEntity
-          ? _value.userEntity!
+          ? _value.userEntity
           : userEntity // ignore: cast_nullable_to_non_nullable
               as UserEntity,
     ) as $Val);
@@ -367,12 +491,8 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
 
   @override
   @pragma('vm:prefer-inline')
-  $UserEntityCopyWith<$Res>? get userEntity {
-    if (_value.userEntity == null) {
-      return null;
-    }
-
-    return $UserEntityCopyWith<$Res>(_value.userEntity!, (value) {
+  $UserEntityCopyWith<$Res> get userEntity {
+    return $UserEntityCopyWith<$Res>(_value.userEntity, (value) {
       return _then(_value.copyWith(userEntity: value) as $Val);
     });
   }
@@ -411,14 +531,6 @@ class __$$AuthorizedCopyWithImpl<$Res>
               as UserEntity,
     ));
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserEntityCopyWith<$Res> get userEntity {
-    return $UserEntityCopyWith<$Res>(_value.userEntity, (value) {
-      return _then(_value.copyWith(userEntity: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -456,9 +568,9 @@ class _$Authorized implements Authorized {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(UserEntity userEntity) authorized,
-    required TResult Function(UserEntity? userEntity) unauthorized,
-    required TResult Function(UserEntity? userEntity) loading,
-    required TResult Function(UserEntity? userEntity, String? message) error,
+    required TResult Function(UserEntity userEntity) unauthorized,
+    required TResult Function(UserEntity userEntity) loading,
+    required TResult Function(UserEntity userEntity, String? message) error,
   }) {
     return authorized(userEntity);
   }
@@ -467,9 +579,9 @@ class _$Authorized implements Authorized {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UserEntity userEntity)? authorized,
-    TResult? Function(UserEntity? userEntity)? unauthorized,
-    TResult? Function(UserEntity? userEntity)? loading,
-    TResult? Function(UserEntity? userEntity, String? message)? error,
+    TResult? Function(UserEntity userEntity)? unauthorized,
+    TResult? Function(UserEntity userEntity)? loading,
+    TResult? Function(UserEntity userEntity, String? message)? error,
   }) {
     return authorized?.call(userEntity);
   }
@@ -478,9 +590,9 @@ class _$Authorized implements Authorized {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UserEntity userEntity)? authorized,
-    TResult Function(UserEntity? userEntity)? unauthorized,
-    TResult Function(UserEntity? userEntity)? loading,
-    TResult Function(UserEntity? userEntity, String? message)? error,
+    TResult Function(UserEntity userEntity)? unauthorized,
+    TResult Function(UserEntity userEntity)? loading,
+    TResult Function(UserEntity userEntity, String? message)? error,
     required TResult orElse(),
   }) {
     if (authorized != null) {
@@ -546,10 +658,10 @@ abstract class _$$UnauthorizedCopyWith<$Res>
       __$$UnauthorizedCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UserEntity? userEntity});
+  $Res call({UserEntity userEntity});
 
   @override
-  $UserEntityCopyWith<$Res>? get userEntity;
+  $UserEntityCopyWith<$Res> get userEntity;
 }
 
 /// @nodoc
@@ -563,13 +675,13 @@ class __$$UnauthorizedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userEntity = freezed,
+    Object? userEntity = null,
   }) {
     return _then(_$Unauthorized(
-      freezed == userEntity
+      null == userEntity
           ? _value.userEntity
           : userEntity // ignore: cast_nullable_to_non_nullable
-              as UserEntity?,
+              as UserEntity,
     ));
   }
 }
@@ -580,7 +692,7 @@ class _$Unauthorized implements Unauthorized {
   const _$Unauthorized(this.userEntity);
 
   @override
-  final UserEntity? userEntity;
+  final UserEntity userEntity;
 
   @override
   String toString() {
@@ -609,9 +721,9 @@ class _$Unauthorized implements Unauthorized {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(UserEntity userEntity) authorized,
-    required TResult Function(UserEntity? userEntity) unauthorized,
-    required TResult Function(UserEntity? userEntity) loading,
-    required TResult Function(UserEntity? userEntity, String? message) error,
+    required TResult Function(UserEntity userEntity) unauthorized,
+    required TResult Function(UserEntity userEntity) loading,
+    required TResult Function(UserEntity userEntity, String? message) error,
   }) {
     return unauthorized(userEntity);
   }
@@ -620,9 +732,9 @@ class _$Unauthorized implements Unauthorized {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UserEntity userEntity)? authorized,
-    TResult? Function(UserEntity? userEntity)? unauthorized,
-    TResult? Function(UserEntity? userEntity)? loading,
-    TResult? Function(UserEntity? userEntity, String? message)? error,
+    TResult? Function(UserEntity userEntity)? unauthorized,
+    TResult? Function(UserEntity userEntity)? loading,
+    TResult? Function(UserEntity userEntity, String? message)? error,
   }) {
     return unauthorized?.call(userEntity);
   }
@@ -631,9 +743,9 @@ class _$Unauthorized implements Unauthorized {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UserEntity userEntity)? authorized,
-    TResult Function(UserEntity? userEntity)? unauthorized,
-    TResult Function(UserEntity? userEntity)? loading,
-    TResult Function(UserEntity? userEntity, String? message)? error,
+    TResult Function(UserEntity userEntity)? unauthorized,
+    TResult Function(UserEntity userEntity)? loading,
+    TResult Function(UserEntity userEntity, String? message)? error,
     required TResult orElse(),
   }) {
     if (unauthorized != null) {
@@ -681,10 +793,10 @@ class _$Unauthorized implements Unauthorized {
 }
 
 abstract class Unauthorized implements AuthState {
-  const factory Unauthorized(final UserEntity? userEntity) = _$Unauthorized;
+  const factory Unauthorized(final UserEntity userEntity) = _$Unauthorized;
 
   @override
-  UserEntity? get userEntity;
+  UserEntity get userEntity;
   @override
   @JsonKey(ignore: true)
   _$$UnauthorizedCopyWith<_$Unauthorized> get copyWith =>
@@ -697,10 +809,10 @@ abstract class _$$LoadingCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       __$$LoadingCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UserEntity? userEntity});
+  $Res call({UserEntity userEntity});
 
   @override
-  $UserEntityCopyWith<$Res>? get userEntity;
+  $UserEntityCopyWith<$Res> get userEntity;
 }
 
 /// @nodoc
@@ -713,13 +825,13 @@ class __$$LoadingCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userEntity = freezed,
+    Object? userEntity = null,
   }) {
     return _then(_$Loading(
-      freezed == userEntity
+      null == userEntity
           ? _value.userEntity
           : userEntity // ignore: cast_nullable_to_non_nullable
-              as UserEntity?,
+              as UserEntity,
     ));
   }
 }
@@ -730,7 +842,7 @@ class _$Loading implements Loading {
   const _$Loading(this.userEntity);
 
   @override
-  final UserEntity? userEntity;
+  final UserEntity userEntity;
 
   @override
   String toString() {
@@ -759,9 +871,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(UserEntity userEntity) authorized,
-    required TResult Function(UserEntity? userEntity) unauthorized,
-    required TResult Function(UserEntity? userEntity) loading,
-    required TResult Function(UserEntity? userEntity, String? message) error,
+    required TResult Function(UserEntity userEntity) unauthorized,
+    required TResult Function(UserEntity userEntity) loading,
+    required TResult Function(UserEntity userEntity, String? message) error,
   }) {
     return loading(userEntity);
   }
@@ -770,9 +882,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UserEntity userEntity)? authorized,
-    TResult? Function(UserEntity? userEntity)? unauthorized,
-    TResult? Function(UserEntity? userEntity)? loading,
-    TResult? Function(UserEntity? userEntity, String? message)? error,
+    TResult? Function(UserEntity userEntity)? unauthorized,
+    TResult? Function(UserEntity userEntity)? loading,
+    TResult? Function(UserEntity userEntity, String? message)? error,
   }) {
     return loading?.call(userEntity);
   }
@@ -781,9 +893,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UserEntity userEntity)? authorized,
-    TResult Function(UserEntity? userEntity)? unauthorized,
-    TResult Function(UserEntity? userEntity)? loading,
-    TResult Function(UserEntity? userEntity, String? message)? error,
+    TResult Function(UserEntity userEntity)? unauthorized,
+    TResult Function(UserEntity userEntity)? loading,
+    TResult Function(UserEntity userEntity, String? message)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -831,10 +943,10 @@ class _$Loading implements Loading {
 }
 
 abstract class Loading implements AuthState {
-  const factory Loading(final UserEntity? userEntity) = _$Loading;
+  const factory Loading(final UserEntity userEntity) = _$Loading;
 
   @override
-  UserEntity? get userEntity;
+  UserEntity get userEntity;
   @override
   @JsonKey(ignore: true)
   _$$LoadingCopyWith<_$Loading> get copyWith =>
@@ -847,10 +959,10 @@ abstract class _$$ErrorCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
       __$$ErrorCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UserEntity? userEntity, String? message});
+  $Res call({UserEntity userEntity, String? message});
 
   @override
-  $UserEntityCopyWith<$Res>? get userEntity;
+  $UserEntityCopyWith<$Res> get userEntity;
 }
 
 /// @nodoc
@@ -862,14 +974,14 @@ class __$$ErrorCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res, _$Error>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userEntity = freezed,
+    Object? userEntity = null,
     Object? message = freezed,
   }) {
     return _then(_$Error(
-      freezed == userEntity
+      null == userEntity
           ? _value.userEntity
           : userEntity // ignore: cast_nullable_to_non_nullable
-              as UserEntity?,
+              as UserEntity,
       freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -884,7 +996,7 @@ class _$Error implements Error {
   const _$Error(this.userEntity, [this.message]);
 
   @override
-  final UserEntity? userEntity;
+  final UserEntity userEntity;
   @override
   final String? message;
 
@@ -916,9 +1028,9 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(UserEntity userEntity) authorized,
-    required TResult Function(UserEntity? userEntity) unauthorized,
-    required TResult Function(UserEntity? userEntity) loading,
-    required TResult Function(UserEntity? userEntity, String? message) error,
+    required TResult Function(UserEntity userEntity) unauthorized,
+    required TResult Function(UserEntity userEntity) loading,
+    required TResult Function(UserEntity userEntity, String? message) error,
   }) {
     return error(userEntity, message);
   }
@@ -927,9 +1039,9 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UserEntity userEntity)? authorized,
-    TResult? Function(UserEntity? userEntity)? unauthorized,
-    TResult? Function(UserEntity? userEntity)? loading,
-    TResult? Function(UserEntity? userEntity, String? message)? error,
+    TResult? Function(UserEntity userEntity)? unauthorized,
+    TResult? Function(UserEntity userEntity)? loading,
+    TResult? Function(UserEntity userEntity, String? message)? error,
   }) {
     return error?.call(userEntity, message);
   }
@@ -938,9 +1050,9 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UserEntity userEntity)? authorized,
-    TResult Function(UserEntity? userEntity)? unauthorized,
-    TResult Function(UserEntity? userEntity)? loading,
-    TResult Function(UserEntity? userEntity, String? message)? error,
+    TResult Function(UserEntity userEntity)? unauthorized,
+    TResult Function(UserEntity userEntity)? loading,
+    TResult Function(UserEntity userEntity, String? message)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -988,11 +1100,11 @@ class _$Error implements Error {
 }
 
 abstract class Error implements AuthState {
-  const factory Error(final UserEntity? userEntity, [final String? message]) =
+  const factory Error(final UserEntity userEntity, [final String? message]) =
       _$Error;
 
   @override
-  UserEntity? get userEntity;
+  UserEntity get userEntity;
   String? get message;
   @override
   @JsonKey(ignore: true)

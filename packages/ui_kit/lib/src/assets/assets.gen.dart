@@ -12,6 +12,101 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 
+class $AssetsCustomizationsGen {
+  const $AssetsCustomizationsGen();
+
+  /// File path: assets/customizations/cap.svg
+  SvgGenImage get cap => const SvgGenImage('assets/customizations/cap.svg');
+
+  /// File path: assets/customizations/cloak.svg
+  SvgGenImage get cloak => const SvgGenImage('assets/customizations/cloak.svg');
+
+  /// File path: assets/customizations/color_blue.svg
+  SvgGenImage get colorBlue => const SvgGenImage('assets/customizations/color_blue.svg');
+
+  /// File path: assets/customizations/color_green.svg
+  SvgGenImage get colorGreen => const SvgGenImage('assets/customizations/color_green.svg');
+
+  /// File path: assets/customizations/color_purple.svg
+  SvgGenImage get colorPurple => const SvgGenImage('assets/customizations/color_purple.svg');
+
+  /// File path: assets/customizations/color_red.svg
+  SvgGenImage get colorRed => const SvgGenImage('assets/customizations/color_red.svg');
+
+  /// File path: assets/customizations/color_yellow.svg
+  SvgGenImage get colorYellow => const SvgGenImage('assets/customizations/color_yellow.svg');
+
+  /// File path: assets/customizations/eyes_angry.svg
+  SvgGenImage get eyesAngry => const SvgGenImage('assets/customizations/eyes_angry.svg');
+
+  /// File path: assets/customizations/eyes_cute.svg
+  SvgGenImage get eyesCute => const SvgGenImage('assets/customizations/eyes_cute.svg');
+
+  /// File path: assets/customizations/eyes_default.svg
+  SvgGenImage get eyesDefault => const SvgGenImage('assets/customizations/eyes_default.svg');
+
+  /// File path: assets/customizations/eyes_wink.svg
+  SvgGenImage get eyesWink => const SvgGenImage('assets/customizations/eyes_wink.svg');
+
+  /// File path: assets/customizations/hat.svg
+  SvgGenImage get hat => const SvgGenImage('assets/customizations/hat.svg');
+
+  /// File path: assets/customizations/hoodie.svg
+  SvgGenImage get hoodie => const SvgGenImage('assets/customizations/hoodie.svg');
+
+  /// File path: assets/customizations/none-1.svg
+  SvgGenImage get none1 => const SvgGenImage('assets/customizations/none-1.svg');
+
+  /// File path: assets/customizations/robot.svg
+  SvgGenImage get robot => const SvgGenImage('assets/customizations/robot.svg');
+
+  /// File path: assets/customizations/scarf.svg
+  SvgGenImage get scarf => const SvgGenImage('assets/customizations/scarf.svg');
+
+  /// File path: assets/customizations/shirt.svg
+  SvgGenImage get shirt => const SvgGenImage('assets/customizations/shirt.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+        cap,
+        cloak,
+        colorBlue,
+        colorGreen,
+        colorPurple,
+        colorRed,
+        colorYellow,
+        eyesAngry,
+        eyesCute,
+        eyesDefault,
+        eyesWink,
+        hat,
+        hoodie,
+        none1,
+        robot,
+        scarf,
+        shirt
+      ];
+}
+
+class $AssetsCustomizationsOptionsGen {
+  const $AssetsCustomizationsOptionsGen();
+
+  /// File path: assets/customizations_options/clothes.svg
+  SvgGenImage get clothes => const SvgGenImage('assets/customizations_options/clothes.svg');
+
+  /// File path: assets/customizations_options/color.svg
+  SvgGenImage get color => const SvgGenImage('assets/customizations_options/color.svg');
+
+  /// File path: assets/customizations_options/eyes.svg
+  SvgGenImage get eyes => const SvgGenImage('assets/customizations_options/eyes.svg');
+
+  /// File path: assets/customizations_options/hat.svg
+  SvgGenImage get hat => const SvgGenImage('assets/customizations_options/hat.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [clothes, color, eyes, hat];
+}
+
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
@@ -74,6 +169,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_collections.svg
   SvgGenImage get icCollections => const SvgGenImage('assets/icons/ic_collections.svg');
 
+  /// File path: assets/icons/ic_computer.svg
+  SvgGenImage get icComputer => const SvgGenImage('assets/icons/ic_computer.svg');
+
   /// File path: assets/icons/ic_google_icon.svg
   SvgGenImage get icGoogleIcon => const SvgGenImage('assets/icons/ic_google_icon.svg');
 
@@ -105,6 +203,7 @@ class $AssetsIconsGen {
         icArrowNextRed,
         icClose,
         icCollections,
+        icComputer,
         icGoogleIcon,
         icSettings,
         icSpeach,
@@ -117,6 +216,21 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/bike.svg
+  SvgGenImage get bike => const SvgGenImage('assets/images/bike.svg');
+
+  /// File path: assets/images/dog.svg
+  SvgGenImage get dog => const SvgGenImage('assets/images/dog.svg');
+
+  /// File path: assets/images/han.svg
+  SvgGenImage get han => const SvgGenImage('assets/images/han.svg');
+
+  /// File path: assets/images/ic_coin.svg
+  SvgGenImage get icCoin => const SvgGenImage('assets/images/ic_coin.svg');
+
+  /// File path: assets/images/ic_robot.svg
+  SvgGenImage get icRobot => const SvgGenImage('assets/images/ic_robot.svg');
+
   /// File path: assets/images/im_auth.jpg
   AssetGenImage get imAuth => const AssetGenImage('assets/images/im_auth.jpg');
 
@@ -128,7 +242,8 @@ class $AssetsImagesGen {
   SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
 
   /// List of all assets
-  List<dynamic> get values => [imAuth, imNotebookFrontGradient, imToroid];
+  List<dynamic> get values =>
+      [bike, dog, han, icCoin, icRobot, imAuth, imNotebookFrontGradient, imToroid];
 }
 
 class $AssetsLottieGen {
@@ -140,6 +255,9 @@ class $AssetsLottieGen {
   /// File path: assets/lottie/help.json
   LottieGenImage get help => const LottieGenImage('assets/lottie/help.json');
 
+  /// File path: assets/lottie/no_connection.json
+  LottieGenImage get noConnection => const LottieGenImage('assets/lottie/no_connection.json');
+
   /// File path: assets/lottie/robot.json
   LottieGenImage get robot => const LottieGenImage('assets/lottie/robot.json');
 
@@ -147,12 +265,15 @@ class $AssetsLottieGen {
   LottieGenImage get success => const LottieGenImage('assets/lottie/success.json');
 
   /// List of all assets
-  List<LottieGenImage> get values => [confetti, help, robot, success];
+  List<LottieGenImage> get values => [confetti, help, noConnection, robot, success];
 }
 
 class UiKitAssets {
   UiKitAssets._();
 
+  static const $AssetsCustomizationsGen customizations = $AssetsCustomizationsGen();
+  static const $AssetsCustomizationsOptionsGen customizationsOptions =
+      $AssetsCustomizationsOptionsGen();
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();

@@ -11,7 +11,6 @@ import 'package:make_haton/src/ui/blocs/navigator_bloc/navigation_service.dart';
 typedef NavigatorKey = GlobalKey<NavigatorState>;
 
 final getIt = GetIt.instance;
-
 @InjectableInit(
   initializerName: 'init', // default
   preferRelativeImports: true, // default

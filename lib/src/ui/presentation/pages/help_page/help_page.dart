@@ -20,7 +20,7 @@ class HelpPage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Center(
+            const Center(
               child: Text(
                 'Learn Session',
                 style: learnSession,
@@ -33,7 +33,7 @@ class HelpPage extends StatelessWidget {
             const SizedBox(
               height: 64,
             ),
-            Flexible(
+            const Flexible(
               child: Text(
                 'During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:',
                 style: lessonPropolsolTextStyle,
@@ -42,25 +42,25 @@ class HelpPage extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            Text(
+            const Text(
               '1. Learn a Word',
               style: helpTextTextSyle,
             ),
-            Text(
+            const Text(
               '2. Learn example of its use in sentences',
               style: helpTextTextSyle,
             ),
-            Text(
+            const Text(
               '3. Fill a blank Letter in a Word',
               style: helpTextTextSyle,
             ),
             const SizedBox(
               height: 32,
             ),
-            Text(
+            const Text(
               'Just follow this process!',
               style: lessonPropolsolTextStyle,
-            )
+            ),
           ],
         ),
       ),

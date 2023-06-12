@@ -22,30 +22,39 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         event.map(
           signIn: (signIn) => _handleSigningIn(),
           signOut: (signOut) => _signOut(),
+          getUser: (value) => _getUser(),
         );
       },
     );
   }
 
-  Future<void> _signOut()async{
+  Future<void>? _getUser() async {
     emit(AuthState.loading(state.userEntity));
-    final nullUser = await signOutUseCase.execute();
-    emit(AuthState.unauthorized(nullUser));
+    final user = await getUserUseCase.execute();
+    if (user != null) {
+      emit(AuthState.authorized(user));
+    }
+    emit(AuthState.unauthorized(UserEntity.empty()));
+  }
+
+  Future<void> _signOut() async {
+    emit(AuthState.loading(state.userEntity));
+    await signOutUseCase.execute();
+    emit(AuthState.unauthorized(UserEntity.empty()));
   }
 
   Future<void> _handleSigningIn() async {
-    emit(const AuthState.loading(null));
-    try{
+    emit(AuthState.loading(UserEntity.empty()));
+    try {
       final user = await signingInUseCase.execute();
-      if(user==null){
-        emit(const AuthState.unauthorized(null));
+      if (user == null) {
+        emit(AuthState.unauthorized(UserEntity.empty()));
 
         return;
       }
       emit(AuthState.authorized(user));
-
-    }catch (err){
-      emit(const AuthState.error(null));
+    } catch (err) {
+      emit(AuthState.error(UserEntity.empty()));
     }
   }
 }

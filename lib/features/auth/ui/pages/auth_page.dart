@@ -1,13 +1,13 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/auth/ui/bloc/auth_bloc.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-
-import 'package:make_haton/features/auth/data/repositories/auth_repository_impl.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
@@ -81,9 +81,7 @@ class AuthPageState extends State<AuthPage> {
                       UiKitAssets.icons.icGoogleIcon.keyName,
                     ),
                     text: localization.continueWithGoogle,
-                    onPressed: () {
-                      AppAuthRepositoryImpl().signInWithGoogle();
-                    },
+                    onPressed: () => context.read<AuthBloc>().add(const AuthEvent.signIn()),
                   ),
                 ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
@@ -96,9 +94,6 @@ class AuthPageState extends State<AuthPage> {
                         UiKitAssets.icons.icAppleWhite.keyName,
                       ),
                       text: localization.continueWithApple,
-                      onPressed: () {
-                        AppAuthRepositoryImpl().signInWithGoogle();
-                      },
                     ),
                   ),
                 const Padding(

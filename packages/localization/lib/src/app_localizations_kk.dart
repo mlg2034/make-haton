@@ -83,6 +83,21 @@ class AppLocalizationsKk extends AppLocalizations {
   String get got_it => 'ТҮСІНІКТІ';
 
   @override
+  String get dictionary => 'СӨЗДІК';
+
+  @override
+  String get words => 'сөз';
+
+  @override
+  String get connection_is_lost => 'Қосылым жоқ';
+
+  @override
+  String get check_your_network => 'Желінізді тексеріп, бетті қайта жүктеңіз';
+
+  @override
+  String get reload => 'Қайта жүктеу';
+
+  @override
   String get learn_session => 'Learn Session';
 
   @override

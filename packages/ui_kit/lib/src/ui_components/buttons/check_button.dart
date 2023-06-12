@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../ui_kit.dart';
 
 class CheckButton extends StatelessWidget {
+  final String? rightAnswer;
   final VoidCallback onPressed;
   final Color color;
   final String title;
   const CheckButton({
+    this.rightAnswer,
     required this.onPressed,
     required this.color,
     required this.title,

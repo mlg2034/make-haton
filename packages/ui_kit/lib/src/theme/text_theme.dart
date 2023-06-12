@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -121,6 +120,27 @@ const helpTextTextSyle = TextStyle(
   fontSize: 14,
   height: 16.42 / 14,
   color: AppColors.learnButtonColor,
+);
+const characterTitleTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.46 / 20,
+  color: AppColors.black,
+);
+const coinsCountTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.46 / 20,
+  color: AppColors.coinsColor,
+);
+const characterTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
+  height: 16.42 / 14,
+  color: AppColors.title,
 );
 
 const titleScript = TextStyle(

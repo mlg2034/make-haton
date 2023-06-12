@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/auth/ui/bloc/auth_bloc.dart';
+import 'package:make_haton/shared/di.dart';
+import 'package:make_haton/shared/routes.dart';
+import 'package:make_haton/src/ui/blocs/navigator_bloc/navigation_service.dart';
 import 'package:make_haton/src/ui/presentation/pages/settings_page/settings_page.dart';
 import 'package:make_haton/src/ui/presentation/widgets/progress_bar.dart';
 
@@ -14,6 +19,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = context.locale;
+    final state = context.read<AuthBloc>().state;
+    final user = state.map(
+      authorized: (user) => user,
+      unauthorized: (user) => user,
+      loading: (user) => user,
+      error: (user) => user,
+    ).userEntity;
 
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +37,7 @@ class HomePage extends StatelessWidget {
               Column(
                 children: [
                   Text(l.welcomeText),
-                  const Text('User'),
+                  Text(user.name),
                 ],
               ),
               const Spacer(),
@@ -38,7 +50,7 @@ class HomePage extends StatelessWidget {
                         SvgPicture.asset(
                           UiKitAssets.icons.coin.keyName,
                         ),
-                        const Text('200'),
+                        Text('${user.coins}'),
                       ],
                     ),
                   ),
@@ -47,13 +59,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        // trailing: AppOutlinedButton.square(
-        //   onPressed: () => Navigator.of(context)
-        //       .push(MaterialPageRoute(builder: (context) => const SettingsPage())),
-        //   child: SvgPicture.asset(
-        //     UiKitAssets.icons.icSettings.keyName,
-        //   ),
-        // ),
       ),
       body: SafeArea(
         child: Column(
@@ -61,10 +66,12 @@ class HomePage extends StatelessWidget {
           children: [
             const Divider(),
             const Spacer(),
-            SvgPicture.asset(
-              UiKitAssets.images.imNotebookFrontGradient.keyName,
+            GestureDetector(
+              onTap: () {
+                getIt.get<NavigatorManager>().pushNamed(Routes.characterPage);
+              },
+              child: SvgPicture.asset(UiKitAssets.images.icRobot.keyName),
             ),
-            // LottieWidget(lottieKeyName: UiKitAssets.lottie.robot.keyName),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 24),
               child: Row(
@@ -107,7 +114,7 @@ class HomePage extends StatelessWidget {
               height: 16,
             ),
             Text(
-              l.wordsLearnedTitle(15),
+              l.wordsLearnedTitle(user.practicedWords),
               style: button,
             ),
             const SizedBox(

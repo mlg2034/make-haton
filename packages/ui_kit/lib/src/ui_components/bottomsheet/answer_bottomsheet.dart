@@ -18,7 +18,7 @@ class AnswerBottomSheets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 24, horizontal: 48),
+      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 48),
       width: 428,
       height: 136,
       color: backgroundColor,
