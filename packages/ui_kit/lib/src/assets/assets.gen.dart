@@ -145,6 +145,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/coin.svg
   SvgGenImage get coin => const SvgGenImage('assets/icons/coin.svg');
 
+  /// File path: assets/icons/email.png
+  AssetGenImage get email => const AssetGenImage('assets/icons/email.png');
+
   /// File path: assets/icons/exit.svg
   SvgGenImage get exit => const SvgGenImage('assets/icons/exit.svg');
 
@@ -195,6 +198,7 @@ class $AssetsIconsGen {
         book,
         books,
         coin,
+        email,
         exit,
         icAppleWhite,
         icArrowBack,
@@ -216,23 +220,11 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/ic_arrow_back.svg
-  SvgGenImage get icArrowBack => const SvgGenImage('assets/images/ic_arrow_back.svg');
-
-  /// File path: assets/images/ic_cancel.svg
-  SvgGenImage get icCancel => const SvgGenImage('assets/images/ic_cancel.svg');
-
   /// File path: assets/images/ic_coin.svg
   SvgGenImage get icCoin => const SvgGenImage('assets/images/ic_coin.svg');
 
-  /// File path: assets/images/ic_help.svg
-  SvgGenImage get icHelp => const SvgGenImage('assets/images/ic_help.svg');
-
   /// File path: assets/images/ic_robot.svg
   SvgGenImage get icRobot => const SvgGenImage('assets/images/ic_robot.svg');
-
-  /// File path: assets/images/ic_settings.svg
-  SvgGenImage get icSettings => const SvgGenImage('assets/images/ic_settings.svg');
 
   /// File path: assets/images/im_auth.jpg
   AssetGenImage get imAuth => const AssetGenImage('assets/images/im_auth.jpg');
@@ -245,16 +237,7 @@ class $AssetsImagesGen {
   SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
-        icArrowBack,
-        icCancel,
-        icCoin,
-        icHelp,
-        icRobot,
-        icSettings,
-        imNotebookFrontGradient,
-        imToroid
-      ];
+  List<dynamic> get values => [icCoin, icRobot, imAuth, imNotebookFrontGradient, imToroid];
 }
 
 class $AssetsLottieGen {
