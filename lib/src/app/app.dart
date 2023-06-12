@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           state.map(
             authorized: (user) {
               final navigatorManager = getIt.get<NavigatorManager>();
-              navigatorManager.pushReplacementNamed(Routes.homePage);
+              navigatorManager.pushNamedAndRemoveUntil(Routes.homePage);
             },
             unauthorized: (user) {},
             loading: (user) {},

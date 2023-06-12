@@ -5,23 +5,23 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
 import 'package:make_haton/features/auth/ui/bloc/auth_bloc.dart';
-import 'package:make_haton/features/auth/ui/pages/auth_page_email.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-class AuthPage extends StatefulWidget {
-  const AuthPage({Key? key}) : super(key: key);
+class AuthPageEmail extends StatefulWidget {
+  const AuthPageEmail({Key? key}) : super(key: key);
 
   @override
-  AuthPageState createState() => AuthPageState();
+  AuthPageEmailState createState() => AuthPageEmailState();
 }
 
-class AuthPageState extends State<AuthPage> {
+class AuthPageEmailState extends State<AuthPageEmail> {
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
     bool isIos = Platform.isIOS;
+    final TextEditingController textEditingController = TextEditingController();
 
     return Scaffold(
       body: Stack(
@@ -74,48 +74,51 @@ class AuthPageState extends State<AuthPage> {
                   style: header_3,
                 ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 16)),
-                SizedBox(
-                  width: double.infinity,
-                  height: 54,
-                  child: AuthButton(
-                    icon: SvgPicture.asset(
-                      UiKitAssets.icons.icGoogleIcon.keyName,
+                TextField(
+                  controller: textEditingController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),),
+                    labelText: 'email',
+                    labelStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.title,
                     ),
-                    text: localization.continueWithGoogle,
-                    onPressed: () => context.read<AuthBloc>().add(const AuthEvent.signIn()),
                   ),
                 ),
-                const SizedBox(height: 10,),
-                  SizedBox(
+                const SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
                   width: double.infinity,
                   height: 54,
                   child: AuthButton(
                     icon: Image.asset(
                       UiKitAssets.icons.email.keyName,
                     ),
-                    text: 'email',
+                    text: 'Sign In',
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AuthPageEmail()));
+                      final email = textEditingController.text.trim();
+                      context
+                          .read<AuthBloc>()
+                          .add(AuthEvent.signInEmail(email));
                     },
                   ),
                 ),
-             
                 const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
-                SizedBox(
-                  width: double.infinity,
-                  height: 54,
-                  child: AuthButton(
-                    onPressed: () {
-                      print('login with email');
-                    },
-                    icon: SvgPicture.asset(
-                      UiKitAssets.icons.icAppleWhite.keyName,
+                if (isIos)
+                  SizedBox(
+                    width: double.infinity,
+                    height: 54,
+                    child: AuthButton(
+                      icon: SvgPicture.asset(
+                        UiKitAssets.icons.icAppleWhite.keyName,
+                      ),
+                      text: localization.continueWithApple,
                     ),
-                    text: localization.continueWithApple,
                   ),
-                ),
                 const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                  padding: EdgeInsets.symmetric(vertical: 32),
                 ),
               ],
             ),
