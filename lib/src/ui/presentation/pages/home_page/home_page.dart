@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:localization/localization.dart';
+import 'package:make_haton/features/auth/domain/entities/user_entity.dart';
 import 'package:make_haton/features/auth/ui/bloc/auth_bloc.dart';
 import 'package:make_haton/shared/di.dart';
 import 'package:make_haton/shared/routes.dart';
@@ -13,19 +15,41 @@ import 'package:ui_kit/ui_kit.dart';
 
 const _kAspectRatio = 158 / 123;
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Widget? robot;
+
+  // sy(UserEntity user)async{
+
+  Future<void> customizeRobot() async {
+    final res =
+        await getIt.get<NavigatorManager>().pushNamed(Routes.characterPage, arguments: robot);
+
+    if (res != null) {
+      robot = res as Widget;
+
+      setState(() {});
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final l = context.locale;
     final state = context.read<AuthBloc>().state;
-    final user = state.map(
-      authorized: (user) => user,
-      unauthorized: (user) => user,
-      loading: (user) => user,
-      error: (user) => user,
-    ).userEntity;
+    final user = state
+        .map(
+          authorized: (user) => user,
+          unauthorized: (user) => user,
+          loading: (user) => user,
+          error: (user) => user,
+        )
+        .userEntity;
 
     return Scaffold(
       appBar: AppBar(
@@ -65,20 +89,17 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Divider(),
-            const Spacer(),
             GestureDetector(
-              onTap: () {
-                getIt.get<NavigatorManager>().pushNamed(Routes.characterPage);
-              },
-              child: SvgPicture.asset(UiKitAssets.images.icRobot.keyName),
+              onTap: () => customizeRobot(),
+              child: robot ?? SvgPicture.asset(UiKitAssets.images.icRobot.keyName),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 48.0, vertical: 16),
               child: Row(
                 children: [
                   Expanded(

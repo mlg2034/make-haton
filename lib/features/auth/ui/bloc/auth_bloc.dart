@@ -17,9 +17,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final SigningInUseCase signingInUseCase;
   final GetUserUseCase getUserUseCase;
   final SignOutUseCase signOutUseCase;
-
-  AuthBloc(super.initialState, this.signingInUseCase, this.getUserUseCase,
-      this.signOutUseCase) {
+  final store = FirebaseFirestore.instance.collection(FirebaseKeys.usersKey);
+  AuthBloc(super.initialState, this.signingInUseCase, this.getUserUseCase, this.signOutUseCase) {
     on<AuthEvent>(
       (event, emit) {
         event.map(
@@ -86,5 +85,19 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     } catch (err) {
       emit(AuthState.error(UserEntity.empty()));
     }
+  }
+
+  Future<Map<String, dynamic>> storeData() async {
+    return Map.fromIterable((await store.get()).docs.map((e) => e.data()));
+  }
+
+  _saveToFirestore(UserEntity user) async {
+    final docs = (await store.get()).docs;
+    final userFromStore = docs.where((element) => element.data()['id'] == user.id).firstOrNull;
+    final ex = (await store.where('id', isEqualTo: user.id).get());
+    // ex.
+    // if(userFromStore != null){
+    //   ;
+    // }
   }
 }

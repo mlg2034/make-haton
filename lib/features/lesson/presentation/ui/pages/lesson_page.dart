@@ -20,7 +20,7 @@ class _LessonPageState extends State<LessonPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: LearnAppBar(
+        title: BaseAppBar(
           title: localization.lesson,
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () => Navigator.of(context).push(
@@ -41,25 +41,7 @@ class _LessonPageState extends State<LessonPage> {
             const SizedBox(
               height: 30,
             ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                width: 76,
-                height: 48,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: AppColors.primary,
-                ),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 20,
-                  height: 18,
-                  child: SvgPicture.asset(
-                    UiKitAssets.icons.sound.keyName,
-                  ),
-                ),
-              ),
-            ),
+            SoundButton(),
             const SizedBox(
               height: 15,
             ),

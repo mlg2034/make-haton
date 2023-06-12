@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,6 +12,9 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
+  final app = await Firebase.initializeApp();
+  FirebaseAuth.instanceFor(app: app);
+  FirebaseFirestore.instanceFor(app: app);
 
-  await Firebase.initializeApp().then((value) => runApp(const MyApp()));
+  runApp(const MyApp());
 }

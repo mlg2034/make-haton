@@ -4,4 +4,5 @@ class FirebaseKeys {
   static const String categories = 'categories';
   static const String words = 'words';
   static const String character = 'character';
+  static const String database = 'database';
 }

@@ -101,19 +101,21 @@ class AuthPageState extends State<AuthPage> {
                 ),
              
                 const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
-                if (isIos)
-                  SizedBox(
-                    width: double.infinity,
-                    height: 54,
-                    child: AuthButton(
-                      icon: SvgPicture.asset(
-                        UiKitAssets.icons.icAppleWhite.keyName,
-                      ),
-                      text: localization.continueWithApple,
+                SizedBox(
+                  width: double.infinity,
+                  height: 54,
+                  child: AuthButton(
+                    onPressed: () {
+                      print('login with email');
+                    },
+                    icon: SvgPicture.asset(
+                      UiKitAssets.icons.icAppleWhite.keyName,
                     ),
+                    text: localization.continueWithApple,
                   ),
+                ),
                 const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 32),
+                  padding: EdgeInsets.symmetric(vertical: 16),
                 ),
               ],
             ),

@@ -51,6 +51,13 @@ const categoryTextStyle = TextStyle(
   height: 21.18 / 18,
   color: AppColors.primary,
 );
+const wordCountTextSyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.48 / 20,
+  color: AppColors.primary,
+);
 const buttonTextTextStyle = TextStyle(
   fontFamily: 'Work Sans',
   fontWeight: FontWeight.w900,
@@ -126,7 +133,7 @@ const coinsCountTextStyle = TextStyle(
   fontWeight: FontWeight.w900,
   fontSize: 20,
   height: 23.46 / 20,
-  color: AppColors.coinColor,
+  color: AppColors.coinsColor,
 );
 const characterTextStyle = TextStyle(
   fontFamily: 'Work Sans',
@@ -144,12 +151,12 @@ const titleScript = TextStyle(
   height: 88.51 / 64,
 );
 const title = TextStyle(
-  fontFamily: 'Work Sans',
-  fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w900,
-  fontSize: 20,
-  height: 23.46 / 20,
-);
+    fontFamily: 'Work Sans',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w900,
+    fontSize: 20,
+    height: 23.46 / 20,
+    color: AppColors.title);
 const header_1 = TextStyle(
   fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
@@ -165,6 +172,7 @@ const header_2 = TextStyle(
   height: 21.11 / 18,
 );
 const header_3 = TextStyle(
+  color: AppColors.learnPropolsalColor,
   fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w700,
@@ -172,12 +180,12 @@ const header_3 = TextStyle(
   height: 16.42 / 14,
 );
 const subtitle = TextStyle(
-  fontFamily: 'Work Sans',
-  fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w500,
-  fontSize: 16,
-  height: 18.77 / 16,
-);
+    fontFamily: 'Work Sans',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    height: 18.77 / 16,
+    color: AppColors.learnPropolsalColor);
 const subtitle_2 = TextStyle(
   fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
@@ -235,6 +243,7 @@ const info_2 = TextStyle(
   height: 18.77 / 16,
 );
 const wordQuiz = TextStyle(
+  color: AppColors.learnPropolsalColor,
   fontFamily: 'Work Sans',
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w700,
@@ -247,4 +256,12 @@ const letterQuiz = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 32,
   height: 37.54 / 32,
+);
+const coinsTextStyle = TextStyle(
+  fontFamily: 'Work Sans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w900,
+  fontSize: 20,
+  height: 23.460 / 20,
+  color: AppColors.coinsColor,
 );
