@@ -1,5 +1,6 @@
 {
   "en": [
-    "words"
+    "words",
+    "no_clothes"
   ]
 }

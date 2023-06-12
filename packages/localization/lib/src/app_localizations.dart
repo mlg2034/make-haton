@@ -191,6 +191,12 @@ abstract class AppLocalizations {
   /// **'Продолжить с AppleID'**
   String get continueWithApple;
 
+  /// No description provided for @continueWithEmail.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить с Email'**
+  String get continueWithEmail;
+
   /// No description provided for @lesson.
   ///
   /// In ru, this message translates to:
@@ -284,62 +290,260 @@ abstract class AppLocalizations {
   /// No description provided for @learn_session.
   ///
   /// In ru, this message translates to:
-  /// **'Learn Session'**
+  /// **'Учебное занятие'**
   String get learn_session;
 
   /// No description provided for @example_help_main_text.
   ///
   /// In ru, this message translates to:
-  /// **'During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:'**
+  /// **'Во время обучения вам необходимо выучить слова, которые были даны. Эти слова относятся к одной коллекции. После того, как вы их выучите, вам будет предложено проверить свою внимательность, вам нужно будет вставить пропущенную букву в каждом слове. Полный процесс сеанса:'**
   String get example_help_main_text;
 
   /// No description provided for @example_help_first_sub_text.
   ///
   /// In ru, this message translates to:
-  /// **'1. Learn a Word'**
+  /// **'1. Выучить слово'**
   String get example_help_first_sub_text;
 
   /// No description provided for @example_help_second_sub_text.
   ///
   /// In ru, this message translates to:
-  /// **'2. Learn example of its use in sentences'**
+  /// **'2. Выучить пример его использования в предложениях'**
   String get example_help_second_sub_text;
 
   /// No description provided for @example_help_third_sub_text.
   ///
   /// In ru, this message translates to:
-  /// **'3. Fill a blank Letter in a Word'**
+  /// **'3. Вставить пропущенную букву в слове'**
   String get example_help_third_sub_text;
 
   /// No description provided for @just_follow.
   ///
   /// In ru, this message translates to:
-  /// **'Just follow this process!'**
+  /// **'Просто следуйте этому процессу!'**
   String get just_follow;
 
   /// No description provided for @book_example_one_sentences.
   ///
   /// In ru, this message translates to:
-  /// **'An item that people read to gain knowledge'**
+  /// **'Предмет, который люди читают, чтобы получить знания'**
   String get book_example_one_sentences;
 
   /// No description provided for @book_example_two_sentences.
   ///
   /// In ru, this message translates to:
-  /// **'THE {val}'**
+  /// **' {val}'**
   String book_example_two_sentences(Object val);
 
   /// No description provided for @wordsLearnedTitle.
   ///
   /// In ru, this message translates to:
-  /// **'PRACTICED {count} words today'**
+  /// **'Сегодня вы выучили {count} слов'**
   String wordsLearnedTitle(Object count);
 
   /// No description provided for @welcomeText.
   ///
   /// In ru, this message translates to:
-  /// **'👋 Good morning,'**
+  /// **'👋 Доброе утро,'**
   String get welcomeText;
+
+  /// No description provided for @well_done_it_s_right.
+  ///
+  /// In ru, this message translates to:
+  /// **'Молодец! Правильно!'**
+  String get well_done_it_s_right;
+
+  /// No description provided for @keep_going_green.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжай в том же духе!'**
+  String get keep_going_green;
+
+  /// No description provided for @that_s_a_mistake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Это ошибка'**
+  String get that_s_a_mistake;
+
+  /// No description provided for @try_again.
+  ///
+  /// In ru, this message translates to:
+  /// **'Попробуй еще раз!'**
+  String get try_again;
+
+  /// No description provided for @practice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Практика'**
+  String get practice;
+
+  /// No description provided for @can_you_complete_with.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сможете ли вы завершить без ошибок?'**
+  String get can_you_complete_with;
+
+  /// No description provided for @want_to_exit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хотите выйти?'**
+  String get want_to_exit;
+
+  /// No description provided for @your_progress_will_be_lost.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ваш прогресс будет потерян!'**
+  String get your_progress_will_be_lost;
+
+  /// No description provided for @keep_practicing_to_remember_more_words.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжайте практиковаться, чтобы запомнить больше слов'**
+  String get keep_practicing_to_remember_more_words;
+
+  /// No description provided for @you_ve_got_of.
+  ///
+  /// In ru, this message translates to:
+  /// **'У вас {count} из {num}'**
+  String you_ve_got_of(Object count, Object num);
+
+  /// No description provided for @practice_session.
+  ///
+  /// In ru, this message translates to:
+  /// **'Практическая сессия'**
+  String get practice_session;
+
+  /// No description provided for @examples_of_use.
+  ///
+  /// In ru, this message translates to:
+  /// **'Примеры'**
+  String get examples_of_use;
+
+  /// No description provided for @help.
+  ///
+  /// In ru, this message translates to:
+  /// **'Помощь'**
+  String get help;
+
+  /// No description provided for @wardrobe.
+  ///
+  /// In ru, this message translates to:
+  /// **'гардероб'**
+  String get wardrobe;
+
+  /// No description provided for @color.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цвет'**
+  String get color;
+
+  /// No description provided for @color_blue.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синий'**
+  String get color_blue;
+
+  /// No description provided for @color_red.
+  ///
+  /// In ru, this message translates to:
+  /// **'Красный'**
+  String get color_red;
+
+  /// No description provided for @color_purple.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фиолетовый'**
+  String get color_purple;
+
+  /// No description provided for @color_yellow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жёлтый'**
+  String get color_yellow;
+
+  /// No description provided for @cap.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шапка'**
+  String get cap;
+
+  /// No description provided for @none.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет'**
+  String get none;
+
+  /// No description provided for @scarf.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шарф'**
+  String get scarf;
+
+  /// No description provided for @hat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шляпа'**
+  String get hat;
+
+  /// No description provided for @clothes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Одежда'**
+  String get clothes;
+
+  /// No description provided for @no_clothes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без одежды'**
+  String get no_clothes;
+
+  /// No description provided for @cloak.
+  ///
+  /// In ru, this message translates to:
+  /// **'Плащ'**
+  String get cloak;
+
+  /// No description provided for @shirt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Футболка'**
+  String get shirt;
+
+  /// No description provided for @hoodie.
+  ///
+  /// In ru, this message translates to:
+  /// **'Худи'**
+  String get hoodie;
+
+  /// No description provided for @eyes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Глаза'**
+  String get eyes;
+
+  /// No description provided for @eyes_default.
+  ///
+  /// In ru, this message translates to:
+  /// **'по умолчанию'**
+  String get eyes_default;
+
+  /// No description provided for @eyes_wink.
+  ///
+  /// In ru, this message translates to:
+  /// **'подмигивание'**
+  String get eyes_wink;
+
+  /// No description provided for @eyes_angry.
+  ///
+  /// In ru, this message translates to:
+  /// **'сердитый'**
+  String get eyes_angry;
+
+  /// No description provided for @eyes_cute.
+  ///
+  /// In ru, this message translates to:
+  /// **'милый'**
+  String get eyes_cute;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

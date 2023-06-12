@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/ui_kit.dart';
 import 'package:lottie/lottie.dart';
+import 'package:localization/localization.dart';
 
 class HelpPage extends StatelessWidget {
   const HelpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.locale;
+
     return Scaffold(
       appBar: CustomAppBar(
-        title: 'HELP',
+        title: localization.help,
         onLeadingTap: () => Navigator.of(context).pop(),
       ),
       body: Padding(
@@ -20,9 +23,9 @@ class HelpPage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Center(
+            Center(
               child: Text(
-                'Learn Session',
+                localization.learn_session,
                 style: learnSession,
               ),
             ),
@@ -33,32 +36,32 @@ class HelpPage extends StatelessWidget {
             const SizedBox(
               height: 64,
             ),
-            const Flexible(
+             Flexible(
               child: Text(
-                'During the Learn you have to learn words that are given. These words are from one collection. After learning them, your attention will be challenged, you will have to fill the blank Letter in each Word. The full process of the session:',
+                localization.example_help_main_text,
                 style: lessonPropolsolTextStyle,
               ),
             ),
             const SizedBox(
               height: 32,
             ),
-            const Text(
-              '1. Learn a Word',
+             Text(
+               localization.example_help_first_sub_text,
               style: helpTextTextSyle,
             ),
-            const Text(
-              '2. Learn example of its use in sentences',
+             Text(
+               localization.example_help_second_sub_text,
               style: helpTextTextSyle,
             ),
-            const Text(
-              '3. Fill a blank Letter in a Word',
+             Text(
+              localization.example_help_third_sub_text,
               style: helpTextTextSyle,
             ),
             const SizedBox(
               height: 32,
             ),
-            const Text(
-              'Just follow this process!',
+             Text(
+               localization.just_follow,
               style: lessonPropolsolTextStyle,
             ),
           ],

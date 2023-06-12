@@ -66,8 +66,8 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
             const SizedBox(
               height: 50,
             ),
-            const Text(
-              'Fill the blank letter',
+             Text(
+              localization.fill_the_blank,
               style: lessonPropolsolTextStyle,
             ),
             const SizedBox(
@@ -107,17 +107,17 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                 showModalBottomSheet(
                   context: context,
                   builder: (BuildContext context) {
-                    return const AnswerBottomSheets(
+                    return AnswerBottomSheets(
                       backgroundColor: AppColors.checkButtonColor,
-                      mainText: 'WEEL DONE , IT IS RIGHT',
-                      subText: 'Keep going green!',
+                      mainText: localization.well_done_it_s_right,
+                      subText: localization.keep_going_green,
                     );
                   },
                 );
               },
-              child: const ContinueButton(
+              child: ContinueButton(
                 color: AppColors.checkButtonColor,
-                title: 'CHECK',
+                title: localization.check,
               ),
             ),
           ],
