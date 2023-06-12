@@ -14,7 +14,7 @@ class LessonExample extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: LearnAppBar(
+        title: BaseAppBar(
           title: 'LESSON',
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () =>

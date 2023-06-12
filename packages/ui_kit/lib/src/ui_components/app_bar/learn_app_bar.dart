@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../ui_kit.dart';
 
-class LearnAppBar extends StatelessWidget implements PreferredSizeWidget {
+class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final VoidCallback? onLeadingTapHelp;
   final VoidCallback? onLeadingTapExit;
   final Widget? trailing;
-  const LearnAppBar({
+  const BaseAppBar({
     this.onLeadingTapExit,
     this.trailing,
     this.onLeadingTapHelp,

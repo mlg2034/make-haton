@@ -216,6 +216,15 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/bike.svg
+  SvgGenImage get bike => const SvgGenImage('assets/images/bike.svg');
+
+  /// File path: assets/images/dog.svg
+  SvgGenImage get dog => const SvgGenImage('assets/images/dog.svg');
+
+  /// File path: assets/images/han.svg
+  SvgGenImage get han => const SvgGenImage('assets/images/han.svg');
+
   /// File path: assets/images/ic_coin.svg
   SvgGenImage get icCoin => const SvgGenImage('assets/images/ic_coin.svg');
 
@@ -236,7 +245,7 @@ class $AssetsImagesGen {
   SvgGenImage get imToroid => const SvgGenImage('assets/images/im_toroid.svg');
 
   /// List of all assets
-  List<dynamic> get values => [icCoin, icRobot, imAuth, imCar, imNotebookFrontGradient, imToroid];
+  List<dynamic> get values =>[bike, dog, han, icCoin, icRobot, imAuth, imNotebookFrontGradient, imToroid];
 }
 
 class $AssetsLottieGen {

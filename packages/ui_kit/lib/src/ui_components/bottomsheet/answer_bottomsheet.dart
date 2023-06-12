@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../ui_kit.dart';
 
 class AnswerBottomSheets extends StatelessWidget {
+  final VoidCallback onPressed;
   final String mainText;
   final String subText;
   final Color backgroundColor;
   const AnswerBottomSheets({
+    required this.onPressed,
     required this.backgroundColor,
     required this.mainText,
     required this.subText,
@@ -43,15 +45,19 @@ class AnswerBottomSheets extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            width: 145,
-            height: 88,
-            decoration: BoxDecoration(
-              color: AppColors.white,
-              borderRadius: BorderRadius.circular(24),
+          GestureDetector(
+            onTap: onPressed,
+            
+            child: Container(
+              alignment: Alignment.center,
+              width: 145,
+              height: 88,
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(24),
+              ),
+              child: Image.asset('packages/ui_kit/assets/icons/ic_arrow_go.png'),
             ),
-            child: Image.asset('packages/ui_kit/assets/icons/ic_arrow_go.png'),
           ),
         ],
       ),

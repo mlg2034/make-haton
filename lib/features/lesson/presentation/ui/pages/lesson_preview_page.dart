@@ -19,14 +19,14 @@ class _LessonPreviewPageState extends State<LessonPreviewPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: LearnAppBar(
+        title: BaseAppBar(
           title: localization.lesson,
           onLeadingTapExit: () => Navigator.of(context).pop(),
-          onLeadingTapHelp: () => Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => const HelpPage(),
-            ),
-          ),
+          // onLeadingTapHelp: () => Navigator.of(context).push(
+          //   MaterialPageRoute(
+          //     builder: (context) => const HelpPage(),
+          //   ),
+          // ),
         ),
       ),
       body: Center(
