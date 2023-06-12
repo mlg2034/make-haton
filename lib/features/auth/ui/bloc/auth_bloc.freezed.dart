@@ -259,7 +259,7 @@ abstract class _$$SignInEmailCopyWith<$Res>
       __$$SignInEmailCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String email, String password});
+  $Res call({String email});
 }
 
 /// @nodoc
@@ -274,16 +274,11 @@ class __$$SignInEmailCopyWithImpl<$Res>
   @override
   $Res call({
     Object? email = null,
-    Object? password = null,
   }) {
     return _then(_$SignInEmail(
       null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -292,16 +287,14 @@ class __$$SignInEmailCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SignInEmail implements SignInEmail {
-  const _$SignInEmail(this.email, this.password);
+  const _$SignInEmail(this.email);
 
   @override
   final String email;
-  @override
-  final String password;
 
   @override
   String toString() {
-    return 'AuthEvent.signInEmail(email: $email, password: $password)';
+    return 'AuthEvent.signInEmail(email: $email)';
   }
 
   @override
@@ -309,8 +302,7 @@ class _$SignInEmail implements SignInEmail {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SignInEmail &&
-            (identical(other.email, email) || other.email == email) )
-           
+            (identical(other.email, email) || other.email == email));
   }
 
   @override
@@ -398,8 +390,7 @@ class _$SignInEmail implements SignInEmail {
 }
 
 abstract class SignInEmail implements AuthEvent {
-  const factory SignInEmail(final String email) =
-      _$SignInEmail;
+  const factory SignInEmail(final String email) = _$SignInEmail;
 
   @override
   String get email;

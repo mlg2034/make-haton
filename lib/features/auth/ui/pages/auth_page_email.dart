@@ -78,9 +78,9 @@ class AuthPageEmailState extends State<AuthPageEmail> {
                   controller: textEditingController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16)),
+                        borderRadius: BorderRadius.circular(16),),
                     labelText: 'email',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: AppColors.title,
                     ),

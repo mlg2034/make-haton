@@ -34,24 +34,29 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 32.0),
           child: Row(
             children: [
-              Column(
-                children: [
-                  Text(l.welcomeText),
-                  Text(user.name),
-                ],
+              Expanded(
+                flex: 3,
+                child: Column(
+                  children: [
+                    Text(l.welcomeText),
+                      Text(user.name.replaceAll(RegExp("@.*"), '')),
+                  ],
+                ),
               ),
-              const Spacer(),
-              FakeButton(
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          UiKitAssets.icons.coin.keyName,
-                        ),
-                        Text('${user.coins}'),
-                      ],
+              Expanded(
+                flex: 1,
+                child: FakeButton(
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            UiKitAssets.icons.coin.keyName,
+                          ),
+                          Text('${user.coins}'),
+                        ],
+                      ),
                     ),
                   ),
                 ),
