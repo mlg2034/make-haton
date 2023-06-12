@@ -3,14 +3,15 @@ import 'package:make_haton/features/practice/presentation/practice_choose_icon.d
 import 'package:ui_kit/ui_kit.dart';
 
 class PracticeChooseWord extends StatefulWidget {
-  const PracticeChooseWord({super.key});
+  const PracticeChooseWord({Key? key}) : super(key: key);
 
   @override
-  State<PracticeChooseWord> createState() => _PracticeChooseWordState();
+  _PracticeChooseWordState createState() => _PracticeChooseWordState();
 }
 
 class _PracticeChooseWordState extends State<PracticeChooseWord> {
   List<String> words = ['book', 'newspaper', 'magazine', 'cow', 'red'];
+  String selectedWord = '';
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class _PracticeChooseWordState extends State<PracticeChooseWord> {
                 'He promised to read the ',
                 style: subtitle,
               ),
-              Text('____'),
+              Text(selectedWord.isNotEmpty ? selectedWord : '____', style: subtitle),
             ],
           ),
           const SizedBox(
@@ -48,15 +49,33 @@ class _PracticeChooseWordState extends State<PracticeChooseWord> {
               children: words.map((word) {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: AppColors.border),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Text(
-                      word,
-                      style: subtitle,
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        if (selectedWord == word) {
+                          selectedWord = '';
+                        } else {
+                          selectedWord = word;
+                        }
+                      });
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: selectedWord == word
+                              ? AppColors.title
+                              : AppColors.border,
+                          width: selectedWord == word ? 2.0 : 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Text(
+                        word,
+                        style: selectedWord == word
+                            ? buttonTextTextStyle
+                            : subtitle,
+                      ),
                     ),
                   ),
                 );
@@ -72,7 +91,9 @@ class _PracticeChooseWordState extends State<PracticeChooseWord> {
                 builder: (context) => PracticeChooseIcon(),
               ),
             ),
-            color: AppColors.border,
+            color: selectedWord.isNotEmpty
+                ? AppColors.checkButtonColor
+                : AppColors.border,
             title: 'Check',
           ),
         ],

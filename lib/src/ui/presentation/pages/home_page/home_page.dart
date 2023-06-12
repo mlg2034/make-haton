@@ -51,6 +51,8 @@ class _HomePageState extends State<HomePage> {
         )
         .userEntity;
 
+    final navigator = getIt.get<NavigatorManager>();
+
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 120,
@@ -153,6 +155,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Expanded(
                     child: AppOutlinedButton.rect(
+                      onPressed: ()=>navigator.pushNamed(Routes.learnPage),
                       innerPadding: const EdgeInsets.symmetric(horizontal: 32.0),
                       aspectRatio: _kAspectRatio,
                       child: SvgPicture.asset(
@@ -165,6 +168,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Expanded(
                     child: AppOutlinedButton.rect(
+                      onPressed: ()=>navigator.pushNamed(Routes.practicePage),
                       innerPadding: const EdgeInsets.symmetric(horizontal: 32.0),
                       aspectRatio: _kAspectRatio,
                       child: SvgPicture.asset(

@@ -14,10 +14,11 @@ class PracticeChooseIcon extends StatefulWidget {
 }
 
 class _PracticeChooseIconState extends State<PracticeChooseIcon> {
+  String selectedIcon = '';
+
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
-    final tts = getIt.get<AppTTS>();
 
     return Scaffold(
       backgroundColor: AppColors.white,
@@ -30,7 +31,9 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
           const SizedBox(
             height: 50,
           ),
-          SoundButton(onPressedCallback: () => tts.speak(localizations.book),),
+          SoundButton(
+            onPressedCallback:()=> getIt.get<AppTTS>().speak(context.locale.book),
+          ),
           const SizedBox(
             height: 16,
           ),
@@ -43,16 +46,22 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 48),
-            child: AppOutlinedButton.rect(
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 32, horizontal: 16),
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColors.border),
+                borderRadius: BorderRadius.circular(16),
+                color: AppColors.white,
+              ),
               child: Flexible(
                 child: Center(
                   child: Text(
-                    'An item tha people read to gain knowledge',
+                    'An item that people read to gain knowledge',
                     style: lessonPropolsolTextStyle,
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              aspectRatio: 5,
             ),
           ),
           const SizedBox(
@@ -66,9 +75,30 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: AppOutlinedButton.square(
-                      child: Image.asset(
-                        UiKitAssets.icons.book.keyName,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          if (selectedIcon == 'han') {
+                            selectedIcon = '';
+                          } else {
+                            selectedIcon = 'han';
+                          }
+                        });
+                      },
+                      child: Container(
+                        height: 126,
+                        width: 126,
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: selectedIcon == 'han'
+                                  ? AppColors.title
+                                  : AppColors.border,
+                            ),
+                            borderRadius: BorderRadius.circular(16)),
+                        child: SvgPicture.asset(
+                          UiKitAssets.images.han.keyName,
+                        ),
                       ),
                     ),
                   ),
@@ -76,9 +106,30 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: AppOutlinedButton.square(
-                      child: Image.asset(
-                        UiKitAssets.icons.book.keyName,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          if (selectedIcon == 'book') {
+                            selectedIcon = '';
+                          } else {
+                            selectedIcon = 'book';
+                          }
+                        });
+                      },
+                      child: Container(
+                        height: 126,
+                        width: 126,
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: selectedIcon == 'book'
+                                  ? AppColors.title
+                                  : AppColors.border,
+                            ),
+                            borderRadius: BorderRadius.circular(16)),
+                        child: SvgPicture.asset(
+                          UiKitAssets.images.bike.keyName,
+                        ),
                       ),
                     ),
                   ),
@@ -94,9 +145,30 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: AppOutlinedButton.square(
-                      child: Image.asset(
-                        UiKitAssets.icons.book.keyName,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          if (selectedIcon == 'question_mark') {
+                            selectedIcon = '';
+                          } else {
+                            selectedIcon = 'question_mark';
+                          }
+                        });
+                      },
+                      child: Container(
+                        height: 126,
+                        width: 126,
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: selectedIcon == 'question_mark'
+                                  ? AppColors.title
+                                  : AppColors.border,
+                            ),
+                            borderRadius: BorderRadius.circular(16)),
+                        child: Image.asset(
+                          UiKitAssets.icons.book.keyName,
+                        ),
                       ),
                     ),
                   ),
@@ -104,9 +176,30 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: AppOutlinedButton.square(
-                      child: Image.asset(
-                        UiKitAssets.icons.book.keyName,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          if (selectedIcon == 'coin') {
+                            selectedIcon = '';
+                          } else {
+                            selectedIcon = 'coin';
+                          }
+                        });
+                      },
+                      child: Container(
+                        height: 126,
+                        width: 126,
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: selectedIcon == 'coin'
+                                  ? AppColors.title
+                                  : AppColors.border,
+                            ),
+                            borderRadius: BorderRadius.circular(16)),
+                        child: SvgPicture.asset(
+                          UiKitAssets.icons.coin.keyName,
+                        ),
                       ),
                     ),
                   ),
@@ -118,7 +211,7 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
             height: 28,
           ),
           Text(
-            'Choose the image that describe the word',
+            'Choose the image that describes the word',
             style: exampleLetterTextStyle,
           ),
           const Divider(
@@ -129,10 +222,12 @@ class _PracticeChooseIconState extends State<PracticeChooseIcon> {
           ),
           CheckButton(
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => PracticeFinishPage()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => PracticeFinishPage()));
             },
-            color: AppColors.border,
+            color: selectedIcon.isNotEmpty
+                ? AppColors.checkButtonColor
+                : AppColors.border,
             title: 'CHECK',
           ),
         ],

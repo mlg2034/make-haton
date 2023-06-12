@@ -16,6 +16,7 @@ class PracticeQuizePage extends StatefulWidget {
 
 class _PracticeQuizePageState extends State<PracticeQuizePage> {
   bool isQuizButtonSelected = false;
+  String selectedQuizButton = '';
   final tts = getIt.get<AppTTS>();
 
   @override
@@ -71,27 +72,61 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
               crossAxisCount: 2,
               childAspectRatio: 2.0,
               children: [
-                QuizButton(
-                  widgetTools: const Text(
-                    'book',
-                    style: lessonPropolsolTextStyle,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: QuizButton(
+                    widgetTools: Text(
+                      'book',
+                      style: selectedQuizButton == 'book'
+                          ? buttonTextTextStyle
+                          : lessonPropolsolTextStyle,
+                    ),
+                    onPressed: () => setState(
+                        () => selectedQuizButton = selectedQuizButton == 'book' ? '' : 'book'),
+                    isSelected: selectedQuizButton == 'book',
                   ),
-                  onPressed: () => setState(() => isQuizButtonSelected = true),
                 ),
-                QuizButton(
-                  widgetTools: const Text(
-                    'book',
-                    style: lessonPropolsolTextStyle,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: QuizButton(
+                    widgetTools: Text(
+                      'car',
+                      style: selectedQuizButton == 'car'
+                          ? buttonTextTextStyle
+                          : lessonPropolsolTextStyle,
+                    ),
+                    onPressed: () => setState(
+                        () => selectedQuizButton = selectedQuizButton == 'car' ? '' : 'car'),
+                    isSelected: selectedQuizButton == 'car',
                   ),
-                  onPressed: () => setState(() => isQuizButtonSelected = true),
                 ),
-                QuizButton(
-                  widgetTools: const Text('Askhat', style: lessonPropolsolTextStyle),
-                  onPressed: () => setState(() => isQuizButtonSelected = true),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: QuizButton(
+                    widgetTools: Text(
+                      'laptop',
+                      style: selectedQuizButton == 'laptop'
+                          ? buttonTextTextStyle
+                          : lessonPropolsolTextStyle,
+                    ),
+                    onPressed: () => setState(
+                        () => selectedQuizButton = selectedQuizButton == 'laptop' ? '' : 'laptop'),
+                    isSelected: selectedQuizButton == 'laptop',
+                  ),
                 ),
-                QuizButton(
-                  widgetTools: const Text('red', style: lessonPropolsolTextStyle),
-                  onPressed: () => setState(() => isQuizButtonSelected = true),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: QuizButton(
+                    widgetTools: Text(
+                      'notebook',
+                      style: selectedQuizButton == 'notebook'
+                          ? buttonTextTextStyle
+                          : lessonPropolsolTextStyle,
+                    ),
+                    onPressed: () => setState(() =>
+                        selectedQuizButton = selectedQuizButton == 'notebook' ? '' : 'notebook'),
+                    isSelected: selectedQuizButton == 'notebook',
+                  ),
                 ),
               ],
             ),
@@ -103,7 +138,7 @@ class _PracticeQuizePageState extends State<PracticeQuizePage> {
             color: AppColors.border,
           ),
           CheckButton(
-            color: AppColors.border,
+            color: selectedQuizButton.isEmpty? AppColors.border: AppColors.checkButtonColor,
             title: 'Check',
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
