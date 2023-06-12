@@ -115,132 +115,151 @@ class CharacterPageState extends State<CharacterPage> {
     final clothColor = selectedOptions[clothes] == UiKitAssets.customizations.none1.keyName? Colors.transparent:null;
     final hatColor = selectedOptions[hats] == UiKitAssets.customizations.none1.keyName? Colors.transparent:null;
 
-    return Scaffold(
-      appBar: CharacterAppBar(
-        title: 'CHARACTER',
-        onLeadingTapExit: () => Navigator.of(context).pop(robot(color, clothColor, hatColor )),
-        onLeadingTapHelp: () => Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => const HelpPage(),
+    return WillPopScope(
+      onWillPop: () async{
+        Navigator.of(context).pop(robot(color, clothColor, hatColor ));
+
+        return true;
+      },
+      child: Scaffold(
+        appBar: CharacterAppBar(
+          title: 'CHARACTER',
+          onLeadingTapExit: () => Navigator.of(context).pop(robot(color, clothColor, hatColor )),
+          onLeadingTapHelp: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const HelpPage(),
+            ),
           ),
         ),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(
-            height: 60,
-          ),
-          SizedBox(
-            height: 400,
-            width: 250,
-            child: Stack(
-              alignment: Alignment.centerLeft,
-              children: [
-                SvgPicture.asset(
-                  UiKitAssets.images.icRobot.keyName,
-                  colorFilter: ColorFilter.mode(color, BlendMode.darken),
-                ),
-                Positioned(
-                  bottom: 0,
-                  child: SvgPicture.asset(
-                    selectedOptions[clothes],
-                    height: 250,
-                    color: clothColor,
-                  ),
-                ),
-                Positioned(
-                  left: 75,
-                  top: 0,
-                  child: SvgPicture.asset(
-                    selectedOptions[hats],
-                    height: 100,
-                    color: hatColor,
-                  ),
-                ),
-                Positioned(
-                  left: 35,
-                  top: 50,
-                  child: SvgPicture.asset(
-                    selectedOptions[eyes],
-                    width: 180,
-                    colorFilter: ColorFilter.mode(color, BlendMode.darken),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            // height: 80,
-            width: 177,
-            decoration: BoxDecoration(
-              color: AppColors.coinContainerColor,
-              border: Border.all(color: AppColors.border),
-              borderRadius: BorderRadius.circular(24),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-              child: Row(
-                children: [
-                  SvgPicture.asset(
-                    UiKitAssets.images.icCoin.keyName,
-                    height: 42,
-                    width: 22.46,
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    user.coins.toString(),
-                    style: coinsCountTextStyle,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          const Divider(),
-          Expanded(
-            child: ListView.builder(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemCount: optionRepo.optionMap.length,
-              itemBuilder: (BuildContext context, int itemIndex) {
-                final item = optionRepo.optionMap.keys.elementAt(itemIndex);
-                final category = optionRepo.optionMapDetailed[item]!;
-                final optionItems = category.values;
+        body: LayoutBuilder(
+          builder: (context, constraints) {
+            final size = MediaQuery.of(context).size;
 
-                return GestureDetector(
-                  onTap: () => test(itemIndex, item, optionItems, category),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 102,
-                          height: 102,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.border),
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-                          child: SvgPicture.asset(optionRepo.optionMap.values.elementAt(itemIndex)),
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          optionRepo.optionMap.keys.elementAt(itemIndex),
-                          style: characterTextStyle,
-                        ),
-                      ],
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: size.height*0.5,maxHeight: size.height+100, maxWidth:  size.width),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 60,
                     ),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
+                    SizedBox(
+                      height: 400,
+                      width: 250,
+                      child: Stack(
+                        alignment: Alignment.centerLeft,
+                        children: [
+                          SvgPicture.asset(
+                            UiKitAssets.images.icRobot.keyName,
+                            colorFilter: ColorFilter.mode(color, BlendMode.darken),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            child: SvgPicture.asset(
+                              selectedOptions[clothes],
+                              height: 250,
+                              color: clothColor,
+                            ),
+                          ),
+                          Positioned(
+                            left: 75,
+                            top: 0,
+                            child: SvgPicture.asset(
+                              selectedOptions[hats],
+                              height: 100,
+                              color: hatColor,
+                            ),
+                          ),
+                          Positioned(
+                            left: 35,
+                            top: 50,
+                            child: SvgPicture.asset(
+                              selectedOptions[eyes],
+                              width: 180,
+                              colorFilter: ColorFilter.mode(color, BlendMode.darken),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      // height: 80,
+                      width: 177,
+                      decoration: BoxDecoration(
+                        color: AppColors.coinContainerColor,
+                        border: Border.all(color: AppColors.border),
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                        child: Row(
+                          children: [
+                            SvgPicture.asset(
+                              UiKitAssets.images.icCoin.keyName,
+                              height: 42,
+                              width: 22.46,
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              user.coins.toString(),
+                              style: coinsCountTextStyle,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    const Divider(),
+                    SizedBox(
+                      height: 170,
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: optionRepo.optionMap.length,
+                        itemBuilder: (BuildContext context, int itemIndex) {
+                          final item = optionRepo.optionMap.keys.elementAt(itemIndex);
+                          final category = optionRepo.optionMapDetailed[item]!;
+                          final optionItems = category.values;
+
+                          return GestureDetector(
+                            onTap: () => test(itemIndex, item, optionItems, category),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    width: 102,
+                                    height: 102,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: AppColors.border),
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+                                    child: SvgPicture.asset(optionRepo.optionMap.values.elementAt(itemIndex)),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  Text(
+                                    optionRepo.optionMap.keys.elementAt(itemIndex),
+                                    style: characterTextStyle,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
   Future<void> customizeRobot() async {
     final res = await getIt.get<NavigatorManager>().pushNamed(Routes.characterPage, arguments: robot);
 
-    print(res);
     if (res != null) {
       robot = res as Widget;
 
@@ -84,8 +83,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: SafeArea(
-        child:Column(
+      body: SingleChildScrollView(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Divider(),
