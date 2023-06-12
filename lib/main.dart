@@ -7,16 +7,14 @@ import 'package:make_haton/shared/di.dart';
 import 'package:make_haton/src/app/app.dart';
 
 void main() async {
-  configDi();
   WidgetsFlutterBinding.ensureInitialized();
+  configDi();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
   final app = await Firebase.initializeApp();
   FirebaseAuth.instanceFor(app: app);
   FirebaseFirestore.instanceFor(app: app);
-  print(Firebase.apps);
-
 
   runApp(const MyApp());
 }

@@ -57,7 +57,7 @@ class CharacterPageState extends State<CharacterPage> {
     return null;
   }
 
-  Widget robot (color, clothColor, hatColor){
+  Widget robot(color, clothColor, hatColor) {
     return SizedBox(
       height: 400,
       width: 250,
@@ -112,19 +112,23 @@ class CharacterPageState extends State<CharacterPage> {
         .userEntity;
 
     final color = getColor() ?? Colors.transparent;
-    final clothColor = selectedOptions[clothes] == UiKitAssets.customizations.none1.keyName? Colors.transparent:null;
-    final hatColor = selectedOptions[hats] == UiKitAssets.customizations.none1.keyName? Colors.transparent:null;
+    final clothColor = selectedOptions[clothes] == UiKitAssets.customizations.none1.keyName
+        ? Colors.transparent
+        : null;
+    final hatColor = selectedOptions[hats] == UiKitAssets.customizations.none1.keyName
+        ? Colors.transparent
+        : null;
 
     return WillPopScope(
-      onWillPop: () async{
-        Navigator.of(context).pop(robot(color, clothColor, hatColor ));
+      onWillPop: () async {
+        Navigator.of(context).pop(robot(color, clothColor, hatColor));
 
         return true;
       },
       child: Scaffold(
         appBar: CharacterAppBar(
           title: 'CHARACTER',
-          onLeadingTapExit: () => Navigator.of(context).pop(robot(color, clothColor, hatColor )),
+          onLeadingTapExit: () => Navigator.of(context).pop(robot(color, clothColor, hatColor)),
           onLeadingTapHelp: () => Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => const HelpPage(),
@@ -137,7 +141,10 @@ class CharacterPageState extends State<CharacterPage> {
 
             return SingleChildScrollView(
               child: ConstrainedBox(
-                constraints: BoxConstraints(minHeight: size.height*0.5,maxHeight: size.height+100, maxWidth:  size.width),
+                constraints: BoxConstraints(
+                    minHeight: size.height * 0.5,
+                    maxHeight: size.height + 100,
+                    maxWidth: size.width),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -187,7 +194,7 @@ class CharacterPageState extends State<CharacterPage> {
                       // height: 80,
                       width: 177,
                       decoration: BoxDecoration(
-                        color: AppColors.coinContainerColor,
+                        color: AppColors.secondaryInactive,
                         border: Border.all(color: AppColors.border),
                         borderRadius: BorderRadius.circular(24),
                       ),
@@ -239,8 +246,10 @@ class CharacterPageState extends State<CharacterPage> {
                                       border: Border.all(color: AppColors.border),
                                       borderRadius: BorderRadius.circular(16),
                                     ),
-                                    padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-                                    child: SvgPicture.asset(optionRepo.optionMap.values.elementAt(itemIndex)),
+                                    padding:
+                                        const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+                                    child: SvgPicture.asset(
+                                        optionRepo.optionMap.values.elementAt(itemIndex)),
                                   ),
                                   const SizedBox(height: 16),
                                   Text(
@@ -265,7 +274,6 @@ class CharacterPageState extends State<CharacterPage> {
   }
 
   test(int itemIndex, String item, optionItems, Map<String, dynamic> category) async {
-
     final newItem = await showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -309,11 +317,10 @@ class CharacterPageState extends State<CharacterPage> {
         );
       },
     );
-   if(newItem!=null){
-     selectedOptions[optionRepo.optionMap.keys.elementAt(itemIndex)] = newItem;
+    if (newItem != null) {
+      selectedOptions[optionRepo.optionMap.keys.elementAt(itemIndex)] = newItem;
 
-         setState(() {});
-   }
-
+      setState(() {});
+    }
   }
 }

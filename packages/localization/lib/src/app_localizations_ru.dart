@@ -98,6 +98,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get reload => 'Перезагрузить';
 
   @override
+  String get collections => 'КОЛЛЕКЦИИ';
+
+  @override
+  String get learned => 'ИЗУЧЕНО';
+
+  @override
   String get learn_session => 'Learn Session';
 
   @override

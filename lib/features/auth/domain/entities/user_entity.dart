@@ -25,7 +25,7 @@ class UserEntity with _$UserEntity {
 }
 
 @freezed
-class Settings with _$Settings{
+class Settings with _$Settings {
   factory Settings({
     @Default(false) bool notificationsEnabled,
     @Default(false) bool soundEnabled,

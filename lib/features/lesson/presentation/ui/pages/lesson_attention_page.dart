@@ -18,13 +18,13 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: LearnAppBar(
+        title: BaseAppBar(
           title: localization.lesson,
           onLeadingTapExit: () {
             Navigator.of(context).pop();
           },
           onLeadingTapHelp: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HelpPage()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => HelpPage()));
           },
         ),
       ),
@@ -107,17 +107,19 @@ class _LessonAttetionPageState extends State<LessonAttetionPage> {
                 showModalBottomSheet(
                   context: context,
                   builder: (BuildContext context) {
-                    return const AnswerBottomSheets(
+                    return AnswerBottomSheets(
                       backgroundColor: AppColors.checkButtonColor,
                       mainText: 'WEEL DONE , IT IS RIGHT',
                       subText: 'Keep going green!',
+                      onPressed: () {},
                     );
                   },
                 );
               },
-              child: const ContinueButton(
+              child: CheckButton(
                 color: AppColors.checkButtonColor,
                 title: 'CHECK',
+                onPressed: () {},
               ),
             ),
           ],

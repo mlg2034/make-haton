@@ -15,7 +15,7 @@ class AppAuthRepositoryImpl implements AppAuthRepository {
     final GoogleSignIn googleSignIn = GoogleSignIn();
 
     final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
-    print(googleSignInAccount==null);
+    print(googleSignInAccount == null);
 
     if (googleSignInAccount != null) {
       final GoogleSignInAuthentication googleSignInAuthentication =

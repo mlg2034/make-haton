@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:localization/localization.dart';
 import 'package:make_haton/features/lesson/presentation/ui/pages/lesson_example.dart';
+import 'package:make_haton/src/services/app_tts.dart';
 import 'package:make_haton/src/ui/presentation/pages/help_page/help_page.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 import '../../../../../shared/di.dart';
-import '../../../../../src/services/app_tts.dart';
 
 class LessonPage extends StatefulWidget {
   const LessonPage({super.key});
@@ -16,16 +16,16 @@ class LessonPage extends StatefulWidget {
 }
 
 class _LessonPageState extends State<LessonPage> {
-  final tts = getIt.get<AppTTS>();
   
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
+    final tts = getIt.get<AppTTS>();
 
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: LearnAppBar(
+        title: BaseAppBar(
           title: localization.lesson,
           onLeadingTapExit: () => Navigator.of(context).pop(),
           onLeadingTapHelp: () => Navigator.of(context).push(
@@ -46,27 +46,7 @@ class _LessonPageState extends State<LessonPage> {
             const SizedBox(
               height: 30,
             ),
-            GestureDetector(
-              onTap: () {
-                tts.speak(localization.book);
-              },
-              child: Container(
-                width: 76,
-                height: 48,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: AppColors.primary,
-                ),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 20,
-                  height: 18,
-                  child: SvgPicture.asset(
-                    UiKitAssets.icons.sound.keyName,
-                  ),
-                ),
-              ),
-            ),
+            SoundButton(onPressedCallback: () => tts.speak(localization.book),),
             const SizedBox(
               height: 15,
             ),

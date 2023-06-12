@@ -17,7 +17,6 @@ class AuthPage extends StatefulWidget {
 }
 
 class AuthPageState extends State<AuthPage> {
-
   @override
   Widget build(BuildContext context) {
     final localization = context.locale;
@@ -73,7 +72,6 @@ class AuthPageState extends State<AuthPage> {
                   textAlign: TextAlign.center,
                   style: header_3,
                 ),
-
                 const Padding(padding: EdgeInsets.symmetric(vertical: 16)),
                 SizedBox(
                   width: double.infinity,
@@ -87,19 +85,19 @@ class AuthPageState extends State<AuthPage> {
                   ),
                 ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 8)),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 54,
-                    child: AuthButton(
-                      onPressed: (){
-                        print('login with email');
-                      },
-                      icon: SvgPicture.asset(
-                        UiKitAssets.icons.icAppleWhite.keyName,
-                      ),
-                      text: localization.continueWithApple,
+                SizedBox(
+                  width: double.infinity,
+                  height: 54,
+                  child: AuthButton(
+                    onPressed: () {
+                      print('login with email');
+                    },
+                    icon: SvgPicture.asset(
+                      UiKitAssets.icons.icAppleWhite.keyName,
                     ),
+                    text: localization.continueWithApple,
                   ),
+                ),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 16),
                 ),

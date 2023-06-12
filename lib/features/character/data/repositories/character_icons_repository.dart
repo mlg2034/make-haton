@@ -2,7 +2,6 @@ import 'package:ui_kit/ui_kit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CharacterIconRepository {
-
   final List<SvgPicture> chracterColorIcons = [
     SvgPicture.asset(UiKitAssets.customizations.colorBlue.keyName),
     SvgPicture.asset(UiKitAssets.customizations.colorGreen.keyName),

@@ -5,6 +5,7 @@ import 'package:make_haton/shared/di.dart';
 import 'package:make_haton/src/services/app_tts.dart';
 import 'package:ui_kit/ui_kit.dart';
 
+
 class Dictionary extends StatefulWidget {
   final List<String> titleList;
   final List<String> itemsList;
@@ -33,6 +34,7 @@ class _DictionaryState extends State<Dictionary> {
           onLeadingTapExit: () => Navigator.of(context).pop(),
           title: localization.dictionary,
           wordsCount: widget.itemsList.length,
+          subtitle: localization.words,
         ),
       ),
       body: ListView.builder(

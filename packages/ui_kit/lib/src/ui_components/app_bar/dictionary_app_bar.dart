@@ -5,6 +5,7 @@ import 'package:ui_kit/ui_kit.dart';
 class DictionaryAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final int? wordsCount;
+  final String? subtitle;
 
   final VoidCallback? onLeadingTapExit;
 
@@ -12,6 +13,7 @@ class DictionaryAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.onLeadingTapExit,
     this.title,
     this.wordsCount,
+    this.subtitle,
     super.key,
   });
 
@@ -31,11 +33,11 @@ class DictionaryAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               RichText(
                 text: TextSpan(
-                  text: '$wordsCount',
+                  text: '$wordsCount ',
                   style: info.copyWith(color: AppColors.primary),
                   children: [
                     TextSpan(
-                      text: " words",
+                      text: subtitle,
                       style: info.copyWith(color: AppColors.title),
                     ),
                   ],

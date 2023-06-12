@@ -15,5 +15,4 @@ class CharacterEntity with _$CharacterEntity {
   }) = _CharacterEntity;
 
   factory CharacterEntity.fromJson(Map<String, dynamic> json) => _$CharacterEntityFromJson(json);
-
 }
